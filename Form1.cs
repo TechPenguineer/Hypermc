@@ -48,14 +48,16 @@ namespace Hypermc
         }
 
 
-        public static void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             string mod_path, version_path, version_compatible;
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = @"%Appdata%\roaming\.minecraft\mods";
-            version_path = @"%Appdata%\roaming\.minecraft\versions";
+            version_path = sPath+"\\.minecraft\\versions";
 
-            if (!Directory.Exists(version_compatible)) 
+            Console.WriteLine(version_path);
+            if (!Directory.Exists(version_path)) 
             {
                 MessageBox.Show("Looks like you dont have Forge version 1.16.5 installed! Please make sure to install it or else this application will not work", "Incompatible Version", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
