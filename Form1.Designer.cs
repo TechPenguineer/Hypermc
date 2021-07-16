@@ -42,6 +42,7 @@ namespace Hypermc
             this.minecraftVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.currentMods = new System.Windows.Forms.TreeView();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +102,7 @@ namespace Hypermc
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sidepanel.Controls.Add(this.label1);
             this.sidepanel.Controls.Add(this.currentMods);
             this.sidepanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidepanel.Location = new System.Drawing.Point(0, 24);
@@ -121,8 +123,9 @@ namespace Hypermc
             // launch_btn
             // 
             this.launch_btn.BackgroundImage = global::Hypermc.Properties.Resources.launch1;
+            this.launch_btn.Dock = System.Windows.Forms.DockStyle.Right;
             this.launch_btn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.launch_btn.Location = new System.Drawing.Point(647, 0);
+            this.launch_btn.Location = new System.Drawing.Point(650, 0);
             this.launch_btn.Name = "launch_btn";
             this.launch_btn.Size = new System.Drawing.Size(87, 54);
             this.launch_btn.TabIndex = 0;
@@ -137,8 +140,8 @@ namespace Hypermc
             this.minecraftVersionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2});
             this.minecraftVersionToolStripMenuItem.Name = "minecraftVersionToolStripMenuItem";
-            this.minecraftVersionToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.minecraftVersionToolStripMenuItem.Text = " Minecraft Version";
+            this.minecraftVersionToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.minecraftVersionToolStripMenuItem.Text = " Minecraft Versions";
             // 
             // toolStripMenuItem2
             // 
@@ -148,10 +151,21 @@ namespace Hypermc
             // 
             // currentMods
             // 
-            this.currentMods.Location = new System.Drawing.Point(6, 3);
+            this.currentMods.Location = new System.Drawing.Point(6, 49);
             this.currentMods.Name = "currentMods";
-            this.currentMods.Size = new System.Drawing.Size(121, 399);
+            this.currentMods.Size = new System.Drawing.Size(121, 353);
             this.currentMods.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-4, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Currently Installed";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -171,6 +185,7 @@ namespace Hypermc
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.sidepanel.ResumeLayout(false);
+            this.sidepanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,6 +206,7 @@ namespace Hypermc
         private System.Windows.Forms.ToolStripMenuItem minecraftVersionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         public System.Windows.Forms.TreeView currentMods;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -72,7 +72,7 @@ namespace Hypermc
             string mod_path, version_path, version_compatible;
             String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
-            mod_path = @"%Appdata%\roaming\.minecraft\mods";
+            mod_path = sPath+"\\.minecraft\\mods";
             version_path = sPath+"\\.minecraft\\versions";
 
             Console.WriteLine(version_path);
@@ -87,6 +87,11 @@ namespace Hypermc
         }
 
         private void launch_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
