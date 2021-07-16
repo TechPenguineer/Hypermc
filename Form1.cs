@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Collections;
 
 
 namespace Hypermc
@@ -48,11 +50,15 @@ namespace Hypermc
 
         public static void Form1_Load(object sender, EventArgs e)
         {
-            string mod_path, version_path;
+            string mod_path, version_path, version_compatible;
+            version_compatible = "Forge 1.16.5";
             mod_path = @"%Appdata%\roaming\.minecraft\mods";
             version_path = @"%Appdata%\roaming\.minecraft\versions";
 
-
+            if (!Directory.Exists(version_compatible)) 
+            {
+                MessageBox.Show("Looks like you dont have Forge version 1.16.5 installed! Please make sure to install it or else this application will not work", "Incompatible Version", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
