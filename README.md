@@ -1,4 +1,4 @@
-<img src="../Hypermc/img/banner.png">
+<img src="https://i.imgur.com/PwwhUkC.png">
 
 # About
 
