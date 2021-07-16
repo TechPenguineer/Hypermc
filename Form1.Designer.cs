@@ -41,7 +41,9 @@ namespace Hypermc
             this.launch_btn = new System.Windows.Forms.Button();
             this.minecraftVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.currentMods = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
+            this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +101,7 @@ namespace Hypermc
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sidepanel.Controls.Add(this.currentMods);
             this.sidepanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidepanel.Location = new System.Drawing.Point(0, 24);
             this.sidepanel.Name = "sidepanel";
@@ -143,6 +146,13 @@ namespace Hypermc
             this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "1.16.5";
             // 
+            // currentMods
+            // 
+            this.currentMods.Location = new System.Drawing.Point(6, 3);
+            this.currentMods.Name = "currentMods";
+            this.currentMods.Size = new System.Drawing.Size(121, 399);
+            this.currentMods.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +170,7 @@ namespace Hypermc
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.sidepanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,6 +190,7 @@ namespace Hypermc
         private System.Windows.Forms.Button launch_btn;
         private System.Windows.Forms.ToolStripMenuItem minecraftVersionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        public System.Windows.Forms.TreeView currentMods;
     }
 }
 

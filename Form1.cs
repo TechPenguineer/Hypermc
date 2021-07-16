@@ -47,6 +47,25 @@ namespace Hypermc
             System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
         }
 
+        public void ListDirectory(TreeView treeView, string path)
+        {
+            treeView.Nodes.Clear();
+            var rootDirectoryInfo = new DirectoryInfo(path);
+            treeView.Nodes.Add(CreateDirectoryNode(rootDirectoryInfo));
+        }
+        private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
+        {
+            var directoryNode = new TreeNode(directoryInfo.Name);
+            foreach(var directory in directoryInfo.GetDirectories())
+            {
+                directoryNode.Nodes.Add(CreateDirectoryNode(directory));
+            }
+            foreach(var file in directoryInfo.GetFiles())
+            {
+                directoryNode.Nodes.Add(new TreeNode(file.Name));
+            }
+            return directoryNode;
+        }
 
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -60,6 +79,9 @@ namespace Hypermc
             if (!Directory.Exists(version_path)) 
             {
                 MessageBox.Show("Looks like you dont have Forge version 1.16.5 installed! Please make sure to install it or else this application will not work", "Incompatible Version", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else
+            {
+                ListDirectory(currentMods, mod_path);
             }
 
         }
