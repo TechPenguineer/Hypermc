@@ -115,7 +115,7 @@ namespace Hypermc
             string mod_path;
             String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             mod_path = sPath + "\\.minecraft\\mods";
-            
+            String make_cmd = "git clone " + git_https + " .";
         }
     }
 }
