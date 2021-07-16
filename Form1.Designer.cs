@@ -48,10 +48,13 @@ namespace Hypermc
             this.git_https_input = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.redditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mod_container = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.mod_container.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -225,12 +228,29 @@ namespace Hypermc
             this.redditToolStripMenuItem.Text = "Reddit";
             this.redditToolStripMenuItem.Click += new System.EventHandler(this.redditToolStripMenuItem_Click);
             // 
+            // mod_container
+            // 
+            this.mod_container.Controls.Add(this.panel3);
+            this.mod_container.Location = new System.Drawing.Point(133, 84);
+            this.mod_container.Name = "mod_container";
+            this.mod_container.Size = new System.Drawing.Size(551, 351);
+            this.mod_container.TabIndex = 4;
+            this.mod_container.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mod_container_Scroll);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(40, 29);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 100);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(870, 438);
+            this.Controls.Add(this.mod_container);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sidepanel);
@@ -248,6 +268,7 @@ namespace Hypermc
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.mod_container.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +294,8 @@ namespace Hypermc
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox git_https_input;
         private System.Windows.Forms.ToolStripMenuItem redditToolStripMenuItem;
+        private System.Windows.Forms.Panel mod_container;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

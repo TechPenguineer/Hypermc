@@ -134,5 +134,9 @@ namespace Hypermc
             System.Diagnostics.Process.Start("https://www.reddit.com/r/hypermc/");
 
         }
+
+        private void mod_container_Scroll(object sender, ScrollEventArgs e)
+        {
+        }
     }
 }
