@@ -47,6 +47,7 @@ namespace Hypermc
             this.label2 = new System.Windows.Forms.Label();
             this.git_https_input = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.redditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,7 +71,8 @@ namespace Hypermc
             this.githubToolStripMenuItem,
             this.docsToolStripMenuItem,
             this.reportABugToolStripMenuItem,
-            this.downloadNewReleaseToolStripMenuItem});
+            this.downloadNewReleaseToolStripMenuItem,
+            this.redditToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -216,6 +218,13 @@ namespace Hypermc
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // redditToolStripMenuItem
+            // 
+            this.redditToolStripMenuItem.Name = "redditToolStripMenuItem";
+            this.redditToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.redditToolStripMenuItem.Text = "Reddit";
+            this.redditToolStripMenuItem.Click += new System.EventHandler(this.redditToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +272,7 @@ namespace Hypermc
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox git_https_input;
+        private System.Windows.Forms.ToolStripMenuItem redditToolStripMenuItem;
     }
 }
 

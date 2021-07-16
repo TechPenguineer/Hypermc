@@ -114,16 +114,24 @@ namespace Hypermc
             string git_https = git_https_input.Text;
             try
             {
+                
                 string mod_path;
                 String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 mod_path = sPath + "\\.minecraft\\mods";
-                String make_cmd = "cd " + mod_path + " && " + "git clone " + git_https + " .";
-                System.Diagnostics.Process.Start("CMD.exe", make_cmd);
+                String make_cmd = "cd " + mod_path + " && " + "git clone " + git_https;
+                Console.WriteLine(git_https);
+                Process.Start("git", make_cmd);
             }
             catch(IOException)
             {
                 MessageBox.Show("Git repository doesn't exist", "HyperMc", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+        }
+
+        private void redditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.reddit.com/r/hypermc/");
 
         }
     }
