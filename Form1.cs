@@ -138,5 +138,25 @@ namespace Hypermc
         private void mod_container_Scroll(object sender, ScrollEventArgs e)
         {
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optifine_download_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
