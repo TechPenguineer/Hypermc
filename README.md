@@ -1,2 +1,2 @@
-# Hypermc
- Install Minecraft mods with a user friendly interface
+<img src="../Hypermc/img/banner.png" align="left">
+<h1 align="center">HyperMc</h1>
