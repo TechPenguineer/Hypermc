@@ -243,6 +243,7 @@ namespace Hypermc
             this.panel3.Location = new System.Drawing.Point(40, 29);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.TabIndex = 1;
             // 
             // Form1
             // 
