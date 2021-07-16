@@ -317,6 +317,7 @@ namespace Hypermc
             this.journeymap_download.TabIndex = 4;
             this.journeymap_download.Text = "DOWNLOAD";
             this.journeymap_download.UseVisualStyleBackColor = true;
+            this.journeymap_download.Click += new System.EventHandler(this.journeymap_download_Click);
             // 
             // label4
             // 

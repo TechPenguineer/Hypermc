@@ -72,6 +72,7 @@ namespace Hypermc
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            
             string mod_path, version_path, version_compatible;
             String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
@@ -151,7 +152,7 @@ namespace Hypermc
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         public void copy_to_mod_folder(string sourcePath,string file_name)
@@ -162,12 +163,21 @@ namespace Hypermc
                string destFile = System.IO.Path.Combine(targetPath, file_name);
 
                System.IO.File.Copy(sourceFile, destFile, true);
+               Form1_Load(null, EventArgs.Empty);
+
         }
         private void optifine_download_Click(object sender, EventArgs e)
         {
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine(path);
             copy_to_mod_folder("../../mods/","OptiFine_1.16.5.jar");
+        }
+
+        private void journeymap_download_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder("../../mods/","journeymap-1.16.5.jar");
         }
     }
 }
