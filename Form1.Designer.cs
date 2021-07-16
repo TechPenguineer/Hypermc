@@ -37,7 +37,9 @@ namespace Hypermc
             this.downloadNewReleaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sidepanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.launch_btn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -97,11 +99,25 @@ namespace Hypermc
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.launch_btn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(133, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 54);
             this.panel1.TabIndex = 2;
+            // 
+            // launch_btn
+            // 
+            this.launch_btn.BackgroundImage = global::Hypermc.Properties.Resources.launch1;
+            this.launch_btn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.launch_btn.Location = new System.Drawing.Point(20, 0);
+            this.launch_btn.Name = "launch_btn";
+            this.launch_btn.Size = new System.Drawing.Size(87, 54);
+            this.launch_btn.TabIndex = 0;
+            this.launch_btn.Text = "Launch";
+            this.launch_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.launch_btn.UseMnemonic = false;
+            this.launch_btn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -118,6 +134,7 @@ namespace Hypermc
             this.Text = "Hypermc";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +150,7 @@ namespace Hypermc
         private System.Windows.Forms.ToolStripMenuItem downloadNewReleaseToolStripMenuItem;
         private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button launch_btn;
     }
 }
 
