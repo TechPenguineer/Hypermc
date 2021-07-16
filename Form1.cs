@@ -210,5 +210,11 @@ namespace Hypermc
             Console.WriteLine(path);
             copy_to_mod_folder("../../mods/", "create-mc1.16.5.jar");
         }
+
+        private void reload_btn_Click(object sender, EventArgs e)
+        {
+            Form1_Load(null, EventArgs.Empty);
+
+        }
     }
 }

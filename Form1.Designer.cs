@@ -68,6 +68,7 @@ namespace Hypermc
             this.panel6 = new System.Windows.Forms.Panel();
             this.crate_download = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.reload_btn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -186,6 +187,7 @@ namespace Hypermc
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.reload_btn);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.launch_btn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -457,6 +459,16 @@ namespace Hypermc
             this.label7.TabIndex = 0;
             this.label7.Text = "Crate";
             // 
+            // reload_btn
+            // 
+            this.reload_btn.Location = new System.Drawing.Point(454, 12);
+            this.reload_btn.Name = "reload_btn";
+            this.reload_btn.Size = new System.Drawing.Size(190, 29);
+            this.reload_btn.TabIndex = 2;
+            this.reload_btn.Text = "Reload";
+            this.reload_btn.UseVisualStyleBackColor = true;
+            this.reload_btn.Click += new System.EventHandler(this.reload_btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,6 +553,7 @@ namespace Hypermc
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button crate_download;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button reload_btn;
     }
 }
 
