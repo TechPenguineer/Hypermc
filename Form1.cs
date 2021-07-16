@@ -179,5 +179,36 @@ namespace Hypermc
             Console.WriteLine(path);
             copy_to_mod_folder("../../mods/","journeymap-1.16.5.jar");
         }
+
+        private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1_Load(null, EventArgs.Empty);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jei_download_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder("../../mods/","jei_1.12.2-4.16.jar");
+        }
+
+        private void biomes_o_plenty_download_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder("../../mods/","BiomesOPlenty-1.16.5-universal.jar");
+        }
+
+        private void crate_download_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder("../../mods/", "create-mc1.16.5.jar");
+        }
     }
 }

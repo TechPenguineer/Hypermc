@@ -57,6 +57,17 @@ namespace Hypermc
             this.panel3 = new System.Windows.Forms.Panel();
             this.journeymap_download = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.jei_download = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.biomes_o_plenty_download = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.crate_download = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,13 +75,17 @@ namespace Hypermc
             this.mod_container.SuspendLayout();
             this.optifine_panel.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
-            this.minecraftVersionToolStripMenuItem});
+            this.minecraftVersionToolStripMenuItem,
+            this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(870, 24);
@@ -240,6 +255,9 @@ namespace Hypermc
             // 
             // mod_container
             // 
+            this.mod_container.Controls.Add(this.panel6);
+            this.mod_container.Controls.Add(this.panel5);
+            this.mod_container.Controls.Add(this.panel4);
             this.mod_container.Controls.Add(this.panel3);
             this.mod_container.Controls.Add(this.optifine_panel);
             this.mod_container.Controls.Add(this.scroll_bar_vert);
@@ -330,6 +348,115 @@ namespace Hypermc
             this.label4.Text = "Journeymap";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reloadToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // reloadToolStripMenuItem
+            // 
+            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadToolStripMenuItem.Text = "Reload";
+            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.jei_download);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(7, 136);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(512, 53);
+            this.panel4.TabIndex = 6;
+            // 
+            // jei_download
+            // 
+            this.jei_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jei_download.Location = new System.Drawing.Point(356, 8);
+            this.jei_download.Name = "jei_download";
+            this.jei_download.Size = new System.Drawing.Size(149, 33);
+            this.jei_download.TabIndex = 4;
+            this.jei_download.Text = "DOWNLOAD";
+            this.jei_download.UseVisualStyleBackColor = true;
+            this.jei_download.Click += new System.EventHandler(this.jei_download_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(246, 38);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Just Enough Items";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.biomes_o_plenty_download);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Location = new System.Drawing.Point(7, 195);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(512, 53);
+            this.panel5.TabIndex = 7;
+            // 
+            // biomes_o_plenty_download
+            // 
+            this.biomes_o_plenty_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.biomes_o_plenty_download.Location = new System.Drawing.Point(356, 8);
+            this.biomes_o_plenty_download.Name = "biomes_o_plenty_download";
+            this.biomes_o_plenty_download.Size = new System.Drawing.Size(149, 33);
+            this.biomes_o_plenty_download.TabIndex = 4;
+            this.biomes_o_plenty_download.Text = "DOWNLOAD";
+            this.biomes_o_plenty_download.UseVisualStyleBackColor = true;
+            this.biomes_o_plenty_download.Click += new System.EventHandler(this.biomes_o_plenty_download_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(228, 38);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Biomes O\' Plenty";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.crate_download);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Location = new System.Drawing.Point(7, 254);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(512, 53);
+            this.panel6.TabIndex = 8;
+            // 
+            // crate_download
+            // 
+            this.crate_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crate_download.Location = new System.Drawing.Point(356, 8);
+            this.crate_download.Name = "crate_download";
+            this.crate_download.Size = new System.Drawing.Size(149, 33);
+            this.crate_download.TabIndex = 4;
+            this.crate_download.Text = "DOWNLOAD";
+            this.crate_download.UseVisualStyleBackColor = true;
+            this.crate_download.Click += new System.EventHandler(this.crate_download_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 38);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Crate";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +470,9 @@ namespace Hypermc
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(886, 477);
+            this.MinimumSize = new System.Drawing.Size(886, 477);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hypermc";
@@ -360,6 +490,12 @@ namespace Hypermc
             this.optifine_panel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,6 +530,17 @@ namespace Hypermc
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button journeymap_download;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button jei_download;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button biomes_o_plenty_download;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button crate_download;
+        private System.Windows.Forms.Label label7;
     }
 }
 
