@@ -88,8 +88,7 @@ namespace Hypermc
                 ListDirectory(currentMods, mod_path);
                 }catch(IOException)
                 {
-                    MessageBox.Show("There was an error fetching your minecraft folder.", "Hypermc", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Application.Exit();
+                    
                 }
             }
 
