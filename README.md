@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/3YTFrNo.png">
+<img src="https://i.imgur.com/3YTFrNo.png" style="width:400px" align="center">
 
 # About
 
