@@ -214,7 +214,6 @@ namespace Hypermc
         private void reload_btn_Click(object sender, EventArgs e)
         {
             Form1_Load(null, EventArgs.Empty);
-
         }
     }
 }
