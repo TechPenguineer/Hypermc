@@ -45,17 +45,16 @@ namespace Hypermc
             System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
         }
 
-        public static void get_env_var()
+        public void get_env_var()
         {
             string path;
-            path = @"%Appdata%\\roaming\\.minecraft\\mods";
-            Environment.SetEnvironmentVariable("HypermcDIR",path);
-            path = Environment.ExpandEnvironmentVariables(path);
-            Console.WriteLine(path);
+            path = @"%Appdata%\roaming\.minecraft\mods";
+            Environment.SetEnvironmentVariable("HyperMc", path);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            get_env_var();
+            string getEnv = Environment.GetEnvironmentVariable("HyperMc");
+            Console.WriteLine(getEnv);
         }
 
         private void launch_btn_Click(object sender, EventArgs e)
