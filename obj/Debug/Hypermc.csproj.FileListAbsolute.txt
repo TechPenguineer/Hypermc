@@ -1,0 +1,10 @@
+D:\Desktop\Hypermc\Hypermc\bin\Debug\Hypermc.exe.config
+D:\Desktop\Hypermc\Hypermc\bin\Debug\Hypermc.exe
+D:\Desktop\Hypermc\Hypermc\bin\Debug\Hypermc.pdb
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.csproj.AssemblyReference.cache
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.Form1.resources
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.Properties.Resources.resources
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.csproj.GenerateResource.cache
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.csproj.CoreCompileInputs.cache
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.exe
+D:\Desktop\Hypermc\Hypermc\obj\Debug\Hypermc.pdb
