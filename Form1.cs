@@ -55,6 +55,7 @@ namespace Hypermc
         }
         private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
+          
             var directoryNode = new TreeNode(directoryInfo.Name);
             foreach(var directory in directoryInfo.GetDirectories())
             {
@@ -65,6 +66,8 @@ namespace Hypermc
                 directoryNode.Nodes.Add(new TreeNode(file.Name));
             }
             return directoryNode;
+            
+
         }
 
         public void Form1_Load(object sender, EventArgs e)
@@ -81,7 +84,13 @@ namespace Hypermc
                 MessageBox.Show("Looks like you dont have Forge version 1.16.5 installed! Please make sure to install it or else this application will not work", "Incompatible Version", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }else
             {
+                try{
                 ListDirectory(currentMods, mod_path);
+                }catch(IOException)
+                {
+                    MessageBox.Show("There was an error fetching your minecraft folder.", "Hypermc", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Application.Exit();
+                }
             }
 
         }
