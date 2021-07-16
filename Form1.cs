@@ -108,5 +108,14 @@ namespace Hypermc
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string git_https = git_https_input.Text;
+            string mod_path;
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            mod_path = sPath + "\\.minecraft\\mods";
+            
+        }
     }
 }

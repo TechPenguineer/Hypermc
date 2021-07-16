@@ -45,7 +45,7 @@ namespace Hypermc
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.git_https_input = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
@@ -175,12 +175,13 @@ namespace Hypermc
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.git_https_input);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(690, 73);
+            this.panel2.Location = new System.Drawing.Point(690, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 365);
+            this.panel2.Size = new System.Drawing.Size(180, 354);
             this.panel2.TabIndex = 3;
             // 
             // label2
@@ -193,26 +194,27 @@ namespace Hypermc
             this.label2.TabIndex = 0;
             this.label2.Text = "Install by GIT";
             // 
-            // textBox1
+            // git_https_input
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(0, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "GIT HTTPS";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.git_https_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.git_https_input.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.git_https_input.Location = new System.Drawing.Point(0, 65);
+            this.git_https_input.Name = "git_https_input";
+            this.git_https_input.Size = new System.Drawing.Size(180, 20);
+            this.git_https_input.TabIndex = 1;
+            this.git_https_input.Text = "GIT HTTPS";
+            this.git_https_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 104);
+            this.button1.Location = new System.Drawing.Point(3, 91);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Internalize";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -260,7 +262,7 @@ namespace Hypermc
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox git_https_input;
     }
 }
 
