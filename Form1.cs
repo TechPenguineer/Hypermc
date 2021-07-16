@@ -154,9 +154,20 @@ namespace Hypermc
 
         }
 
+        public void copy_to_mod_folder(string sourcePath,string file_name)
+        {
+               String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+               string targetPath = sPath + "\\.minecraft\\mods";
+               string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
+               string destFile = System.IO.Path.Combine(targetPath, file_name);
+
+               System.IO.File.Copy(sourceFile, destFile, true);
+        }
         private void optifine_download_Click(object sender, EventArgs e)
         {
-
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder("../../mods/","OptiFine_1.16.5.jar");
         }
     }
 }
