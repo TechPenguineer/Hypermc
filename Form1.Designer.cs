@@ -62,30 +62,35 @@ namespace Hypermc
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // githubToolStripMenuItem
             // 
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
             this.githubToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.githubToolStripMenuItem.Text = "Github";
+            this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
             // 
             // docsToolStripMenuItem
             // 
             this.docsToolStripMenuItem.Name = "docsToolStripMenuItem";
             this.docsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.docsToolStripMenuItem.Text = "Docs";
+            this.docsToolStripMenuItem.Click += new System.EventHandler(this.docsToolStripMenuItem_Click);
             // 
             // reportABugToolStripMenuItem
             // 
             this.reportABugToolStripMenuItem.Name = "reportABugToolStripMenuItem";
             this.reportABugToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.reportABugToolStripMenuItem.Text = "Report a bug";
+            this.reportABugToolStripMenuItem.Click += new System.EventHandler(this.reportABugToolStripMenuItem_Click);
             // 
             // downloadNewReleaseToolStripMenuItem
             // 
             this.downloadNewReleaseToolStripMenuItem.Name = "downloadNewReleaseToolStripMenuItem";
             this.downloadNewReleaseToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.downloadNewReleaseToolStripMenuItem.Text = "Download new release";
+            this.downloadNewReleaseToolStripMenuItem.Click += new System.EventHandler(this.downloadNewReleaseToolStripMenuItem_Click);
             // 
             // sidepanel
             // 

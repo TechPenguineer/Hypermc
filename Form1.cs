@@ -16,5 +16,30 @@ namespace Hypermc
         {
             InitializeComponent();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc");
+        }
+
+        private void docsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
+        }
+
+        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/issues/new");
+        }
+
+        private void downloadNewReleaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
+        }
     }
 }
