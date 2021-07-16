@@ -36,6 +36,7 @@ namespace Hypermc
             this.reportABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadNewReleaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sidepanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,12 +94,22 @@ namespace Hypermc
             this.sidepanel.Size = new System.Drawing.Size(133, 414);
             this.sidepanel.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(133, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(737, 54);
+            this.panel1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(870, 438);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.sidepanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -121,6 +132,7 @@ namespace Hypermc
         private System.Windows.Forms.ToolStripMenuItem reportABugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloadNewReleaseToolStripMenuItem;
         private System.Windows.Forms.Panel sidepanel;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
