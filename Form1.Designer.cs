@@ -126,6 +126,7 @@ namespace Hypermc
             this.launch_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.launch_btn.UseMnemonic = false;
             this.launch_btn.UseVisualStyleBackColor = true;
+            this.launch_btn.Click += new System.EventHandler(this.launch_btn_Click);
             // 
             // minecraftVersionToolStripMenuItem
             // 
