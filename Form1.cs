@@ -41,5 +41,10 @@ namespace Hypermc
         {
             System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

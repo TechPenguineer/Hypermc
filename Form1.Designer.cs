@@ -38,6 +38,8 @@ namespace Hypermc
             this.sidepanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.launch_btn = new System.Windows.Forms.Button();
+            this.minecraftVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +47,8 @@ namespace Hypermc
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.minecraftVersionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(870, 24);
@@ -115,7 +118,7 @@ namespace Hypermc
             // 
             this.launch_btn.BackgroundImage = global::Hypermc.Properties.Resources.launch1;
             this.launch_btn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.launch_btn.Location = new System.Drawing.Point(20, 0);
+            this.launch_btn.Location = new System.Drawing.Point(647, 0);
             this.launch_btn.Name = "launch_btn";
             this.launch_btn.Size = new System.Drawing.Size(87, 54);
             this.launch_btn.TabIndex = 0;
@@ -123,6 +126,20 @@ namespace Hypermc
             this.launch_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.launch_btn.UseMnemonic = false;
             this.launch_btn.UseVisualStyleBackColor = true;
+            // 
+            // minecraftVersionToolStripMenuItem
+            // 
+            this.minecraftVersionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.minecraftVersionToolStripMenuItem.Name = "minecraftVersionToolStripMenuItem";
+            this.minecraftVersionToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.minecraftVersionToolStripMenuItem.Text = " Minecraft Version";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "1.16.5";
             // 
             // Form1
             // 
@@ -137,6 +154,7 @@ namespace Hypermc
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hypermc";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -156,6 +174,8 @@ namespace Hypermc
         private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button launch_btn;
+        private System.Windows.Forms.ToolStripMenuItem minecraftVersionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 
