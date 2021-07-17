@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Collections;
-
+using LibGit2Sharp;
 
 namespace Hypermc
 {  
@@ -28,7 +28,7 @@ namespace Hypermc
             Directory.CreateDirectory(path);
             Directory.CreateDirectory(path2);
 
-            Process.Start("cmd.exe", "/c c: && cd " + path2 + " && git clone https://github.com/HyperMC-mods/mod-pack.git . ");
+            Repository.Clone("https://github.com/HyperMC-mods/mod-pack.git", path2);
         }
         public Form1()
         {
@@ -135,7 +135,7 @@ namespace Hypermc
                 mod_path = sPath + "\\.minecraft\\mods";
                 String make_cmd = "cd " + mod_path + " && " + "git clone " + git_https;
                 Console.WriteLine(git_https);
-                Process.Start("git", make_cmd);
+                Repository.Clone(git_https, mod_path);
             }
             catch(IOException)
             {
