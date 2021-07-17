@@ -39,51 +39,56 @@ namespace Hypermc
             this.redditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minecraftVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sidepanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.currentMods = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reload_btn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.launch_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.git_https_input = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.mod_container = new System.Windows.Forms.Panel();
-            this.scroll_bar_vert = new System.Windows.Forms.VScrollBar();
-            this.optifine_panel = new System.Windows.Forms.Panel();
-            this.optifine_label = new System.Windows.Forms.Label();
-            this.optifine_download = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.journeymap_download = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.jei_download = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.biomes_o_plenty_download = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.crate_download = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.reload_btn = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.biomes_o_plenty_download = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.jei_download = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.journeymap_download = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.optifine_panel = new System.Windows.Forms.Panel();
+            this.optifine_download = new System.Windows.Forms.Button();
+            this.optifine_label = new System.Windows.Forms.Label();
+            this.scroll_bar_vert = new System.Windows.Forms.VScrollBar();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDirectoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.mod_container.SuspendLayout();
-            this.optifine_panel.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.optifine_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.minecraftVersionToolStripMenuItem,
             this.toolsToolStripMenuItem});
@@ -155,6 +160,21 @@ namespace Hypermc
             this.toolStripMenuItem2.Size = new System.Drawing.Size(104, 22);
             this.toolStripMenuItem2.Text = "1.16.5";
             // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reloadToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // reloadToolStripMenuItem
+            // 
+            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.reloadToolStripMenuItem.Text = "Reload";
+            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
+            // 
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -195,6 +215,27 @@ namespace Hypermc
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 54);
             this.panel1.TabIndex = 2;
+            // 
+            // reload_btn
+            // 
+            this.reload_btn.Location = new System.Drawing.Point(454, 12);
+            this.reload_btn.Name = "reload_btn";
+            this.reload_btn.Size = new System.Drawing.Size(190, 29);
+            this.reload_btn.TabIndex = 2;
+            this.reload_btn.Text = " ";
+            this.reload_btn.UseVisualStyleBackColor = true;
+            this.reload_btn.Click += new System.EventHandler(this.reload_btn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label3.Location = new System.Drawing.Point(16, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "1.16.5 Forge Mods";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // launch_btn
             // 
@@ -269,101 +310,67 @@ namespace Hypermc
             this.mod_container.TabIndex = 4;
             this.mod_container.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mod_container_Scroll);
             // 
-            // scroll_bar_vert
+            // panel6
             // 
-            this.scroll_bar_vert.Location = new System.Drawing.Point(531, 4);
-            this.scroll_bar_vert.Name = "scroll_bar_vert";
-            this.scroll_bar_vert.Size = new System.Drawing.Size(20, 347);
-            this.scroll_bar_vert.TabIndex = 2;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.crate_download);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Location = new System.Drawing.Point(7, 254);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(512, 53);
+            this.panel6.TabIndex = 8;
             // 
-            // optifine_panel
+            // crate_download
             // 
-            this.optifine_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.optifine_panel.Controls.Add(this.optifine_download);
-            this.optifine_panel.Controls.Add(this.optifine_label);
-            this.optifine_panel.Location = new System.Drawing.Point(7, 18);
-            this.optifine_panel.Name = "optifine_panel";
-            this.optifine_panel.Size = new System.Drawing.Size(512, 53);
-            this.optifine_panel.TabIndex = 3;
+            this.crate_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crate_download.Location = new System.Drawing.Point(356, 8);
+            this.crate_download.Name = "crate_download";
+            this.crate_download.Size = new System.Drawing.Size(149, 33);
+            this.crate_download.TabIndex = 4;
+            this.crate_download.Text = "DOWNLOAD";
+            this.crate_download.UseVisualStyleBackColor = true;
+            this.crate_download.Click += new System.EventHandler(this.crate_download_Click);
             // 
-            // optifine_label
+            // label7
             // 
-            this.optifine_label.AutoSize = true;
-            this.optifine_label.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optifine_label.Location = new System.Drawing.Point(3, 0);
-            this.optifine_label.Name = "optifine_label";
-            this.optifine_label.Size = new System.Drawing.Size(114, 38);
-            this.optifine_label.TabIndex = 0;
-            this.optifine_label.Text = "Optifine";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 38);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Crate";
             // 
-            // optifine_download
+            // panel5
             // 
-            this.optifine_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optifine_download.Location = new System.Drawing.Point(356, 8);
-            this.optifine_download.Name = "optifine_download";
-            this.optifine_download.Size = new System.Drawing.Size(149, 33);
-            this.optifine_download.TabIndex = 4;
-            this.optifine_download.Text = "DOWNLOAD";
-            this.optifine_download.UseVisualStyleBackColor = true;
-            this.optifine_download.Click += new System.EventHandler(this.optifine_download_Click);
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.biomes_o_plenty_download);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Location = new System.Drawing.Point(7, 195);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(512, 53);
+            this.panel5.TabIndex = 7;
             // 
-            // label3
+            // biomes_o_plenty_download
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label3.Location = new System.Drawing.Point(16, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "1.16.5 Forge Mods";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.biomes_o_plenty_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.biomes_o_plenty_download.Location = new System.Drawing.Point(356, 8);
+            this.biomes_o_plenty_download.Name = "biomes_o_plenty_download";
+            this.biomes_o_plenty_download.Size = new System.Drawing.Size(149, 33);
+            this.biomes_o_plenty_download.TabIndex = 4;
+            this.biomes_o_plenty_download.Text = "DOWNLOAD";
+            this.biomes_o_plenty_download.UseVisualStyleBackColor = true;
+            this.biomes_o_plenty_download.Click += new System.EventHandler(this.biomes_o_plenty_download_Click);
             // 
-            // panel3
+            // label6
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.journeymap_download);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(7, 77);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(512, 53);
-            this.panel3.TabIndex = 5;
-            // 
-            // journeymap_download
-            // 
-            this.journeymap_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.journeymap_download.Location = new System.Drawing.Point(356, 8);
-            this.journeymap_download.Name = "journeymap_download";
-            this.journeymap_download.Size = new System.Drawing.Size(149, 33);
-            this.journeymap_download.TabIndex = 4;
-            this.journeymap_download.Text = "DOWNLOAD";
-            this.journeymap_download.UseVisualStyleBackColor = true;
-            this.journeymap_download.Click += new System.EventHandler(this.journeymap_download_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 38);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Journeymap";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reloadToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // reloadToolStripMenuItem
-            // 
-            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reloadToolStripMenuItem.Text = "Reload";
-            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(228, 38);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Biomes O\' Plenty";
             // 
             // panel4
             // 
@@ -397,77 +404,106 @@ namespace Hypermc
             this.label5.Text = "Just Enough Items";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.biomes_o_plenty_download);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(7, 195);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(512, 53);
-            this.panel5.TabIndex = 7;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.journeymap_download);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(7, 77);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(512, 53);
+            this.panel3.TabIndex = 5;
             // 
-            // biomes_o_plenty_download
+            // journeymap_download
             // 
-            this.biomes_o_plenty_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.biomes_o_plenty_download.Location = new System.Drawing.Point(356, 8);
-            this.biomes_o_plenty_download.Name = "biomes_o_plenty_download";
-            this.biomes_o_plenty_download.Size = new System.Drawing.Size(149, 33);
-            this.biomes_o_plenty_download.TabIndex = 4;
-            this.biomes_o_plenty_download.Text = "DOWNLOAD";
-            this.biomes_o_plenty_download.UseVisualStyleBackColor = true;
-            this.biomes_o_plenty_download.Click += new System.EventHandler(this.biomes_o_plenty_download_Click);
+            this.journeymap_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.journeymap_download.Location = new System.Drawing.Point(356, 8);
+            this.journeymap_download.Name = "journeymap_download";
+            this.journeymap_download.Size = new System.Drawing.Size(149, 33);
+            this.journeymap_download.TabIndex = 4;
+            this.journeymap_download.Text = "DOWNLOAD";
+            this.journeymap_download.UseVisualStyleBackColor = true;
+            this.journeymap_download.Click += new System.EventHandler(this.journeymap_download_Click);
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 38);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Biomes O\' Plenty";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 38);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Journeymap";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // panel6
+            // optifine_panel
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.crate_download);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(7, 254);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(512, 53);
-            this.panel6.TabIndex = 8;
+            this.optifine_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.optifine_panel.Controls.Add(this.optifine_download);
+            this.optifine_panel.Controls.Add(this.optifine_label);
+            this.optifine_panel.Location = new System.Drawing.Point(7, 18);
+            this.optifine_panel.Name = "optifine_panel";
+            this.optifine_panel.Size = new System.Drawing.Size(512, 53);
+            this.optifine_panel.TabIndex = 3;
             // 
-            // crate_download
+            // optifine_download
             // 
-            this.crate_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crate_download.Location = new System.Drawing.Point(356, 8);
-            this.crate_download.Name = "crate_download";
-            this.crate_download.Size = new System.Drawing.Size(149, 33);
-            this.crate_download.TabIndex = 4;
-            this.crate_download.Text = "DOWNLOAD";
-            this.crate_download.UseVisualStyleBackColor = true;
-            this.crate_download.Click += new System.EventHandler(this.crate_download_Click);
+            this.optifine_download.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optifine_download.Location = new System.Drawing.Point(356, 8);
+            this.optifine_download.Name = "optifine_download";
+            this.optifine_download.Size = new System.Drawing.Size(149, 33);
+            this.optifine_download.TabIndex = 4;
+            this.optifine_download.Text = "DOWNLOAD";
+            this.optifine_download.UseVisualStyleBackColor = true;
+            this.optifine_download.Click += new System.EventHandler(this.optifine_download_Click);
             // 
-            // label7
+            // optifine_label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 38);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Crate";
+            this.optifine_label.AutoSize = true;
+            this.optifine_label.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optifine_label.Location = new System.Drawing.Point(3, 0);
+            this.optifine_label.Name = "optifine_label";
+            this.optifine_label.Size = new System.Drawing.Size(114, 38);
+            this.optifine_label.TabIndex = 0;
+            this.optifine_label.Text = "Optifine";
             // 
-            // reload_btn
+            // scroll_bar_vert
             // 
-            this.reload_btn.Location = new System.Drawing.Point(454, 12);
-            this.reload_btn.Name = "reload_btn";
-            this.reload_btn.Size = new System.Drawing.Size(190, 29);
-            this.reload_btn.TabIndex = 2;
-            this.reload_btn.Text = "Reload";
-            this.reload_btn.UseVisualStyleBackColor = true;
-            this.reload_btn.Click += new System.EventHandler(this.reload_btn_Click);
+            this.scroll_bar_vert.Location = new System.Drawing.Point(531, 4);
+            this.scroll_bar_vert.Name = "scroll_bar_vert";
+            this.scroll_bar_vert.Size = new System.Drawing.Size(20, 347);
+            this.scroll_bar_vert.TabIndex = 2;
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openDirectoriesToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // openDirectoriesToolStripMenuItem
+            // 
+            this.openDirectoriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.versionsToolStripMenuItem,
+            this.modsToolStripMenuItem});
+            this.openDirectoriesToolStripMenuItem.Name = "openDirectoriesToolStripMenuItem";
+            this.openDirectoriesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openDirectoriesToolStripMenuItem.Text = "Open Directories";
+            // 
+            // versionsToolStripMenuItem
+            // 
+            this.versionsToolStripMenuItem.Name = "versionsToolStripMenuItem";
+            this.versionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.versionsToolStripMenuItem.Text = "Versions";
+            this.versionsToolStripMenuItem.Click += new System.EventHandler(this.versionsToolStripMenuItem_Click);
+            // 
+            // modsToolStripMenuItem
+            // 
+            this.modsToolStripMenuItem.Name = "modsToolStripMenuItem";
+            this.modsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modsToolStripMenuItem.Text = "Mods";
+            this.modsToolStripMenuItem.Click += new System.EventHandler(this.modsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -498,16 +534,16 @@ namespace Hypermc
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.mod_container.ResumeLayout(false);
-            this.optifine_panel.ResumeLayout(false);
-            this.optifine_panel.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.optifine_panel.ResumeLayout(false);
+            this.optifine_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,6 +590,10 @@ namespace Hypermc
         private System.Windows.Forms.Button crate_download;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button reload_btn;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openDirectoriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem versionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modsToolStripMenuItem;
     }
 }
 

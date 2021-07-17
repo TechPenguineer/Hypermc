@@ -229,5 +229,27 @@ namespace Hypermc
         {
             Form1_Load(null, EventArgs.Empty);
         }
+
+        private void versionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string mod_path, version_path, version_compatible;
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            version_compatible = "Forge 1.16.5";
+            mod_path = sPath + "\\.minecraft\\mods";
+            version_path = sPath + "\\.minecraft\\versions";
+
+            Process.Start(version_path);
+        }
+
+        private void modsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string mod_path, version_path, version_compatible;
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            version_compatible = "Forge 1.16.5";
+            mod_path = sPath + "\\.minecraft\\mods";
+            version_path = sPath + "\\.minecraft\\versions";
+
+            Process.Start(mod_path);
+        }
     }
 }
