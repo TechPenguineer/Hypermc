@@ -1,18 +1,25 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections;
 using LibGit2Sharp;
-using System.Linq;
 
 namespace Hypermc
-{
+{  
     public partial class Form1 : Form
     {
-        static string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        string path = sPath + "\\.hypermc";
-        string path2 = sPath + "\\.hypermc\\git_temp";
-
+            static String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            String path = sPath + "\\.hypermc";
+            String path2 = sPath + "\\.hypermc\\git_temp";
         public void create_appdata_mods()
         {
             try
@@ -25,26 +32,24 @@ namespace Hypermc
                 Console.WriteLine(command);
                 Directory.CreateDirectory(path);
                 Directory.CreateDirectory(path2);
-                if (dirCount == 0 && fileCount == 0)
+                if (dirCount == 0 && fileCount==0 )
                 {
                     Repository.Clone("https://github.com/HyperMC-mods/mod-pack.git .", path2);
                 }
-                else if (fileCount > 0)
+                else if(fileCount > 0)
                 {
-                    // TODO: Add code
-                }
-                else
+
+                }else
                 {
                     MessageBox.Show("Please go to " + path2 + " and delete the .git folder. I can not do it since I dont have admin permissions.", "HyperMC", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            catch { throw; } // TODO: Add code to handle the error or remove the try-catch to rethrow the exception
+            } catch(Exception)
+            { }
         }
         public Form1()
         {
             InitializeComponent();
             create_appdata_mods();
-            Console.Writeline("Loaded...");
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,18 +57,25 @@ namespace Hypermc
 
         }
 
-        private void githubToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc");
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc");
+        }
 
-        private void docsToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
+        private void docsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
+        }
 
-        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/issues/new");
+        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/issues/new");
+        }
 
-        private void downloadNewReleaseToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/releases");
-
-        /// <summary>
-        /// Opens the default web browser to view a url
-        /// </summary>
-        private void OpenBrowser(string url) => Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+        private void downloadNewReleaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
+        }
 
         public void ListDirectory(TreeView treeView, string path)
         {
@@ -73,38 +85,41 @@ namespace Hypermc
         }
         private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
+          
             var directoryNode = new TreeNode(directoryInfo.Name);
-
-            directoryNode.Nodes.AddRange(directoryInfo.GetDirectories()
-                .Select(d => CreateDirectoryNode(d)).ToArray());
-            directoryNode.Nodes.AddRange(directoryInfo.GetFiles()
-                .Select(f => new TreeNode(f.Name)).ToArray());
-
+            foreach(var directory in directoryInfo.GetDirectories())
+            {
+                directoryNode.Nodes.Add(CreateDirectoryNode(directory));
+            }
+            foreach(var file in directoryInfo.GetFiles())
+            {
+                directoryNode.Nodes.Add(new TreeNode(file.Name));
+            }
             return directoryNode;
+            
+
         }
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            
             string mod_path, version_path, version_compatible;
-            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = sPath+"\\.minecraft\\mods";
             version_path = sPath+"\\.minecraft\\versions";
 
             Console.WriteLine(version_path);
-            if (!Directory.Exists(version_path))
+            if (!Directory.Exists(version_path)) 
             {
                 MessageBox.Show("Looks like you dont have Forge version 1.16.5 installed! Please make sure to install it or else this application will not work", "Incompatible Version", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
+            }else
             {
-                try
+                try{
+                ListDirectory(currentMods, mod_path);
+                }catch(IOException)
                 {
-                    ListDirectory(currentMods, mod_path);
-                }
-                catch(IOException)
-                {
-
+                    
                 }
             }
 
@@ -130,10 +145,11 @@ namespace Hypermc
             string git_https = git_https_input.Text;
             try
             {
+                
                 string mod_path;
-                string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 mod_path = sPath + "\\.minecraft\\mods";
-                string make_cmd = $"cd {mod_path} && git clone {git_https}";
+                String make_cmd = "cd " + mod_path + " && " + "git clone " + git_https;
                 Console.WriteLine(git_https);
                 Repository.Clone(git_https, mod_path);
             }
@@ -146,7 +162,8 @@ namespace Hypermc
 
         private void redditToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.reddit.com/r/hypermc/");
+            System.Diagnostics.Process.Start("https://www.reddit.com/r/hypermc/");
+
         }
 
         private void mod_container_Scroll(object sender, ScrollEventArgs e)
@@ -165,18 +182,18 @@ namespace Hypermc
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         public void copy_to_mod_folder(string sourcePath,string file_name)
         {
-            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            string targetPath = sPath + "\\.minecraft\\mods";
-            string sourceFile = Path.Combine(sourcePath, file_name);
-            string destFile = Path.Combine(targetPath, file_name);
+               String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+               string targetPath = sPath + "\\.minecraft\\mods";
+               string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
+               string destFile = System.IO.Path.Combine(targetPath, file_name);
 
-            File.Copy(sourceFile, destFile, true);
-            Form1_Load(null, EventArgs.Empty);
+               System.IO.File.Copy(sourceFile, destFile, true);
+               Form1_Load(null, EventArgs.Empty);
 
         }
         private void optifine_download_Click(object sender, EventArgs e)
@@ -232,7 +249,7 @@ namespace Hypermc
         private void versionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string mod_path, version_path, version_compatible;
-            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = sPath + "\\.minecraft\\mods";
             version_path = sPath + "\\.minecraft\\versions";
@@ -243,7 +260,7 @@ namespace Hypermc
         private void modsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string mod_path, version_path, version_compatible;
-            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = sPath + "\\.minecraft\\mods";
             version_path = sPath + "\\.minecraft\\versions";
@@ -253,7 +270,7 @@ namespace Hypermc
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(path2);
+            System.IO.DirectoryInfo di = new DirectoryInfo(path2);
 
             foreach(FileInfo file in di.GetFiles())
             {

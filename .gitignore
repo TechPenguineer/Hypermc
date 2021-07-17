@@ -8,7 +8,7 @@
 /obj
 *.cache
 /.vscode
-Hypermc/mod-pack/
+/Hypermc/mod-pack/
 /mods
 /Hypermc_TemporaryKey.pfx
 /Hypermc.csproj.user

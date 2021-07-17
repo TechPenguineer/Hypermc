@@ -29,22 +29,8 @@ namespace Hypermc
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Panel panel6;
-            System.Windows.Forms.Label label7;
-            System.Windows.Forms.Panel panel5;
-            System.Windows.Forms.Label label6;
-            System.Windows.Forms.Panel panel4;
-            System.Windows.Forms.Label label5;
-            System.Windows.Forms.Panel panel3;
-            System.Windows.Forms.Label label4;
-            System.Windows.Forms.Panel optifine_panel;
-            System.Windows.Forms.Label optifine_label;
-            System.Windows.Forms.MenuStrip menuStrip1;
-            this.crate_download = new System.Windows.Forms.Button();
-            this.biomes_o_plenty_download = new System.Windows.Forms.Button();
-            this.jei_download = new System.Windows.Forms.Button();
-            this.journeymap_download = new System.Windows.Forms.Button();
-            this.optifine_download = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDirectoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,240 +61,46 @@ namespace Hypermc
             this.git_https_input = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.mod_container = new System.Windows.Forms.Panel();
-            panel6 = new System.Windows.Forms.Panel();
-            label7 = new System.Windows.Forms.Label();
-            panel5 = new System.Windows.Forms.Panel();
-            label6 = new System.Windows.Forms.Label();
-            panel4 = new System.Windows.Forms.Panel();
-            label5 = new System.Windows.Forms.Label();
-            panel3 = new System.Windows.Forms.Panel();
-            label4 = new System.Windows.Forms.Label();
-            optifine_panel = new System.Windows.Forms.Panel();
-            optifine_label = new System.Windows.Forms.Label();
-            menuStrip1 = new System.Windows.Forms.MenuStrip();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            optifine_panel.SuspendLayout();
-            menuStrip1.SuspendLayout();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.crate_download = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.biomes_o_plenty_download = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.jei_download = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.journeymap_download = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.optifine_panel = new System.Windows.Forms.Panel();
+            this.optifine_download = new System.Windows.Forms.Button();
+            this.optifine_label = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.mod_container.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.optifine_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel6
-            // 
-            panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            panel6.Controls.Add(this.crate_download);
-            panel6.Controls.Add(label7);
-            panel6.Location = new System.Drawing.Point(21, 306);
-            panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new System.Drawing.Size(597, 61);
-            panel6.TabIndex = 8;
-            // 
-            // crate_download
-            // 
-            this.crate_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
-            this.crate_download.FlatAppearance.BorderSize = 0;
-            this.crate_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.crate_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.crate_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.crate_download.Location = new System.Drawing.Point(415, 9);
-            this.crate_download.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.crate_download.Name = "crate_download";
-            this.crate_download.Size = new System.Drawing.Size(174, 38);
-            this.crate_download.TabIndex = 4;
-            this.crate_download.Text = "DOWNLOAD";
-            this.crate_download.UseVisualStyleBackColor = false;
-            this.crate_download.Click += new System.EventHandler(this.crate_download_Click);
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            label7.Location = new System.Drawing.Point(4, 0);
-            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(84, 38);
-            label7.TabIndex = 0;
-            label7.Text = "Crate";
-            // 
-            // panel5
-            // 
-            panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            panel5.Controls.Add(this.biomes_o_plenty_download);
-            panel5.Controls.Add(label6);
-            panel5.Location = new System.Drawing.Point(21, 238);
-            panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(597, 61);
-            panel5.TabIndex = 7;
-            // 
-            // biomes_o_plenty_download
-            // 
-            this.biomes_o_plenty_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
-            this.biomes_o_plenty_download.FlatAppearance.BorderSize = 0;
-            this.biomes_o_plenty_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.biomes_o_plenty_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.biomes_o_plenty_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.biomes_o_plenty_download.Location = new System.Drawing.Point(415, 9);
-            this.biomes_o_plenty_download.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.biomes_o_plenty_download.Name = "biomes_o_plenty_download";
-            this.biomes_o_plenty_download.Size = new System.Drawing.Size(174, 38);
-            this.biomes_o_plenty_download.TabIndex = 4;
-            this.biomes_o_plenty_download.Text = "DOWNLOAD";
-            this.biomes_o_plenty_download.UseVisualStyleBackColor = false;
-            this.biomes_o_plenty_download.Click += new System.EventHandler(this.biomes_o_plenty_download_Click);
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            label6.Location = new System.Drawing.Point(4, 0);
-            label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(228, 38);
-            label6.TabIndex = 0;
-            label6.Text = "Biomes O\' Plenty";
-            // 
-            // panel4
-            // 
-            panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            panel4.Controls.Add(this.jei_download);
-            panel4.Controls.Add(label5);
-            panel4.Location = new System.Drawing.Point(21, 170);
-            panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(597, 61);
-            panel4.TabIndex = 6;
-            // 
-            // jei_download
-            // 
-            this.jei_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
-            this.jei_download.FlatAppearance.BorderSize = 0;
-            this.jei_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jei_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.jei_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.jei_download.Location = new System.Drawing.Point(415, 9);
-            this.jei_download.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.jei_download.Name = "jei_download";
-            this.jei_download.Size = new System.Drawing.Size(174, 38);
-            this.jei_download.TabIndex = 4;
-            this.jei_download.Text = "DOWNLOAD";
-            this.jei_download.UseVisualStyleBackColor = false;
-            this.jei_download.Click += new System.EventHandler(this.jei_download_Click);
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            label5.Location = new System.Drawing.Point(4, 0);
-            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(246, 38);
-            label5.TabIndex = 0;
-            label5.Text = "Just Enough Items";
-            label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // panel3
-            // 
-            panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            panel3.Controls.Add(this.journeymap_download);
-            panel3.Controls.Add(label4);
-            panel3.Location = new System.Drawing.Point(21, 102);
-            panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(597, 61);
-            panel3.TabIndex = 5;
-            // 
-            // journeymap_download
-            // 
-            this.journeymap_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
-            this.journeymap_download.FlatAppearance.BorderSize = 0;
-            this.journeymap_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.journeymap_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.journeymap_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.journeymap_download.Location = new System.Drawing.Point(415, 9);
-            this.journeymap_download.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.journeymap_download.Name = "journeymap_download";
-            this.journeymap_download.Size = new System.Drawing.Size(174, 38);
-            this.journeymap_download.TabIndex = 4;
-            this.journeymap_download.Text = "DOWNLOAD";
-            this.journeymap_download.UseVisualStyleBackColor = false;
-            this.journeymap_download.Click += new System.EventHandler(this.journeymap_download_Click);
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            label4.Location = new System.Drawing.Point(4, 0);
-            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(166, 38);
-            label4.TabIndex = 0;
-            label4.Text = "Journeymap";
-            label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // optifine_panel
-            // 
-            optifine_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            optifine_panel.Controls.Add(this.optifine_download);
-            optifine_panel.Controls.Add(optifine_label);
-            optifine_panel.Location = new System.Drawing.Point(21, 33);
-            optifine_panel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            optifine_panel.Name = "optifine_panel";
-            optifine_panel.Size = new System.Drawing.Size(597, 61);
-            optifine_panel.TabIndex = 3;
-            // 
-            // optifine_download
-            // 
-            this.optifine_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
-            this.optifine_download.FlatAppearance.BorderSize = 0;
-            this.optifine_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optifine_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.optifine_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.optifine_download.Location = new System.Drawing.Point(415, 9);
-            this.optifine_download.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.optifine_download.Name = "optifine_download";
-            this.optifine_download.Size = new System.Drawing.Size(174, 38);
-            this.optifine_download.TabIndex = 4;
-            this.optifine_download.Text = "DOWNLOAD";
-            this.optifine_download.UseVisualStyleBackColor = false;
-            this.optifine_download.Click += new System.EventHandler(this.optifine_download_Click);
-            // 
-            // optifine_label
-            // 
-            optifine_label.AutoSize = true;
-            optifine_label.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            optifine_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            optifine_label.Location = new System.Drawing.Point(4, 0);
-            optifine_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            optifine_label.Name = "optifine_label";
-            optifine_label.Size = new System.Drawing.Size(114, 38);
-            optifine_label.TabIndex = 0;
-            optifine_label.Text = "Optifine";
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.minecraftVersionToolStripMenuItem,
             this.toolsToolStripMenuItem,
             this.advancedToolStripMenuItem});
-            menuStrip1.Location = new System.Drawing.Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            menuStrip1.Size = new System.Drawing.Size(1015, 24);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(870, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -448,18 +240,16 @@ namespace Hypermc
             this.sidepanel.Controls.Add(this.currentMods);
             this.sidepanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidepanel.Location = new System.Drawing.Point(0, 24);
-            this.sidepanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.sidepanel.Name = "sidepanel";
-            this.sidepanel.Size = new System.Drawing.Size(155, 481);
+            this.sidepanel.Size = new System.Drawing.Size(133, 414);
             this.sidepanel.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 11F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(4, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 1;
@@ -470,16 +260,15 @@ namespace Hypermc
             // 
             this.currentMods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.currentMods.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currentMods.Font = new System.Drawing.Font("Yu Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.currentMods.Font = new System.Drawing.Font("Yu Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentMods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(207)))), ((int)(((byte)(207)))));
             this.currentMods.HotTracking = true;
-            this.currentMods.Location = new System.Drawing.Point(7, 42);
-            this.currentMods.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.currentMods.Location = new System.Drawing.Point(6, 36);
             this.currentMods.Name = "currentMods";
             this.currentMods.Scrollable = false;
             this.currentMods.ShowNodeToolTips = true;
             this.currentMods.ShowRootLines = false;
-            this.currentMods.Size = new System.Drawing.Size(141, 407);
+            this.currentMods.Size = new System.Drawing.Size(121, 353);
             this.currentMods.TabIndex = 0;
             // 
             // panel1
@@ -487,19 +276,17 @@ namespace Hypermc
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(155, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Location = new System.Drawing.Point(133, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 62);
+            this.panel1.Size = new System.Drawing.Size(737, 54);
             this.panel1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Yu Gothic Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label3.Location = new System.Drawing.Point(1, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(1, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 31);
             this.label3.TabIndex = 1;
@@ -516,10 +303,9 @@ namespace Hypermc
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.git_https_input);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(805, 97);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel2.Location = new System.Drawing.Point(690, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 408);
+            this.panel2.Size = new System.Drawing.Size(180, 354);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -528,12 +314,11 @@ namespace Hypermc
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(115)))), ((int)(((byte)(60)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.button3.Location = new System.Drawing.Point(4, 255);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Location = new System.Drawing.Point(3, 231);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 44);
+            this.button3.Size = new System.Drawing.Size(173, 38);
             this.button3.TabIndex = 5;
             this.button3.Text = "Internalize";
             this.button3.UseVisualStyleBackColor = false;
@@ -542,10 +327,9 @@ namespace Hypermc
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(0, 225);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox1.Location = new System.Drawing.Point(0, 195);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 23);
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "mod name";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -553,10 +337,9 @@ namespace Hypermc
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.label8.Location = new System.Drawing.Point(2, 183);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(2, 159);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 30);
             this.label8.TabIndex = 3;
@@ -567,12 +350,11 @@ namespace Hypermc
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(115)))), ((int)(((byte)(60)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.button1.Location = new System.Drawing.Point(4, 105);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Location = new System.Drawing.Point(3, 103);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 44);
+            this.button1.Size = new System.Drawing.Size(173, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Internalize";
             this.button1.UseVisualStyleBackColor = false;
@@ -582,10 +364,9 @@ namespace Hypermc
             // 
             this.git_https_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.git_https_input.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.git_https_input.Location = new System.Drawing.Point(0, 75);
-            this.git_https_input.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.git_https_input.Location = new System.Drawing.Point(0, 65);
             this.git_https_input.Name = "git_https_input";
-            this.git_https_input.Size = new System.Drawing.Size(210, 23);
+            this.git_https_input.Size = new System.Drawing.Size(180, 20);
             this.git_https_input.TabIndex = 1;
             this.git_https_input.Text = "git https";
             this.git_https_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -593,10 +374,9 @@ namespace Hypermc
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.label2.Location = new System.Drawing.Point(21, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(18, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 30);
             this.label2.TabIndex = 0;
@@ -605,50 +385,221 @@ namespace Hypermc
             // mod_container
             // 
             this.mod_container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.mod_container.Controls.Add(panel6);
-            this.mod_container.Controls.Add(panel5);
-            this.mod_container.Controls.Add(panel4);
-            this.mod_container.Controls.Add(panel3);
-            this.mod_container.Controls.Add(optifine_panel);
-            this.mod_container.Location = new System.Drawing.Point(155, 97);
-            this.mod_container.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.mod_container.Controls.Add(this.panel6);
+            this.mod_container.Controls.Add(this.panel5);
+            this.mod_container.Controls.Add(this.panel4);
+            this.mod_container.Controls.Add(this.panel3);
+            this.mod_container.Controls.Add(this.optifine_panel);
+            this.mod_container.Location = new System.Drawing.Point(133, 84);
             this.mod_container.Name = "mod_container";
-            this.mod_container.Size = new System.Drawing.Size(643, 405);
+            this.mod_container.Size = new System.Drawing.Size(551, 351);
             this.mod_container.TabIndex = 4;
             this.mod_container.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mod_container_Scroll);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel6.Controls.Add(this.crate_download);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Location = new System.Drawing.Point(18, 265);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(512, 53);
+            this.panel6.TabIndex = 8;
+            // 
+            // crate_download
+            // 
+            this.crate_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
+            this.crate_download.FlatAppearance.BorderSize = 0;
+            this.crate_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.crate_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crate_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.crate_download.Location = new System.Drawing.Point(356, 8);
+            this.crate_download.Name = "crate_download";
+            this.crate_download.Size = new System.Drawing.Size(149, 33);
+            this.crate_download.TabIndex = 4;
+            this.crate_download.Text = "DOWNLOAD";
+            this.crate_download.UseVisualStyleBackColor = false;
+            this.crate_download.Click += new System.EventHandler(this.crate_download_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 38);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Crate";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel5.Controls.Add(this.biomes_o_plenty_download);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Location = new System.Drawing.Point(18, 206);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(512, 53);
+            this.panel5.TabIndex = 7;
+            // 
+            // biomes_o_plenty_download
+            // 
+            this.biomes_o_plenty_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
+            this.biomes_o_plenty_download.FlatAppearance.BorderSize = 0;
+            this.biomes_o_plenty_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.biomes_o_plenty_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.biomes_o_plenty_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.biomes_o_plenty_download.Location = new System.Drawing.Point(356, 8);
+            this.biomes_o_plenty_download.Name = "biomes_o_plenty_download";
+            this.biomes_o_plenty_download.Size = new System.Drawing.Size(149, 33);
+            this.biomes_o_plenty_download.TabIndex = 4;
+            this.biomes_o_plenty_download.Text = "DOWNLOAD";
+            this.biomes_o_plenty_download.UseVisualStyleBackColor = false;
+            this.biomes_o_plenty_download.Click += new System.EventHandler(this.biomes_o_plenty_download_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(228, 38);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Biomes O\' Plenty";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel4.Controls.Add(this.jei_download);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(18, 147);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(512, 53);
+            this.panel4.TabIndex = 6;
+            // 
+            // jei_download
+            // 
+            this.jei_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
+            this.jei_download.FlatAppearance.BorderSize = 0;
+            this.jei_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jei_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jei_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.jei_download.Location = new System.Drawing.Point(356, 8);
+            this.jei_download.Name = "jei_download";
+            this.jei_download.Size = new System.Drawing.Size(149, 33);
+            this.jei_download.TabIndex = 4;
+            this.jei_download.Text = "DOWNLOAD";
+            this.jei_download.UseVisualStyleBackColor = false;
+            this.jei_download.Click += new System.EventHandler(this.jei_download_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(246, 38);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Just Enough Items";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel3.Controls.Add(this.journeymap_download);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(18, 88);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(512, 53);
+            this.panel3.TabIndex = 5;
+            // 
+            // journeymap_download
+            // 
+            this.journeymap_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
+            this.journeymap_download.FlatAppearance.BorderSize = 0;
+            this.journeymap_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.journeymap_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.journeymap_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.journeymap_download.Location = new System.Drawing.Point(356, 8);
+            this.journeymap_download.Name = "journeymap_download";
+            this.journeymap_download.Size = new System.Drawing.Size(149, 33);
+            this.journeymap_download.TabIndex = 4;
+            this.journeymap_download.Text = "DOWNLOAD";
+            this.journeymap_download.UseVisualStyleBackColor = false;
+            this.journeymap_download.Click += new System.EventHandler(this.journeymap_download_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 38);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Journeymap";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // optifine_panel
+            // 
+            this.optifine_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.optifine_panel.Controls.Add(this.optifine_download);
+            this.optifine_panel.Controls.Add(this.optifine_label);
+            this.optifine_panel.Location = new System.Drawing.Point(18, 29);
+            this.optifine_panel.Name = "optifine_panel";
+            this.optifine_panel.Size = new System.Drawing.Size(512, 53);
+            this.optifine_panel.TabIndex = 3;
+            // 
+            // optifine_download
+            // 
+            this.optifine_download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(163)))), ((int)(((byte)(139)))));
+            this.optifine_download.FlatAppearance.BorderSize = 0;
+            this.optifine_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.optifine_download.Font = new System.Drawing.Font("Yu Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optifine_download.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.optifine_download.Location = new System.Drawing.Point(356, 8);
+            this.optifine_download.Name = "optifine_download";
+            this.optifine_download.Size = new System.Drawing.Size(149, 33);
+            this.optifine_download.TabIndex = 4;
+            this.optifine_download.Text = "DOWNLOAD";
+            this.optifine_download.UseVisualStyleBackColor = false;
+            this.optifine_download.Click += new System.EventHandler(this.optifine_download_Click);
+            // 
+            // optifine_label
+            // 
+            this.optifine_label.AutoSize = true;
+            this.optifine_label.Font = new System.Drawing.Font("Yu Gothic Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optifine_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.optifine_label.Location = new System.Drawing.Point(3, 0);
+            this.optifine_label.Name = "optifine_label";
+            this.optifine_label.Size = new System.Drawing.Size(114, 38);
+            this.optifine_label.TabIndex = 0;
+            this.optifine_label.Text = "Optifine";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(1015, 505);
+            this.ClientSize = new System.Drawing.Size(870, 438);
             this.Controls.Add(this.mod_container);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sidepanel);
-            this.Controls.Add(menuStrip1);
-            this.MainMenuStrip = menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1031, 544);
-            this.MinimumSize = new System.Drawing.Size(1031, 544);
+            this.MaximumSize = new System.Drawing.Size(886, 477);
+            this.MinimumSize = new System.Drawing.Size(886, 477);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hypermc";
             this.Load += new System.EventHandler(this.Form1_Load);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            optifine_panel.ResumeLayout(false);
-            optifine_panel.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.sidepanel.ResumeLayout(false);
             this.sidepanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -656,6 +607,16 @@ namespace Hypermc
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.mod_container.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.optifine_panel.ResumeLayout(false);
+            this.optifine_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,3 +672,4 @@ namespace Hypermc
         private System.Windows.Forms.Label label8;
     }
 }
+
