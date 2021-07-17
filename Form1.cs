@@ -14,7 +14,7 @@ using System.Collections;
 
 
 namespace Hypermc
-{
+{  
     public partial class Form1 : Form
     {
             static String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -250,6 +250,27 @@ namespace Hypermc
             version_path = sPath + "\\.minecraft\\versions";
 
             Process.Start(mod_path);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo(path2);
+
+            foreach(FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+
+        }
+
+        private void resetGitTemporariesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            create_appdata_mods();
+        }
+
+        private void openTemporairyGitCopiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(path2);
         }
     }
 }

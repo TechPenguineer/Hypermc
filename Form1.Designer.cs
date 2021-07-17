@@ -45,7 +45,6 @@ namespace Hypermc
             this.label1 = new System.Windows.Forms.Label();
             this.currentMods = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.reload_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.launch_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -73,6 +72,10 @@ namespace Hypermc
             this.openDirectoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetGitTemporariesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openTemporairyGitCopiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,7 +94,8 @@ namespace Hypermc
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.minecraftVersionToolStripMenuItem,
-            this.toolsToolStripMenuItem});
+            this.toolsToolStripMenuItem,
+            this.advancedToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(870, 24);
@@ -207,7 +211,7 @@ namespace Hypermc
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.reload_btn);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.launch_btn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -215,16 +219,6 @@ namespace Hypermc
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 54);
             this.panel1.TabIndex = 2;
-            // 
-            // reload_btn
-            // 
-            this.reload_btn.Location = new System.Drawing.Point(454, 12);
-            this.reload_btn.Name = "reload_btn";
-            this.reload_btn.Size = new System.Drawing.Size(190, 29);
-            this.reload_btn.TabIndex = 2;
-            this.reload_btn.Text = " ";
-            this.reload_btn.UseVisualStyleBackColor = true;
-            this.reload_btn.Click += new System.EventHandler(this.reload_btn_Click);
             // 
             // label3
             // 
@@ -505,6 +499,39 @@ namespace Hypermc
             this.modsToolStripMenuItem.Text = "Mods";
             this.modsToolStripMenuItem.Click += new System.EventHandler(this.modsToolStripMenuItem_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(478, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(166, 42);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Uninstall All Mods";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // advancedToolStripMenuItem
+            // 
+            this.advancedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetGitTemporariesToolStripMenuItem,
+            this.openTemporairyGitCopiesToolStripMenuItem});
+            this.advancedToolStripMenuItem.Name = "advancedToolStripMenuItem";
+            this.advancedToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.advancedToolStripMenuItem.Text = "Advanced";
+            // 
+            // resetGitTemporariesToolStripMenuItem
+            // 
+            this.resetGitTemporariesToolStripMenuItem.Name = "resetGitTemporariesToolStripMenuItem";
+            this.resetGitTemporariesToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.resetGitTemporariesToolStripMenuItem.Text = "Reset Git temporaries";
+            this.resetGitTemporariesToolStripMenuItem.Click += new System.EventHandler(this.resetGitTemporariesToolStripMenuItem_Click);
+            // 
+            // openTemporairyGitCopiesToolStripMenuItem
+            // 
+            this.openTemporairyGitCopiesToolStripMenuItem.Name = "openTemporairyGitCopiesToolStripMenuItem";
+            this.openTemporairyGitCopiesToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.openTemporairyGitCopiesToolStripMenuItem.Text = "Open Temporairy Git Copies";
+            this.openTemporairyGitCopiesToolStripMenuItem.Click += new System.EventHandler(this.openTemporairyGitCopiesToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,11 +616,14 @@ namespace Hypermc
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button crate_download;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button reload_btn;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openDirectoriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem versionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modsToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem advancedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetGitTemporariesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openTemporairyGitCopiesToolStripMenuItem;
     }
 }
 
