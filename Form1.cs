@@ -15,7 +15,7 @@ using System.IO;
 {
     public partial class main_frame : Form
     {
-        private void OpenBrowser(string url) => Process.Start(url);
+        private void OpenBrowser(string url) => Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
 
         public main_frame()
         {
