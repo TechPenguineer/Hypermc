@@ -22,7 +22,7 @@ You need **2** simple things
   `NOTE:` As of right now we are only supported by **Windows** **ONLY**\
 
   **VERSION 1.0 (Latest)**<br>
-    [Click here to download version 1.0](/TechPenguineer/Hypermc/releases/download/1.0.0/Hypermc.exe)
+    [Click here to download version 1.0](https://github.com/TechPenguineer/Hypermc/releases/tag/1.0.0)
   
 # Install Instructions
  
@@ -30,7 +30,7 @@ You need **2** simple things
  **IF YOU ARE A EARLY INSTALLED YOU WILL GET A WARNING! YES IT IS SAFE! PRESS RUN ANYWAY**
 
   Step 1. 
-    Install the exe file by pressing [Here](/TechPenguineer/Hypermc/releases/download/1.0.0/Hypermc.exe)
+    Install the exe file by pressing [Here](https://github.com/TechPenguineer/Hypermc/releases/tag/1.0.0)
   
   Step 2.
     You will get a warning. It is a safe file just not comonly used. Press "Run Anyway".
