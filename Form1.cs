@@ -17,22 +17,18 @@ namespace Hypermc
 {
     public partial class Form1 : Form
     {
+            static String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            String path = sPath + "\\.hypermc";
+            String path2 = sPath + "\\.hypermc\\git_temp";
         public void create_appdata_mods()
         {
-            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var process = new System.Diagnostics.Process();
-            var startInfo = new System.Diagnostics.ProcessStartInfo
-            {
-                WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal,
-                FileName = "cmd.exe",
-                RedirectStandardInput = true,
-                UseShellExecute = false
-            };
 
-            process.StartInfo = startInfo;
-            process.Start();
-            process.StandardInput.WriteLine("cd " + sPath + " && mkdir Hypermc && cd Hypermc && git clone https://github.com/HyperMC-mods/mod-pack.git");
+            String command = "/c c:";
+            Console.WriteLine(command);
+            Directory.CreateDirectory(path);
+            Directory.CreateDirectory(path2);
 
+            Process.Start("cmd.exe", "/c c: && cd " + path2 + " && git clone https://github.com/HyperMC-mods/mod-pack.git . ");
         }
         public Form1()
         {
@@ -188,14 +184,14 @@ namespace Hypermc
         {
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine(path);
-            copy_to_mod_folder("../../mods/","OptiFine_1.16.5.jar");
+            copy_to_mod_folder(path2,"OptiFine_1.16.5.jar");
         }
 
         private void journeymap_download_Click(object sender, EventArgs e)
         {
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine(path);
-            copy_to_mod_folder("../../mods/","journeymap-1.16.5.jar");
+            copy_to_mod_folder(path2,"journeymap-1.16.5.jar");
         }
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,21 +208,21 @@ namespace Hypermc
         {
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine(path);
-            copy_to_mod_folder("../../mods/","jei_1.12.2-4.16.jar");
+            copy_to_mod_folder(path2,"jei_1.12.2-4.16.jar");
         }
 
         private void biomes_o_plenty_download_Click(object sender, EventArgs e)
         {
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine(path);
-            copy_to_mod_folder("../../mods/","BiomesOPlenty-1.16.5-universal.jar");
+            copy_to_mod_folder(path2,"BiomesOPlenty-1.16.5-universal.jar");
         }
 
         private void crate_download_Click(object sender, EventArgs e)
         {
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine(path);
-            copy_to_mod_folder("../../mods/", "create-mc1.16.5.jar");
+            copy_to_mod_folder(path2, "create-mc1.16.5.jar");
         }
 
         private void reload_btn_Click(object sender, EventArgs e)
