@@ -28,7 +28,7 @@ namespace Hypermc
                 {
                     Repository.Clone("https://github.com/HyperMC-mods/mod-pack.git .", path2);
                 }
-                else if(fileCount > 0)
+                else if (fileCount > 0)
                 {
                     // TODO: Add code
                 }
@@ -95,7 +95,6 @@ namespace Hypermc
 
         public void Form1_Load(object sender, EventArgs e)
         {
-
             string mod_path, version_path, version_compatible;
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
@@ -106,11 +105,14 @@ namespace Hypermc
             if (!Directory.Exists(version_path))
             {
                 MessageBox.Show("Looks like you dont have Forge version 1.16.5 installed! Please make sure to install it or else this application will not work", "Incompatible Version", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
+            }
+            else
             {
-                try{
-                ListDirectory(currentMods, mod_path);
-                }catch(IOException)
+                try
+                {
+                    ListDirectory(currentMods, mod_path);
+                }
+                catch(IOException)
                 {
 
                 }
@@ -138,7 +140,6 @@ namespace Hypermc
             string git_https = git_https_input.Text;
             try
             {
-
                 string mod_path;
                 string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 mod_path = sPath + "\\.minecraft\\mods";
@@ -156,7 +157,6 @@ namespace Hypermc
         private void redditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.reddit.com/r/hypermc/");
-
         }
 
         private void mod_container_Scroll(object sender, ScrollEventArgs e)
@@ -180,13 +180,13 @@ namespace Hypermc
 
         public void copy_to_mod_folder(string sourcePath,string file_name)
         {
-               string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-               string targetPath = sPath + "\\.minecraft\\mods";
-               string sourceFile = Path.Combine(sourcePath, file_name);
-               string destFile = Path.Combine(targetPath, file_name);
+            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string targetPath = sPath + "\\.minecraft\\mods";
+            string sourceFile = Path.Combine(sourcePath, file_name);
+            string destFile = Path.Combine(targetPath, file_name);
 
-               File.Copy(sourceFile, destFile, true);
-               Form1_Load(null, EventArgs.Empty);
+            File.Copy(sourceFile, destFile, true);
+            Form1_Load(null, EventArgs.Empty);
 
         }
         private void optifine_download_Click(object sender, EventArgs e)
