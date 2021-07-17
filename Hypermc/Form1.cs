@@ -52,22 +52,22 @@ namespace Hypermc
 
         private void githubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc");
+            Process.Start("https://github.com/TechPenguineer/Hypermc");
         }
 
         private void docsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
+            Process.Start("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
         }
 
         private void reportABugToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/issues/new");
+            Process.Start("https://github.com/TechPenguineer/Hypermc/issues/new");
         }
 
         private void downloadNewReleaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
+            Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
         }
 
         public void ListDirectory(TreeView treeView, string path)
@@ -155,7 +155,7 @@ namespace Hypermc
 
         private void redditToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.reddit.com/r/hypermc/");
+            Process.Start("https://www.reddit.com/r/hypermc/");
 
         }
 
@@ -182,10 +182,10 @@ namespace Hypermc
         {
                String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                string targetPath = sPath + "\\.minecraft\\mods";
-               string sourceFile = System.IO.Path.Combine(sourcePath, file_name);
-               string destFile = System.IO.Path.Combine(targetPath, file_name);
+               string sourceFile = Path.Combine(sourcePath, file_name);
+               string destFile = Path.Combine(targetPath, file_name);
 
-               System.IO.File.Copy(sourceFile, destFile, true);
+               File.Copy(sourceFile, destFile, true);
                Form1_Load(null, EventArgs.Empty);
 
         }
@@ -263,7 +263,7 @@ namespace Hypermc
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.IO.DirectoryInfo di = new DirectoryInfo(path2);
+            DirectoryInfo di = new DirectoryInfo(path2);
 
             foreach(FileInfo file in di.GetFiles())
             {
