@@ -3,12 +3,6 @@ using System.Windows.Forms;
 
 namespace Hypermc.Controls
 {
-    public class ModDownloadEventArgs : EventArgs
-    {
-        public Mod Mod { get; init; }
-        public ModDownloadEventArgs(Mod mod) => Mod = mod;
-    }
-
     /// <summary>
     /// Control prompting the user to download a mod
     /// </summary>
