@@ -44,6 +44,7 @@ namespace Hypermc
         {
             InitializeComponent();
             create_appdata_mods();
+            Console.Writeline("Loaded...")
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
