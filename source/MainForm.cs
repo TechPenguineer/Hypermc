@@ -116,10 +116,7 @@ namespace Hypermc
 
         }
 
-        private void redditToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://www.reddit.com/r/hypermc/");
-        }
+        private void redditToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://www.reddit.com/r/hypermc/");
 
         private void mod_container_Scroll(object sender, ScrollEventArgs e)
         {
