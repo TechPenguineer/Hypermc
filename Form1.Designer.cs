@@ -206,7 +206,6 @@ namespace Hypermc
             // 
             // currentMods
             // 
-            this.currentMods.CheckBoxes = true;
             this.currentMods.Location = new System.Drawing.Point(6, 49);
             this.currentMods.Name = "currentMods";
             this.currentMods.Size = new System.Drawing.Size(121, 353);

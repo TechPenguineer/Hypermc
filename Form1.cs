@@ -23,20 +23,12 @@ namespace Hypermc
         public void create_appdata_mods()
         {
 
-            String command = "/c c:";
+            string command = "/c c:";
             Console.WriteLine(command);
             Directory.CreateDirectory(path);
             Directory.CreateDirectory(path2);
 
             Process.Start("cmd.exe", "/c c: && cd " + path2 + " && git clone https://github.com/HyperMC-mods/mod-pack.git . ");
-        }
-
-        // API 
-        public void pull_mod_from_api(String mod_name)
-        {
-            String item_id, modName;
-            modName = mod_name;
-            String api_request_format = "https://www.curseforge.com/minecraft/mc-mods/" + modName + "/download/";// + item_id + "/file";
         }
         public Form1()
         {
