@@ -76,6 +76,9 @@ namespace Hypermc
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetGitTemporariesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTemporairyGitCopiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.sidepanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -203,6 +206,7 @@ namespace Hypermc
             // 
             // currentMods
             // 
+            this.currentMods.CheckBoxes = true;
             this.currentMods.Location = new System.Drawing.Point(6, 49);
             this.currentMods.Name = "currentMods";
             this.currentMods.Size = new System.Drawing.Size(121, 353);
@@ -250,6 +254,9 @@ namespace Hypermc
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.git_https_input);
             this.panel2.Controls.Add(this.label2);
@@ -532,6 +539,37 @@ namespace Hypermc
             this.openTemporairyGitCopiesToolStripMenuItem.Text = "Open Temporairy Git Copies";
             this.openTemporairyGitCopiesToolStripMenuItem.Click += new System.EventHandler(this.openTemporairyGitCopiesToolStripMenuItem_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 18F);
+            this.label8.Location = new System.Drawing.Point(2, 159);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(175, 30);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Install by name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.Location = new System.Drawing.Point(0, 195);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "Mod Name";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(3, 221);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(173, 38);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Internalize";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +662,9 @@ namespace Hypermc
         private System.Windows.Forms.ToolStripMenuItem advancedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetGitTemporariesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openTemporairyGitCopiesToolStripMenuItem;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
     }
 }
 
