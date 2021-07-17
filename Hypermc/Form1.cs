@@ -139,7 +139,7 @@ namespace Hypermc
                 string mod_path;
                 string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 mod_path = sPath + "\\.minecraft\\mods";
-                string make_cmd = "cd " + mod_path + " && " + "git clone " + git_https;
+                string make_cmd = $"cd {mod_path} && git clone {git_https}";
                 Console.WriteLine(git_https);
                 Repository.Clone(git_https, mod_path);
             }
