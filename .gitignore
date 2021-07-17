@@ -2,7 +2,6 @@
 *.exe
 *.pdb
 *.dll
-/.vs
 /.metals
 /bin/Debug
 /obj
