@@ -20,11 +20,36 @@ namespace Hypermc
             static String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             String path = sPath + "\\.hypermc";
             String path2 = sPath + "\\.hypermc\\git_temp";
-            String modLOC = sPath + "\\.minecraft\\mods";
+        public void create_appdata_mods()
+        {
+            try
+            {
+                var directoryInfo = new DirectoryInfo(path2);
+                int fileCount = directoryInfo.GetFiles().Length;
 
+                int dirCount = directoryInfo.GetDirectories().Length;
+                string command = "/c c:";
+                Console.WriteLine(command);
+                Directory.CreateDirectory(path);
+                Directory.CreateDirectory(path2);
+                if (dirCount == 0 && fileCount==0 )
+                {
+                    Repository.Clone("https://github.com/HyperMC-mods/mod-pack.git .", path2);
+                }
+                else if(fileCount > 0)
+                {
+
+                }else
+                {
+                    MessageBox.Show("Please go to " + path2 + " and delete the .git folder. I can not do it since I dont have admin permissions.", "HyperMC", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } catch(Exception)
+            { }
+        }
         public Form1()
         {
             InitializeComponent();
+            create_appdata_mods();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -173,12 +198,16 @@ namespace Hypermc
         }
         private void optifine_download_Click(object sender, EventArgs e)
         {
-            Repository.Clone("https://github.com/HyperMC-mods/optifine.git", modLOC);
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder(path2,"OptiFine_1.16.5.jar");
         }
 
         private void journeymap_download_Click(object sender, EventArgs e)
         {
-            Repository.Clone("https://github.com/HyperMC-mods/journeymap.git", modLOC);
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder(path2,"journeymap-1.16.5.jar");
         }
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -193,20 +222,23 @@ namespace Hypermc
 
         private void jei_download_Click(object sender, EventArgs e)
         {
-            Repository.Clone("https://github.com/HyperMC-mods/jei.git", modLOC);
-
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder(path2,"jei_1.12.2-4.16.jar");
         }
 
         private void biomes_o_plenty_download_Click(object sender, EventArgs e)
         {
-            Repository.Clone("https://github.com/HyperMC-mods/BiomesOPlenty.git", modLOC);
-
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder(path2,"BiomesOPlenty-1.16.5-universal.jar");
         }
 
         private void crate_download_Click(object sender, EventArgs e)
         {
-            Repository.Clone("https://github.com/HyperMC-mods/crates.git", modLOC);
-
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
+            copy_to_mod_folder(path2, "create-mc1.16.5.jar");
         }
 
         private void reload_btn_Click(object sender, EventArgs e)
@@ -249,6 +281,7 @@ namespace Hypermc
 
         private void resetGitTemporariesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            create_appdata_mods();
         }
 
         private void openTemporairyGitCopiesToolStripMenuItem_Click(object sender, EventArgs e)
