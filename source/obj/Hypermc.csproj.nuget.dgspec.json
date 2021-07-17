@@ -1,21 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\quickmd\\Hypermc\\Hypermc\\Hypermc.csproj": {}
+    "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\source\\Hypermc.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\quickmd\\Hypermc\\Hypermc\\Hypermc.csproj": {
+    "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\source\\Hypermc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\quickmd\\Hypermc\\Hypermc\\Hypermc.csproj",
+        "projectUniqueName": "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\source\\Hypermc.csproj",
         "projectName": "Hypermc",
-        "projectPath": "D:\\Desktop\\quickmd\\Hypermc\\Hypermc\\Hypermc.csproj",
-        "packagesPath": "C:\\Users\\rsrud\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\quickmd\\Hypermc\\Hypermc\\obj\\",
+        "projectPath": "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\source\\Hypermc.csproj",
+        "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\source\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rsrud\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"

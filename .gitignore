@@ -14,3 +14,6 @@
 /Hypermc.exe.config
 /Hypermc.sln
 source/mod-pack/
+.vs/Hypermc/v16/.suo
+source/Hypermc.csproj.user
+source/obj/Debug/net5.0-windows/Hypermc.csproj.FileListAbsolute.txt

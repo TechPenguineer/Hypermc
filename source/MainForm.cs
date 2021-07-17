@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Hypermc
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         static string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         string path = sPath + "\\.hypermc";
@@ -40,11 +40,11 @@ namespace Hypermc
             }
             catch { throw; } // TODO: Add code to handle the error or remove the try-catch to rethrow the exception
         }
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             create_appdata_mods();
-            Console.Writeline("Loaded...");
+            Console.WriteLine("Loaded...");
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
