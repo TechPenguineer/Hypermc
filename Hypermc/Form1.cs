@@ -97,7 +97,7 @@ namespace Hypermc
         {
 
             string mod_path, version_path, version_compatible;
-            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = sPath+"\\.minecraft\\mods";
             version_path = sPath+"\\.minecraft\\versions";
@@ -140,9 +140,9 @@ namespace Hypermc
             {
 
                 string mod_path;
-                String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 mod_path = sPath + "\\.minecraft\\mods";
-                String make_cmd = "cd " + mod_path + " && " + "git clone " + git_https;
+                string make_cmd = "cd " + mod_path + " && " + "git clone " + git_https;
                 Console.WriteLine(git_https);
                 Repository.Clone(git_https, mod_path);
             }
@@ -180,7 +180,7 @@ namespace Hypermc
 
         public void copy_to_mod_folder(string sourcePath,string file_name)
         {
-               String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+               string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                string targetPath = sPath + "\\.minecraft\\mods";
                string sourceFile = Path.Combine(sourcePath, file_name);
                string destFile = Path.Combine(targetPath, file_name);
@@ -242,7 +242,7 @@ namespace Hypermc
         private void versionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string mod_path, version_path, version_compatible;
-            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = sPath + "\\.minecraft\\mods";
             version_path = sPath + "\\.minecraft\\versions";
@@ -253,7 +253,7 @@ namespace Hypermc
         private void modsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string mod_path, version_path, version_compatible;
-            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             version_compatible = "Forge 1.16.5";
             mod_path = sPath + "\\.minecraft\\mods";
             version_path = sPath + "\\.minecraft\\versions";
