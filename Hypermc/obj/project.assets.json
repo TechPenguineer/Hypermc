@@ -150,11 +150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaming\\source\\repos\\Hypermc\\Hypermc\\Hypermc.csproj",
+      "projectUniqueName": "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\Hypermc\\Hypermc.csproj",
       "projectName": "Hypermc",
-      "projectPath": "C:\\Users\\Gaming\\source\\repos\\Hypermc\\Hypermc\\Hypermc.csproj",
+      "projectPath": "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\Hypermc\\Hypermc.csproj",
       "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gaming\\source\\repos\\Hypermc\\Hypermc\\obj\\",
+      "outputPath": "C:\\Users\\Gaming\\Documents\\GitHub\\Hypermc\\Hypermc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

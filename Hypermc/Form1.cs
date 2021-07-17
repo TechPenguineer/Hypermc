@@ -17,9 +17,10 @@ namespace Hypermc
 {
     public partial class Form1 : Form
     {
-            static String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            String path = sPath + "\\.hypermc";
-            String path2 = sPath + "\\.hypermc\\git_temp";
+        static string sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        string path = sPath + "\\.hypermc";
+        string path2 = sPath + "\\.hypermc\\git_temp";
+
         public void create_appdata_mods()
         {
             try
