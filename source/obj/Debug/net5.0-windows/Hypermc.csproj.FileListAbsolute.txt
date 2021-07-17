@@ -1,7 +1,0 @@
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.csproj.AssemblyReference.cache
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.Form1.resources
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.csproj.GenerateResource.cache
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.GeneratedMSBuildEditorConfig.editorconfig
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.AssemblyInfoInputs.cache
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.AssemblyInfo.cs
-D:\Desktop\quickmd\Hypermc\Hypermc\obj\Debug\net5.0-windows\Hypermc.csproj.CoreCompileInputs.cache
