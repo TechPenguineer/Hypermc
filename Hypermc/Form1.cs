@@ -51,25 +51,18 @@ namespace Hypermc
 
         }
 
-        private void githubToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/TechPenguineer/Hypermc");
-        }
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc");
 
-        private void docsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
-        }
+        private void docsToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
 
-        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/TechPenguineer/Hypermc/issues/new");
-        }
+        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/issues/new");
 
-        private void downloadNewReleaseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/TechPenguineer/Hypermc/releases");
-        }
+        private void downloadNewReleaseToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/releases");
+
+        /// <summary>
+        /// Opens the default web browser to view a url
+        /// </summary>
+        private void OpenBrowser(string url) => Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
 
         public void ListDirectory(TreeView treeView, string path)
         {
