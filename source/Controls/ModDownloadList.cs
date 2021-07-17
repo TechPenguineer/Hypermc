@@ -3,6 +3,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Hypermc.Controls
@@ -14,6 +16,14 @@ namespace Hypermc.Controls
         public ModDownloadList()
         {
             InitializeComponent();
+        }
+
+        [Category("Appearance")]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        public override Color BackColor
+        {
+            get => base.BackColor;
+            set => base.BackColor = table.BackColor = value;
         }
 
         #region IList<> implementation
