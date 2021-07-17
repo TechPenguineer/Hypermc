@@ -24,19 +24,20 @@ namespace Hypermc
                 Console.WriteLine(command);
                 Directory.CreateDirectory(path);
                 Directory.CreateDirectory(path2);
-                if (dirCount == 0 && fileCount==0 )
+                if (dirCount == 0 && fileCount == 0)
                 {
                     Repository.Clone("https://github.com/HyperMC-mods/mod-pack.git .", path2);
                 }
                 else if(fileCount > 0)
                 {
-
-                }else
+                    // TODO: Add code
+                }
+                else
                 {
                     MessageBox.Show("Please go to " + path2 + " and delete the .git folder. I can not do it since I dont have admin permissions.", "HyperMC", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } catch(Exception)
-            { }
+            }
+            catch { throw; } // TODO: Add code to handle the error or remove the try-catch to rethrow the exception
         }
         public Form1()
         {
