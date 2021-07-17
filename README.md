@@ -21,7 +21,20 @@ You need **2** simple things
 # Installation
   `NOTE:` As of right now we are only supported by **Windows** **ONLY**\
 
+  **VERSION 1.0 (Latest)**<br>
+    [Click here to download version 1.0](github.com/TechPenguineer/Hypermc/releases/download/1.0.0/Hypermc.exe)
+  
+# Install Instructions
+ 
 
-  ```
-    There are no current released
-  ```
+ **IF YOU ARE A EARLY INSTALLED YOU WILL GET A WARNING! YES IT IS SAFE! PRESS RUN ANYWAY**
+
+  Step 1. 
+    Install the exe file by pressing [Here](github.com/TechPenguineer/Hypermc/releases/download/1.0.0/Hypermc.exe)
+  
+  Step 2.
+    You will get a warning. It is a safe file just not comonly used. Press "Run Anyway".
+  
+  Step 3. Launch the application. This will bring up a terminal window for a breif second. Do **NOT** cancel the operation.
+
+  Step 4: A ui window will popup. You can install mods from there
