@@ -17,6 +17,24 @@ namespace Hypermc
 {
     public partial class Form1 : Form
     {
+        public void create_appdata_mods(string sourcePath, string file_name)
+        {
+            String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var process = new System.Diagnostics.Process();
+            var startInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal,
+                FileName = "cmd.exe",
+                RedirectStandardInput = true,
+                UseShellExecute = false
+            };
+
+            process.StartInfo = startInfo;
+            process.Start();
+            process.StandardInput.WriteLine("cd " + sPath);
+            process.StandardInput.WriteLine("git clone ");
+
+        }
         public Form1()
         {
             InitializeComponent();

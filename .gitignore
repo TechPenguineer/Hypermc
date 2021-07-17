@@ -1,6 +1,9 @@
-/Hypermc.csproj
-/Form1.Designer.cs
-/App.config
-/mods
-/obj/debug
-/bin
+
+*.exe
+*.pdb
+*.dll
+/.vs
+/.metals
+/bin/Debug
+/obj
+*.cache
