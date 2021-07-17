@@ -17,7 +17,7 @@ namespace Hypermc
 {
     public partial class Form1 : Form
     {
-        public void create_appdata_mods(string sourcePath, string file_name)
+        public void create_appdata_mods()
         {
             String sPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var process = new System.Diagnostics.Process();
@@ -31,13 +31,13 @@ namespace Hypermc
 
             process.StartInfo = startInfo;
             process.Start();
-            process.StandardInput.WriteLine("cd " + sPath);
-            process.StandardInput.WriteLine("git clone ");
+            process.StandardInput.WriteLine("cd " + sPath + " && mkdir Hypermc && cd Hypermc && git clone https://github.com/HyperMC-mods/mod-pack.git");
 
         }
         public Form1()
         {
             InitializeComponent();
+            create_appdata_mods();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
