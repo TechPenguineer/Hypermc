@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypermc", "Hypermc.csproj", "{1213D85D-3605-446D-8ADB-49635375CFDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypermc", "Hypermc\Hypermc.csproj", "{44242397-080D-4978-97EA-8BEBEDC36A6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1213D85D-3605-446D-8ADB-49635375CFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1213D85D-3605-446D-8ADB-49635375CFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1213D85D-3605-446D-8ADB-49635375CFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1213D85D-3605-446D-8ADB-49635375CFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44242397-080D-4978-97EA-8BEBEDC36A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44242397-080D-4978-97EA-8BEBEDC36A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44242397-080D-4978-97EA-8BEBEDC36A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44242397-080D-4978-97EA-8BEBEDC36A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C3B73CEB-D680-48F9-A0AD-1FFFB7EAB292}
+		SolutionGuid = {C5B9A743-6BEB-46A6-A2BC-CAFD982A0B90}
 	EndGlobalSection
 EndGlobal
