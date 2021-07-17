@@ -6,7 +6,6 @@
 /bin/Debug
 /obj
 *.cache
-/.vscode
 /Hypermc/mod-pack/
 /mods
 /Hypermc_TemporaryKey.pfx
