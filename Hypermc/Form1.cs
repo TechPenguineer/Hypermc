@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 using LibGit2Sharp;
+using System.Linq;
 
 namespace Hypermc
 {
@@ -78,19 +79,14 @@ namespace Hypermc
         }
         private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
-
             var directoryNode = new TreeNode(directoryInfo.Name);
-            foreach(var directory in directoryInfo.GetDirectories())
-            {
-                directoryNode.Nodes.Add(CreateDirectoryNode(directory));
-            }
-            foreach(var file in directoryInfo.GetFiles())
-            {
-                directoryNode.Nodes.Add(new TreeNode(file.Name));
-            }
+
+            directoryNode.Nodes.AddRange(directoryInfo.GetDirectories()
+                .Select(d => CreateDirectoryNode(d)).ToArray());
+            directoryNode.Nodes.AddRange(directoryInfo.GetFiles()
+                .Select(f => new TreeNode(f.Name)).ToArray());
+
             return directoryNode;
-
-
         }
 
         public void Form1_Load(object sender, EventArgs e)
