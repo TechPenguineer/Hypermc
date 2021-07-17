@@ -4,13 +4,11 @@
 
 Hypermc&trade; is a open source Minecraft mod manager. It's automatic game file detector makes it super quick and easy to use. All you have to do is press "Add Mod" and your all set. The mod has been implemented into the game.
 
-Hypermc&trade; also supports cracked versions of minecraft!
-
 # Requirements
 
 You need **2** simple things
-- Minecraft
-- Forge 1.16.5
+- [Minecraft](https://minecraft.net)
+- [Forge 1.16.5](https://files.minecraftforge.net/net/minecraftforge/forge/)
 
  Once those things are installed you are all set!
 
@@ -21,16 +19,16 @@ You need **2** simple things
 # Installation
   `NOTE:` As of right now we are only supported by **Windows** **ONLY**\
 
-  **VERSION 1.0 (Latest)**<br>
-    [Click here to download version 1.0](https://github.com/TechPenguineer/Hypermc/releases/tag/1.0.0)
+  **Get the latest version!**<br>
+    [Click here](https://github.com/TechPenguineer/Hypermc/releases/latest)
   
 # Install Instructions
  
 
- **IF YOU ARE A EARLY INSTALLED YOU WILL GET A WARNING! YES IT IS SAFE! PRESS RUN ANYWAY**
+ **If you are an early adopter of a new version, you may get a Windows Security warning - This is fine, and it is safe. Click "Run Anyway" to continue.**
 
   Step 1. 
-    Install the exe file by pressing [Here](https://github.com/TechPenguineer/Hypermc/releases/tag/1.0.0)
+    Install the exe file by pressing [Here](https://github.com/TechPenguineer/Hypermc/releases/latest)
   
   Step 2.
     You will get a warning. It is a safe file just not comonly used. Press "Run Anyway".
