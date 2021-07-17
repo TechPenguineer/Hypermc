@@ -9,6 +9,9 @@ namespace Hypermc.Controls
         public ModDownloadEventArgs(Mod mod) => Mod = mod;
     }
 
+    /// <summary>
+    /// Control prompting the user to download a mod
+    /// </summary>
     public partial class ModDownloadListing : UserControl
     {
         private Mod _mod { get; set; }
@@ -18,7 +21,7 @@ namespace Hypermc.Controls
             set
             {
                 if (value is null)
-                    throw new ArgumentNullException(nameof(value)));
+                    throw new ArgumentNullException(nameof(value));
 
                 _mod = value;
                 lblModName.Text = _mod.Name;
