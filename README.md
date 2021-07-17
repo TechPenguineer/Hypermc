@@ -1,38 +1,17 @@
-<img src="https://i.imgur.com/3YTFrNo.png" style="width:400px" align="center">
+# Why did we reset?
+When we were attempting to clean up the workspace we accidentally deleted the generated dll's. Those DLLs are generated when the project was made so we can not reconstruct them
+# How long will it take to work again? 
+We are completely restarting the project on the same repository. We will have all the same developers, names, info, and base. The UI will be completely redisgned and a lot more interactive and less static. This should be a lot quicker as there are better developers than myself. So about 1-2 Weeks
+# Will there be anything new?
 
-# About
+**New Things Being Added:**
 
-Hypermc&trade; is a open source Minecraft mod manager. It's automatic game file detector makes it super quick and easy to use. All you have to do is press "Add Mod" and your all set. The mod has been implemented into the game.
+- Expanded list of mods from API's
 
-# Requirements
+- Search bars
 
-You need **2** simple things
-- [Minecraft](https://minecraft.net)
-- [Forge 1.16.5](https://files.minecraftforge.net/net/minecraftforge/forge/)
+- Setup wizards
 
- Once those things are installed you are all set!
+- New Colour schemas
 
- # Help
- **[Click here to report a bug](https://github.com/TechPenguineer/Hypermc/issues/new)**<br>
- **[Click here to go to the subreddit](https://www.reddit.com/r/hypermc/)**
-
-# Installation
-  `NOTE:` As of right now we are only supported by **Windows** **ONLY**\
-
-  **Get the latest version!**<br>
-    [Click here](https://github.com/TechPenguineer/Hypermc/releases/latest)
-  
-# Install Instructions
- 
-
- **If you are an early adopter of a new version, you may get a Windows Security warning - This is fine, and it is safe. Click "Run Anyway" to continue.**
-
-  Step 1. 
-    Install the exe file by pressing [Here](https://github.com/TechPenguineer/Hypermc/releases/latest)
-  
-  Step 2.
-    You will get a warning. It is a safe file just not comonly used. Press "Run Anyway".
-  
-  Step 3. Launch the application. This will bring up a terminal window for a breif second. Do **NOT** cancel the operation.
-
-  Step 4: A ui window will popup. You can install mods from there
+- More supported versions and mod API's
