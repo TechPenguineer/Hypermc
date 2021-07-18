@@ -7,7 +7,7 @@
 
 <a href="https://github.com/techpenguineer/hypermc/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/techpenguineer/hypermc" /></a>
-<a href="https://github.com/badges/shields/pulse" alt="Activity">
+<a href="https://github.com/techpenguineer/hypermc/pulse" alt="Activity">
         <img src="https://img.shields.io/github/commit-activity/m/techpenguineer/hypermc" /></a>
 <a><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
 <hr>
