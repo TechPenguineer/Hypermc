@@ -15,6 +15,11 @@ using System.IO;
 {
     public partial class main_frame : Form
     {
+        public void find_data()
+        {
+               
+        }
+
         private void OpenBrowser(string url) => Process.Start(url);
 
         public main_frame()
@@ -33,5 +38,7 @@ using System.IO;
         }
 
         private void githubToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc");
+
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e) => OpenBrowser("https://github.com/TechPenguineer/Hypermc/tree/main/docs");
     }
 }
