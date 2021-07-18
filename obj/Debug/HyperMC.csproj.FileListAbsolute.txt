@@ -27,3 +27,4 @@ D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\bin\Debug\LibGit2Sharp.dll
 D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\bin\Debug\LibGit2Sharp.pdb
 D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\bin\Debug\LibGit2Sharp.xml
 D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\obj\Debug\HyperMC.csproj.CopyComplete
+D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\bin\Debug\ForgedCurse.dll
