@@ -3,8 +3,8 @@
 *.pdb
 *.dll
 /.metals
-/bin/Debug
-/obj
+bin/
+obj/
 *.cache
 /Hypermc/mod-pack/
 /mods
