@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./img/icob.png" align="center">
+<img src="https://i.imgur.com/mVy4j4L.png" align="center">
 <br>
 <h1 align="center">HyperMC</h1>
 </p>
