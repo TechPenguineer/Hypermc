@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ForgedCurse;
 using System.Windows.Forms;
 using System.Diagnostics;
 using LibGit2Sharp;
 using System.Linq;
 using System.IO;
+using ForgedCurse;
 
 namespace HyperMC
 {
@@ -49,7 +49,8 @@ namespace HyperMC
 
         private void main_frame_Load(object sender, EventArgs e)
         {
-       
+            ForgeClient client = new ForgeClient();
+            AddonSearchData addonSearchData = client.SearchAddons();
         }
     }
 }
