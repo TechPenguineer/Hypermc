@@ -6,24 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ForgedCurse;
 using System.Windows.Forms;
 using System.Diagnostics;
 using LibGit2Sharp;
-using ForgedCurse;
-using ForgedCurse.Utility;
 using System.Linq;
 using System.IO;
 
- namespace HyperMC
+namespace HyperMC
 {
     public partial class main_frame : Form
     {
-        public void getAddonById(string id)
-        {
-            ForgeClient client = new ForgeClient();
-            dynamic addon = client.GetAddon(id);
-            Console.WriteLine(addon.Authors.First().Name);
-        }
         private void OpenBrowser(string url) => Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
 
         public main_frame()
@@ -52,7 +45,11 @@ using System.IO;
         {
             string id_in = gabi_in.Text;
 
-            getAddonById(id_in);
+        }
+
+        private void main_frame_Load(object sender, EventArgs e)
+        {
+       
         }
     }
 }

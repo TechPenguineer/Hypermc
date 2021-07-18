@@ -151,6 +151,7 @@ namespace HyperMC
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "main_frame";
             this.Text = "HyperMC";
+            this.Load += new System.EventHandler(this.main_frame_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
