@@ -11,10 +11,13 @@ using System.Diagnostics;
 using LibGit2Sharp;
 using System.Linq;
 using System.IO;
+
  namespace HyperMC
 {
     public partial class main_frame : Form
     {
+
+        
         private void OpenBrowser(string url) => Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
 
         public main_frame()
