@@ -24,7 +24,7 @@ HyperMC is a Minecraft Extention manager. Downloading assests then putting them 
 <p>
 <h1>What makes us different?  </h1>
 <p align="center">
-HyperMC is a Minecraft Extention manager. Not only does it mean that we have mods but we have other things such as new versions, apis, mods, resourcepacks, and shaders. We will also have a custom file type that you can use to download mod packs made by others/
+HyperMC is a Minecraft Extention manager. Not only does it mean that we have mods but we have other things such as new versions, apis, mods, resourcepacks, and shaders. We will also have a custom file type that you can use to download mod packs made by others.
 </p>
 </p>
 <br>
@@ -71,4 +71,6 @@ As of right now we are still under early stages of development
     Thank you so much to all the amazing contributers. I want to give a special mention to TheBoxyBear for being here since day 1.
     TheBoxyBear github: https://github.com/TheBoxyBear
 </p>
+<p align="center">
+        And to keep up to date, check our reddit here: https://www.reddit.com/r/hypermc/
 </p>
