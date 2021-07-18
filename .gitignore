@@ -12,7 +12,7 @@ obj/
 /Hypermc.csproj.user
 /Hypermc.pdb
 /Hypermc.exe.config
-/Hypermc.sln
+Hypermc.sln
 source/mod-pack/
 .vs/Hypermc/v16/.suo
 source/Hypermc.csproj.user
