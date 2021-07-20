@@ -36,11 +36,7 @@ namespace HyperMC
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gabi_in = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -102,42 +98,10 @@ namespace HyperMC
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.gabi_in);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(713, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(176, 441);
             this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Get Addon By ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // gabi_in
-            // 
-            this.gabi_in.Location = new System.Drawing.Point(8, 39);
-            this.gabi_in.Name = "gabi_in";
-            this.gabi_in.Size = new System.Drawing.Size(156, 20);
-            this.gabi_in.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(8, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Get";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // main_frame
             // 
@@ -154,8 +118,6 @@ namespace HyperMC
             this.Load += new System.EventHandler(this.main_frame_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,9 +132,6 @@ namespace HyperMC
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox gabi_in;
     }
 }
 

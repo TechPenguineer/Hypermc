@@ -66,7 +66,7 @@ As of right now we are still under early stages of development
 </p>
 <br>
 <p>
-<h1>Contributers</h1>
+<h1>Contributers</h1> 
 <p align="center">
     Thank you so much to all the amazing contributers. I want to give a special mention to TheBoxyBear for being here since day 1.
     TheBoxyBear github: https://github.com/TheBoxyBear

@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using LibGit2Sharp;
-using System.Linq;
-using System.IO;
+using ForgedCurse.Utility;
+using ForgedCurse.Enumeration;
 using ForgedCurse;
-
 namespace HyperMC
 {
     public partial class main_frame : Form
     {
+
+        public void fetch_mods()
+        {
+            ForgeClient client = new ForgeClient();
+
+        }
         private void OpenBrowser(string url) => Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
 
         public main_frame()
@@ -43,14 +40,12 @@ namespace HyperMC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string id_in = gabi_in.Text;
 
         }
 
         private void main_frame_Load(object sender, EventArgs e)
         {
-            ForgeClient client = new ForgeClient();
-            AddonSearchData addonSearchData = client.SearchAddons();
+            
         }
     }
 }
