@@ -1,0 +1,222 @@
+﻿<Window x:Class="HyperMC.WpfUi.ClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HyperMC.WpfUi.ClientApp"
+        mc:Ignorable="d"
+        Title="HyperMC Client App"
+        MinHeight="500"
+        Height="580" 
+        FontFamily="/Resources/Fonts/#Roboto"
+        BorderThickness="2"
+        Width="880"
+        MinWidth="800">
+
+    <!--Make Window Milky Glassy UwU-->
+    <Window.Background>
+        <SolidColorBrush Color="White" Opacity=".9" />
+    </Window.Background>
+    <Window.BorderBrush>
+        <SolidColorBrush Color="White" Opacity=".87" />
+    </Window.BorderBrush>
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" 
+                      CornerRadius="15" 
+                      CaptionHeight="0" 
+                      ResizeBorderThickness="4"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!--Window Handling Buttons-->
+        <Grid x:Name="title_bar" 
+              MouseDown="title_bar_MouseDown"
+              Grid.Row="0"
+              Grid.Column="0"
+              Panel.ZIndex="2"
+              Grid.ColumnSpan="2"
+              Background="Transparent">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+
+                <Canvas Width="24" 
+                        Height="24"
+                        Background="Transparent"
+                        Cursor="Hand"
+                        Margin="0 0 5 0">
+                    <Path Fill="DimGray" Data="M19,13H5V11H19V13Z">
+                        <Path.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation From="DimGray"
+                                                        To="#007ACC"
+                                                        Duration="0:0:0.125" 
+                                                        Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation From="#007ACC"
+                                                        To="DimGray"
+                                                        Duration="0:0:0.125" 
+                                                        Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Path.Triggers>
+                    </Path>
+                </Canvas>
+
+                <Canvas Width="24" 
+                        Height="24"
+                        Background="Transparent"
+                        Cursor="Hand"
+                        Margin="0 0 5 0">
+                    <Path Fill="DimGray" Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z">
+                        <Path.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation From="DimGray"
+                                                        To="#007ACC"
+                                                        Duration="0:0:0.125" 
+                                                        Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation From="#007ACC"
+                                                        To="DimGray"
+                                                        Duration="0:0:0.125" 
+                                                        Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Path.Triggers>
+                    </Path>
+                </Canvas>
+            </StackPanel>
+        </Grid>
+        
+        <!--Navbar Background-->
+        <Border Grid.Row=" 0"
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                Background="White"
+                Margin="10 10 5 10"
+                CornerRadius="8">
+            <StackPanel Margin="10">
+                <Grid Height="75">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <!--Icon-->
+                    <Image x:Name="imgIcon"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Grid.RowSpan="2"
+                           Height="50"
+                           Width="50"
+                           Source="/Resources/Images/minecraft_logo.png" />
+
+                    <!--Title-->
+                    <TextBlock x:Name="txtTitle" 
+                               Text="HyperMC"
+                               FontSize="20"
+                               Grid.Column="1"
+                               VerticalAlignment="Bottom" />
+
+                    <!--SubTitle-->
+                    <TextBlock x:Name="txtSubTitle"
+                               Text="v0.1"
+                               FontSize="14"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               Foreground="DimGray" />
+
+                </Grid>
+
+                <RadioButton x:Name="navBtnResourcePacks"
+                              Background="Transparent"
+                              Style="{StaticResource NavBarButtonStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Button Icon-->
+                        <Image Width="25"
+                               Height="25"
+                               Source="/Resources/Images/package.png"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center" />
+
+                        <!--Button Text-->
+                        <TextBlock Text="Resource Packs" 
+                                   Grid.Column="1"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Margin="10 0 0 0"/>
+                    </Grid>
+                </RadioButton>
+
+                <RadioButton x:Name="navBtnMods"
+                              Background="Transparent"
+                              Style="{StaticResource NavBarButtonStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <!--Button Icon-->
+                        <Image Width="25"
+                               Height="25"
+                               Source="/Resources/Images/mod.png"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center" />
+
+                        <!--Button Text-->
+                        <TextBlock Text="Modifications" 
+                                   Grid.Column="1"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   Margin="10 0 0 0"/>
+                    </Grid>
+                </RadioButton>
+            </StackPanel>
+        </Border>
+
+        <!--Content Background-->
+        <Border Grid.Row="1"
+                Margin="5 0 10 10"
+                Grid.Column="1"
+                Grid.RowSpan="1"
+                Background="WhiteSmoke"
+                CornerRadius="8" />
+
+    </Grid>
+</Window>

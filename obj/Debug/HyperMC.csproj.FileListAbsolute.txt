@@ -28,3 +28,5 @@ D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\obj\Debug\HyperMC.csproj.CoreCompileI
 D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\obj\Debug\HyperMC.csproj.CopyComplete
 D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\obj\Debug\HyperMC.exe
 D:\Desktop\Hypermc\Hypermc\HyperMC\HyperMC\obj\Debug\HyperMC.pdb
+C:\work\.nick\HyperMC\obj\Debug\HyperMC.exe
+C:\work\.nick\HyperMC\obj\Debug\HyperMC.pdb

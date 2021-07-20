@@ -1,0 +1,17 @@
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\bin\Debug\HyperMC.WpfUi.ClientApp.exe.config
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\bin\Debug\HyperMC.WpfUi.ClientApp.exe
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\bin\Debug\HyperMC.WpfUi.ClientApp.pdb
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.csprojAssemblyReference.cache
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\MainWindow.g.cs
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\App.g.cs
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp_MarkupCompile.cache
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp_MarkupCompile.lref
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\MainWindow.baml
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.g.resources
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.Properties.Resources.resources
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.csproj.GenerateResource.cache
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.csproj.CoreCompileInputs.cache
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.exe
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\HyperMC.WpfUi.ClientApp.pdb
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\Resources\Styles\NavBarButtonStyle.baml
+C:\work\.nick\HyperMC\HyperMC.WpfUi.ClientApp\obj\Debug\App.baml
