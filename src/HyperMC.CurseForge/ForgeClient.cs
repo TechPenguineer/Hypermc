@@ -19,27 +19,26 @@ namespace HyperMC.CurseForge
         public async Task DownloadMod(Addon mod, string filePath)
         {
             string downloadUrl = await _forgeClient.Files.RetrieveDownloadUrl(mod.Identifier, mod.Files[0].FileId);
-            using (var response = await _forgeClient.HttpClient.GetAsync(downloadUrl))
+            using var response = await _forgeClient.HttpClient.GetAsync(downloadUrl);
+
+            if (response.IsSuccessStatusCode)
             {
-                if (response.IsSuccessStatusCode)
+                using (Stream stream = await response.Content.ReadAsStreamAsync())
                 {
-                    using (Stream stream = await response.Content.ReadAsStreamAsync())
+                    // TODO: Change this out to be the correct output directory
+                    //       fileName can also be whatever name is desired
+                    int index = downloadUrl.LastIndexOf('/');
+                    string fileName = downloadUrl.Substring(index + 1);
+
+                    using (StreamWriter writer = new StreamWriter($"{filePath}\\{fileName}"))
                     {
-                        // TODO: Change this out to be the correct output directory
-                        //  fileName can also be whatever name is wanted
-                        int index = downloadUrl.LastIndexOf('/');
-                        string fileName = downloadUrl.Substring(index + 1);
-                        using (StreamWriter writer = new StreamWriter($"{filePath}\\{fileName}"))
-                        {
-                            await stream.CopyToAsync(writer.BaseStream);
-                        }
+                        await stream.CopyToAsync(writer.BaseStream);
                     }
                 }
             }
         }
-
         public async Task<Addon[]> SearchForMod(string modName = "", string version = "", int amount = 10, int offset = 0, MinecraftCategory category = MinecraftCategory.All,
-                                                 MinecraftSection seciton = MinecraftSection.Mod, AddonSorting sorting = AddonSorting.Featured)
+                                         MinecraftSection seciton = MinecraftSection.Mod, AddonSorting sorting = AddonSorting.Featured)
         {
             AddonQueryBuilder builder = new()
             {
@@ -54,6 +53,11 @@ namespace HyperMC.CurseForge
             };
 
             return await _forgeClient.Addons.SearchAddons(builder);
+        }
+
+        public async Task<Addon> GetModById(int modId)
+        {
+            return await _forgeClient.Addons.RetriveAddon(modId);
         }
     }
 }
