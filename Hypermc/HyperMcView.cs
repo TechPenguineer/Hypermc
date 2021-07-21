@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
@@ -9,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ForgedCurse;
+using Hypermc.Data;
+using Hypermc.UI.Dialogs;
+using Hypermc.UI.UserControls;
 using Hypermc.UI.Views;
 using Hypermc.Utility;
 
@@ -22,29 +27,113 @@ namespace Hypermc
 		{
 			InitializeComponent();
 			_forge = new ForgeClient();
+
+			_modpacks = new();
+			_modpacks.CollectionChanged += ModpacksUpdated;
 		}
 
 		private void HyperMcView_Load(object sender, EventArgs e)
 		{
-			_defaultView = new ControlView(pnl_MainArea);
-			SetView(_defaultView);
+			SetView(new ControlView(pnl_MainArea));
 		}
 
-		private void Btn_DownloadAddon_Click(object sender, EventArgs e)
-        {
-			string idInput = "";//txb_AddonId.Text;
-			if (!int.TryParse(idInput, out int id))
+		#region Default View
+
+		#region Create Modpack Button
+
+		private void Hbtn_CreateModpack_Click(object sender, EventArgs e)
+		{
+			CreateModpackDialog dialog = new();
+			DialogResult result = dialog.ShowDialog(this);
+			if (result == DialogResult.OK)
 			{
-				MessageBox.Show("Invalid Addon Identifier");
-				return;
+				_modpacks.Add(dialog.Data);
+			}
+		}
+
+		#endregion Create Modpack Button
+
+		#region Modpack List
+
+		private ObservableCollection<ModpackData> _modpacks;
+
+		private void ModpacksUpdated(object? sender, NotifyCollectionChangedEventArgs e)
+		{
+			switch (e.Action)
+			{
+				case NotifyCollectionChangedAction.Add:
+					{
+						foreach (ModpackData item in e.NewItems)
+						{
+							flpnl_Modpacks.Controls.Add(CreateModpackBox(item));
+						}
+
+						break;
+					}
+
+				case NotifyCollectionChangedAction.Remove:
+					{
+						foreach (ModpackData item in e.OldItems)
+						{
+							flpnl_Modpacks.Controls.RemoveByKey(item.Name);
+						}
+
+						break;
+					}
+
+				case NotifyCollectionChangedAction.Replace:
+					{
+						foreach (ModpackData item in e.NewItems)
+						{
+							flpnl_Modpacks.Controls.Add(CreateModpackBox(item));
+						}
+						foreach (ModpackData item in e.OldItems)
+						{
+							flpnl_Modpacks.Controls.RemoveByKey(item.Name);
+						}
+
+						break;
+					}
+
+				case NotifyCollectionChangedAction.Reset:
+					{
+						flpnl_Modpacks.Controls.Clear();
+						foreach (ModpackData item in _modpacks)
+						{
+							flpnl_Modpacks.Controls.Add(CreateModpackBox(item));
+						}
+
+						break;
+					}
 			}
 
-			Utils.NotImplAlert(nameof(Btn_DownloadAddon_Click));
+			SortModpacks();
 		}
 
-		private void Panel2_Paint(object sender, PaintEventArgs e)
+		private static ModpackBox CreateModpackBox(ModpackData data)
 		{
+			return new()
+			{
+				Thumbnail = data.Thumbnail,
+				SizeMode = PictureBoxSizeMode.StretchImage,
+				Name = data.Name,
+				Tag = data.Path
+			};
 		}
+
+		private void SortModpacks()
+		{
+			// Questionable
+			lock (flpnl_Modpacks.Controls)
+			{
+				Control[] controls = Utils.PopChildControls(flpnl_Modpacks);
+				flpnl_Modpacks.Controls.AddRange(controls.OrderBy(x => x.Name).ToArray());
+			}
+		}
+
+		#endregion Modpack List
+
+		#endregion Default View
 
 		#region Top Panel
 
@@ -102,7 +191,6 @@ namespace Hypermc
 
 		#region View Hosting
 
-		private IView _defaultView;
 		private IView? _view;
 		private IView? _viewPrev;
 

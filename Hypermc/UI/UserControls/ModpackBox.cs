@@ -22,6 +22,22 @@ namespace Hypermc.UI.UserControls
 		[Description("How to display the image")]
 		public PictureBoxSizeMode SizeMode { get => pcb_Thumbnail.SizeMode; set => pcb_Thumbnail.SizeMode = value; }
 
+		[Browsable(false)]
+		new public string Name {
+			get {
+				return base.Name;
+			}
+			set {
+				base.Name = value;
+				lbl_Name.Text = value;
+			}
+		}
+
+		/*[Category("Appearance")]
+		[DisplayName("Modpack Name")]
+		[Description("The name of the modpack")]
+		public string? ModpackName { get; set; }*/
+
 		public ModpackBox()
 		{
 			InitializeComponent();

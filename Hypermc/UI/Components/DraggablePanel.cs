@@ -12,7 +12,7 @@ namespace Hypermc.UI.Components
 {
 	public class DraggablePanel : Panel
 	{
-		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[Browsable(false)]
 		public bool IsDragging { get; private set; }
 
 		[Category("Behavior")]
@@ -27,9 +27,12 @@ namespace Hypermc.UI.Components
 		{
 			base.OnMouseDown(e);
 
-			IsDragging = true;
-			_dragCursorOrigin = Cursor.Position;
-			_dragFormOrigin = Location;
+			if (DragControl is not null)
+			{
+				IsDragging = true;
+				_dragCursorOrigin = Cursor.Position;
+				_dragFormOrigin = DragControl.Location;
+			}
 		}
 
 		protected override void OnMouseMove(MouseEventArgs e)

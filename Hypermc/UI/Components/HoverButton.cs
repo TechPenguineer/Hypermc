@@ -19,8 +19,8 @@ namespace Hypermc.UI.Components
 		[DisplayName("Hover Background Color")]
 		[Description("Changes the buttons background color to this when hovered on with cursor")]
 		public Color HoverBackColor { get; set; }
-		[Category("Appearance")]
 
+		[Category("Appearance")]
 		[DisplayName("Hover Foreground Color")]
 		[Description("Changes the buttons foreground color to this when hovered on with cursor")]
 		public Color HoverForeColor { get; set; }
