@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HyperMC
+namespace HyperMC_old
 {
     public partial class ModDisplay : UserControl
     {
