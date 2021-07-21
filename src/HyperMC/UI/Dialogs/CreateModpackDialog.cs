@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hypermc.Data;
 using Hypermc.Utility;
-
+using ForgedCurse;
 namespace Hypermc.UI.Dialogs
 {
 	public partial class CreateModpackDialog : Form
@@ -19,6 +19,13 @@ namespace Hypermc.UI.Dialogs
 		public CreateModpackDialog()
 		{
 			InitializeComponent();
+
+			ForgeClient client = new ForgeClient();
+
+			List<dynamic> supported_versions;
+			dynamic versions = client.Minecraft.RetrieveGameVersions();
+			Console.WriteLine(versions);
+			cmbx_McVersion.Items.Add(versions);
 		}
 
 		private void Hbtn_Ok_Click(object sender, EventArgs e)
@@ -39,5 +46,10 @@ namespace Hypermc.UI.Dialogs
 			DialogResult = DialogResult.Cancel;
 			Close();
 		}
-	}
+
+        private void cmbx_McVersion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

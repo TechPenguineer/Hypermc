@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ForgedCurse" Version="2.0.0" />
     <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
-    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +26,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="cli\" />
   </ItemGroup>
 
 </Project>
