@@ -17,7 +17,7 @@ namespace Hypermc.UI.Views
 		{
 			string env_flder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 			string mc_flder = $"{env_flder}\\.minecraft";
-			game_path.Text = mc_flder;
+			//game_path.Text = $"{mc_flder}";
 
 			InitializeComponent();
 		}
