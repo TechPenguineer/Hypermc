@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ForgedCurse" Version="2.0.0" />
     <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.0.2" />
   </ItemGroup>
 
   <ItemGroup>
