@@ -15,6 +15,10 @@ namespace Hypermc.UI.Views
 	{
 		public SettingView()
 		{
+			string env_flder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			string mc_flder = $"{env_flder}\\.minecraft";
+			game_path.Text = mc_flder;
+
 			InitializeComponent();
 		}
 
@@ -50,5 +54,15 @@ namespace Hypermc.UI.Views
 			SendMessage(IView.MSG_GO_BACK);
 			Hide();
 		}
-	}
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl_AlignPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }
