@@ -1,0 +1,145 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\VS Projects\\Hypermc\\src\\HyperMC\\HyperMC.csproj": {}
+  },
+  "projects": {
+    "E:\\VS Projects\\Hypermc\\src\\HyperMC.CurseForge\\HyperMC.CurseForge.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\VS Projects\\Hypermc\\src\\HyperMC.CurseForge\\HyperMC.CurseForge.csproj",
+        "projectName": "HyperMC.CurseForge",
+        "projectPath": "E:\\VS Projects\\Hypermc\\src\\HyperMC.CurseForge\\HyperMC.CurseForge.csproj",
+        "packagesPath": "C:\\Users\\catch\\.nuget\\packages\\",
+        "outputPath": "E:\\VS Projects\\Hypermc\\src\\HyperMC.CurseForge\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\catch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/caliburn-micro-builds/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "ForgedCurse": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\VS Projects\\Hypermc\\src\\HyperMC\\HyperMC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\VS Projects\\Hypermc\\src\\HyperMC\\HyperMC.csproj",
+        "projectName": "HyperMC",
+        "projectPath": "E:\\VS Projects\\Hypermc\\src\\HyperMC\\HyperMC.csproj",
+        "packagesPath": "C:\\Users\\catch\\.nuget\\packages\\",
+        "outputPath": "E:\\VS Projects\\Hypermc\\src\\HyperMC\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\catch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/caliburn-micro-builds/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "E:\\VS Projects\\Hypermc\\src\\HyperMC.CurseForge\\HyperMC.CurseForge.csproj": {
+                "projectPath": "E:\\VS Projects\\Hypermc\\src\\HyperMC.CurseForge\\HyperMC.CurseForge.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "ForgedCurse": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "LibGit2Sharp": {
+              "target": "Package",
+              "version": "[0.26.2, )"
+            },
+            "LibGit2Sharp.NativeBinaries": {
+              "target": "Package",
+              "version": "[2.0.306, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

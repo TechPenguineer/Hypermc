@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HyperMC", "src\HyperMC\HyperMC.csproj", "{8CC82415-7651-4A1E-A0CF-5E9ADA0D675A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperMC.CurseForge", "src\HyperMC.CurseForge\HyperMC.CurseForge.csproj", "{ECEEB29E-FEC4-408B-812A-8381B773126E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CC82415-7651-4A1E-A0CF-5E9ADA0D675A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC82415-7651-4A1E-A0CF-5E9ADA0D675A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC82415-7651-4A1E-A0CF-5E9ADA0D675A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC82415-7651-4A1E-A0CF-5E9ADA0D675A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEEB29E-FEC4-408B-812A-8381B773126E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEEB29E-FEC4-408B-812A-8381B773126E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEEB29E-FEC4-408B-812A-8381B773126E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEEB29E-FEC4-408B-812A-8381B773126E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D9221EF-6331-4388-8557-AC5B941CEF51}
+	EndGlobalSection
+EndGlobal

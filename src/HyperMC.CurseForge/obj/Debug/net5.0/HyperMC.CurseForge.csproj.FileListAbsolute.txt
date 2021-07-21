@@ -1,0 +1,12 @@
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\bin\Debug\net5.0\HyperMC.CurseForge.deps.json
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\bin\Debug\net5.0\HyperMC.CurseForge.dll
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\bin\Debug\net5.0\ref\HyperMC.CurseForge.dll
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\bin\Debug\net5.0\HyperMC.CurseForge.pdb
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.csproj.AssemblyReference.cache
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.GeneratedMSBuildEditorConfig.editorconfig
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.AssemblyInfoInputs.cache
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.AssemblyInfo.cs
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.csproj.CoreCompileInputs.cache
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.dll
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\ref\HyperMC.CurseForge.dll
+E:\VS Projects\Hypermc\src\HyperMC.CurseForge\obj\Debug\net5.0\HyperMC.CurseForge.pdb
