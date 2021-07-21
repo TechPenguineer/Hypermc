@@ -36,7 +36,9 @@ namespace HyperMC
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.modContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +94,7 @@ namespace HyperMC
             // currentToolStripMenuItem
             // 
             this.currentToolStripMenuItem.Name = "currentToolStripMenuItem";
-            this.currentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.currentToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.currentToolStripMenuItem.Text = "1.0.0 (Current)";
             // 
             // panel1
@@ -104,13 +106,30 @@ namespace HyperMC
             this.panel1.Size = new System.Drawing.Size(205, 509);
             this.panel1.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // modContainer
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 31);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(825, 509);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.modContainer.AutoScroll = true;
+            this.modContainer.Location = new System.Drawing.Point(0, 60);
+            this.modContainer.Name = "modContainer";
+            this.modContainer.Size = new System.Drawing.Size(825, 480);
+            this.modContainer.TabIndex = 2;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(12, 31);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(203, 23);
+            this.txtSearch.TabIndex = 3;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(232, 31);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // MainFrame
             // 
@@ -118,7 +137,9 @@ namespace HyperMC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(1037, 537);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.modContainer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -143,7 +164,9 @@ namespace HyperMC
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel modContainer;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 
