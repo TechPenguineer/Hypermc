@@ -74,3 +74,8 @@ As of right now we are still under early stages of development
 <p align="center">
         And to keep up to date, check our reddit here: https://www.reddit.com/r/hypermc/
 </p>
+<br>
+<p align="center">
+        One of your developers created an api wrapper that is used in this project. You can check it out here <br>
+        https://github.com/AndrewToaster/ForgedCurse
+</p>
