@@ -1,3 +1,5 @@
+**[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
+
 <p align="center">
 <img src="https://i.imgur.com/mVy4j4L.png" align="center">
 <br>
