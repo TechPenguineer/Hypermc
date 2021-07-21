@@ -1,4 +1,3 @@
-**[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
 
 <p align="center">
 <img src="https://i.imgur.com/mVy4j4L.png" align="center">
@@ -15,6 +14,9 @@
 <hr>
 
 </p>
+
+# LANGUAGE SUPPORT 
+**[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
 
 <p>
 <h1>About  <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
