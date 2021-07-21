@@ -1,5 +1,5 @@
 ﻿
-namespace HyperMC
+namespace HyperMC_old
 {
     partial class MainFrame
     {

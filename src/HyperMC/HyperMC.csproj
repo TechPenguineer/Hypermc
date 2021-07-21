@@ -3,18 +3,28 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
-    <Copyright>Copyright ©  2021</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ForgedCurse" Version="2.0.0" />
     <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
-    <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.306" />
-	  <PackageReference Include="ForgedCurse" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HyperMC.CurseForge\HyperMC.CurseForge.csproj" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
