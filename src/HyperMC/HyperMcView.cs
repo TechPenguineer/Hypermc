@@ -21,11 +21,14 @@ namespace Hypermc
 {
 	public partial class HyperMcView : Form, IViewHost
 	{
+
+		private readonly IForgeClient _forgeClient;
+
 		public HyperMcView(IForgeClient forgeClient)
 		{
 			InitializeComponent();
 
-            _forgeClient = forgeClient;
+      _forgeClient = forgeClient;
 			_modpacks = new();
 			_modpacks.CollectionChanged += ModpacksUpdated;
         }

@@ -9,33 +9,44 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hypermc.Data;
 using Hypermc.Utility;
-using ForgedCurse;
 using HyperMC.CurseForge;
 
 namespace Hypermc.UI.Dialogs
 {
 	public partial class CreateModpackDialog : Form
 	{
+
+
         private readonly IForgeClient _forgeClient;
 
         public ModpackData? Data { get; private set; }
 		public ModpackData? DataForge { get; private set; }
 
+
 		public CreateModpackDialog(IForgeClient forgeClient)
 		{
 			InitializeComponent();
 
+      _forgeClient = forgeClient;
+      Load += CreateModpackDialog_Load;
+
 			List<dynamic> supported_versions;
-            _forgeClient = forgeClient;
+		}
+
+        private async void CreateModpackDialog_Load(object? sender, EventArgs e)
+        {
+			var versions = await _forgeClient.GetMinecraftVersions();
+
+			Console.WriteLine(versions);
+			cmbx_McVersion.DataSource = versions;
+			cmbx_McVersion.DisplayMember = "VersionString";
+		}
 
 
-			//dynamic versions = _forgeClient.GetMinecraftVersions();
+        
 
-			//Console.WriteLine(versions);
-			//cmbx_McVersion.Items.Add(versions);
-        }
 
-		private void Hbtn_Ok_Click(object sender, EventArgs e)
+        private void Hbtn_Ok_Click(object sender, EventArgs e)
 		{
 			if (string.IsNullOrWhiteSpace(txb_Name.Text))
 			{
