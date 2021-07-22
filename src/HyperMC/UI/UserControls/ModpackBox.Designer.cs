@@ -49,7 +49,7 @@ namespace Hypermc.UI.UserControls
             // lbl_Name
             // 
             this.lbl_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Name.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Name.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Name.ForeColor = System.Drawing.Color.White;
             this.lbl_Name.Location = new System.Drawing.Point(0, 133);
             this.lbl_Name.Name = "lbl_Name";
@@ -62,10 +62,11 @@ namespace Hypermc.UI.UserControls
             // lbl_forge_version
             // 
             this.lbl_forge_version.AutoSize = true;
+            this.lbl_forge_version.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_forge_version.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_forge_version.Location = new System.Drawing.Point(3, 133);
             this.lbl_forge_version.Name = "lbl_forge_version";
-            this.lbl_forge_version.Size = new System.Drawing.Size(127, 20);
+            this.lbl_forge_version.Size = new System.Drawing.Size(85, 12);
             this.lbl_forge_version.TabIndex = 2;
             this.lbl_forge_version.Text = "#FORGE VERSION";
             // 

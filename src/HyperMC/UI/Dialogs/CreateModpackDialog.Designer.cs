@@ -40,6 +40,7 @@ namespace Hypermc.UI.Dialogs
             this.hbtn_Ok = new Hypermc.UI.Components.HoverButton();
             this.lbl_Caption = new System.Windows.Forms.Label();
             this.pnl_Top = new System.Windows.Forms.Panel();
+            this.cpy_right = new System.Windows.Forms.Label();
             this.pnl_AlignPanel.SuspendLayout();
             this.pnl_Top.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@ namespace Hypermc.UI.Dialogs
             // pnl_AlignPanel
             // 
             this.pnl_AlignPanel.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_AlignPanel.Controls.Add(this.cpy_right);
             this.pnl_AlignPanel.Controls.Add(this.cmbx_FmlVersion);
             this.pnl_AlignPanel.Controls.Add(this.cmbx_McVersion);
             this.pnl_AlignPanel.Controls.Add(this.lbl_FmlVersion);
@@ -158,12 +160,12 @@ namespace Hypermc.UI.Dialogs
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Caption.AutoSize = true;
             this.lbl_Caption.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Caption.Location = new System.Drawing.Point(21, 11);
+            this.lbl_Caption.Location = new System.Drawing.Point(158, 9);
             this.lbl_Caption.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_Caption.Name = "lbl_Caption";
-            this.lbl_Caption.Size = new System.Drawing.Size(236, 37);
+            this.lbl_Caption.Size = new System.Drawing.Size(290, 37);
             this.lbl_Caption.TabIndex = 1;
-            this.lbl_Caption.Text = "Add new Modpack";
+            this.lbl_Caption.Text = "Create a New Modpack";
             // 
             // pnl_Top
             // 
@@ -176,6 +178,18 @@ namespace Hypermc.UI.Dialogs
             this.pnl_Top.Name = "pnl_Top";
             this.pnl_Top.Size = new System.Drawing.Size(598, 53);
             this.pnl_Top.TabIndex = 2;
+            // 
+            // cpy_right
+            // 
+            this.cpy_right.AutoSize = true;
+            this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cpy_right.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.cpy_right.Location = new System.Drawing.Point(158, 402);
+            this.cpy_right.Name = "cpy_right";
+            this.cpy_right.Size = new System.Drawing.Size(289, 19);
+            this.cpy_right.TabIndex = 4;
+            this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
+            this.cpy_right.Click += new System.EventHandler(this.cpy_right_Click);
             // 
             // CreateModpackDialog
             // 
@@ -213,5 +227,6 @@ namespace Hypermc.UI.Dialogs
 		private System.Windows.Forms.ComboBox cmbx_McVersion;
 		private System.Windows.Forms.Label lbl_FmlVersion;
 		private System.Windows.Forms.Label lbl_McVersion;
-	}
+        private System.Windows.Forms.Label cpy_right;
+    }
 }

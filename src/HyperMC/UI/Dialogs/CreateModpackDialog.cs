@@ -66,5 +66,10 @@ namespace Hypermc.UI.Dialogs
         {
 
         }
+
+        private void cpy_right_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

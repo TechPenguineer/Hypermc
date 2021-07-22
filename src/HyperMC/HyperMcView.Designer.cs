@@ -41,6 +41,7 @@ namespace Hypermc
             this.pnl_MainArea = new System.Windows.Forms.Panel();
             this.flpnl_Modpacks = new System.Windows.Forms.FlowLayoutPanel();
             this.hbtn_CreateModpack = new Hypermc.UI.Components.HoverButton();
+            this.cpy_right = new System.Windows.Forms.Label();
             this.dpnl_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Icon)).BeginInit();
             this.tlpnl_TopButtons.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Hypermc
             // 
             this.dpnl_Top.BackColor = System.Drawing.Color.White;
             this.dpnl_Top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dpnl_Top.Controls.Add(this.cpy_right);
             this.dpnl_Top.Controls.Add(this.pcb_Icon);
             this.dpnl_Top.Controls.Add(this.label1);
             this.dpnl_Top.Controls.Add(this.tlpnl_TopButtons);
@@ -206,6 +208,17 @@ namespace Hypermc
             this.hbtn_CreateModpack.UseVisualStyleBackColor = false;
             this.hbtn_CreateModpack.Click += new System.EventHandler(this.Hbtn_CreateModpack_Click);
             // 
+            // cpy_right
+            // 
+            this.cpy_right.AutoSize = true;
+            this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cpy_right.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cpy_right.Location = new System.Drawing.Point(388, 5);
+            this.cpy_right.Name = "cpy_right";
+            this.cpy_right.Size = new System.Drawing.Size(289, 19);
+            this.cpy_right.TabIndex = 5;
+            this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
+            // 
             // HyperMcView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -241,6 +254,7 @@ namespace Hypermc
 		private UI.Components.HoverButton hbtn_CreateModpack;
 		private System.Windows.Forms.PictureBox pcb_Icon;
 		private System.Windows.Forms.Label label1;
-	}
+        private System.Windows.Forms.Label cpy_right;
+    }
 }
 
