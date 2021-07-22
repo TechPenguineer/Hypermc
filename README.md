@@ -17,6 +17,7 @@
 
 # LANGUAGE SUPPORT 
 **[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
+**[Documentation España](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/spanishREADME.md)**
 
 <p>
 <h1>About  <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
