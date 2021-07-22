@@ -7,20 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hypermc.Settings;
 using Hypermc.Utility;
 
 namespace Hypermc.UI.Views
 {
 	public partial class SettingView : Form, IView
 	{
-		public SettingView()
+        private readonly IUserSettings _settings;
+
+        public SettingView(IUserSettings settings)
 		{
 			string env_flder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 			string mc_flder = $"{env_flder}\\.minecraft";
 			//game_path.Text = $"{mc_flder}";
 
 			InitializeComponent();
-		}
+            _settings = settings;
+			game_path.Text = settings.MinecraftPath;
+        }
 
 		public event IView.ViewMessageCallback OnMessage;
 
