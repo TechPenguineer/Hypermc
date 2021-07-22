@@ -52,34 +52,36 @@ namespace Hypermc
             // 
             this.dpnl_Top.BackColor = System.Drawing.Color.White;
             this.dpnl_Top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dpnl_Top.Controls.Add(this.label1);
             this.dpnl_Top.Controls.Add(this.cpy_right);
             this.dpnl_Top.Controls.Add(this.pcb_Icon);
-            this.dpnl_Top.Controls.Add(this.label1);
             this.dpnl_Top.Controls.Add(this.tlpnl_TopButtons);
             this.dpnl_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.dpnl_Top.DragControl = this;
             this.dpnl_Top.Location = new System.Drawing.Point(0, 0);
             this.dpnl_Top.Margin = new System.Windows.Forms.Padding(0);
             this.dpnl_Top.Name = "dpnl_Top";
-            this.dpnl_Top.Size = new System.Drawing.Size(1082, 34);
+            this.dpnl_Top.Size = new System.Drawing.Size(1082, 40);
             this.dpnl_Top.TabIndex = 2;
             // 
             // pcb_Icon
             // 
+            this.pcb_Icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcb_Icon.Image = global::Hypermc.Properties.Resources.HyperMc32;
-            this.pcb_Icon.Location = new System.Drawing.Point(43, 0);
+            this.pcb_Icon.Location = new System.Drawing.Point(11, 1);
             this.pcb_Icon.Margin = new System.Windows.Forms.Padding(0);
             this.pcb_Icon.Name = "pcb_Icon";
-            this.pcb_Icon.Size = new System.Drawing.Size(32, 32);
+            this.pcb_Icon.Size = new System.Drawing.Size(31, 32);
             this.pcb_Icon.TabIndex = 2;
             this.pcb_Icon.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 5);
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(537, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 23);
+            this.label1.Size = new System.Drawing.Size(85, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "HyperMC";
             // 
@@ -101,7 +103,7 @@ namespace Hypermc
             this.tlpnl_TopButtons.Name = "tlpnl_TopButtons";
             this.tlpnl_TopButtons.RowCount = 1;
             this.tlpnl_TopButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpnl_TopButtons.Size = new System.Drawing.Size(260, 32);
+            this.tlpnl_TopButtons.Size = new System.Drawing.Size(260, 38);
             this.tlpnl_TopButtons.TabIndex = 0;
             // 
             // hbtn_Minimize
@@ -114,9 +116,9 @@ namespace Hypermc
             this.hbtn_Minimize.HoverForeColor = System.Drawing.Color.Empty;
             this.hbtn_Minimize.Location = new System.Drawing.Point(125, 3);
             this.hbtn_Minimize.Name = "hbtn_Minimize";
-            this.hbtn_Minimize.Size = new System.Drawing.Size(40, 26);
+            this.hbtn_Minimize.Size = new System.Drawing.Size(40, 32);
             this.hbtn_Minimize.TabIndex = 2;
-            this.hbtn_Minimize.Text = "_";
+            this.hbtn_Minimize.Text = "-";
             this.hbtn_Minimize.UseVisualStyleBackColor = true;
             this.hbtn_Minimize.Click += new System.EventHandler(this.Hbtn_Minimize_Click);
             // 
@@ -130,7 +132,7 @@ namespace Hypermc
             this.hbtn_Close.HoverForeColor = System.Drawing.Color.White;
             this.hbtn_Close.Location = new System.Drawing.Point(217, 3);
             this.hbtn_Close.Name = "hbtn_Close";
-            this.hbtn_Close.Size = new System.Drawing.Size(40, 26);
+            this.hbtn_Close.Size = new System.Drawing.Size(40, 32);
             this.hbtn_Close.TabIndex = 0;
             this.hbtn_Close.Text = "✕";
             this.hbtn_Close.UseVisualStyleBackColor = true;
@@ -146,7 +148,7 @@ namespace Hypermc
             this.hbtn_Options.HoverForeColor = System.Drawing.Color.Empty;
             this.hbtn_Options.Location = new System.Drawing.Point(3, 3);
             this.hbtn_Options.Name = "hbtn_Options";
-            this.hbtn_Options.Size = new System.Drawing.Size(40, 26);
+            this.hbtn_Options.Size = new System.Drawing.Size(40, 32);
             this.hbtn_Options.TabIndex = 3;
             this.hbtn_Options.Text = "⚙";
             this.hbtn_Options.UseVisualStyleBackColor = true;
@@ -162,7 +164,7 @@ namespace Hypermc
             this.hbtn_Maximize.HoverForeColor = System.Drawing.Color.Empty;
             this.hbtn_Maximize.Location = new System.Drawing.Point(171, 3);
             this.hbtn_Maximize.Name = "hbtn_Maximize";
-            this.hbtn_Maximize.Size = new System.Drawing.Size(40, 26);
+            this.hbtn_Maximize.Size = new System.Drawing.Size(40, 32);
             this.hbtn_Maximize.TabIndex = 1;
             this.hbtn_Maximize.Text = "▢";
             this.hbtn_Maximize.UseVisualStyleBackColor = true;
@@ -174,10 +176,10 @@ namespace Hypermc
             this.pnl_MainArea.Controls.Add(this.flpnl_Modpacks);
             this.pnl_MainArea.Controls.Add(this.hbtn_CreateModpack);
             this.pnl_MainArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_MainArea.Location = new System.Drawing.Point(0, 34);
+            this.pnl_MainArea.Location = new System.Drawing.Point(0, 40);
             this.pnl_MainArea.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnl_MainArea.Name = "pnl_MainArea";
-            this.pnl_MainArea.Size = new System.Drawing.Size(1082, 610);
+            this.pnl_MainArea.Size = new System.Drawing.Size(1082, 604);
             this.pnl_MainArea.TabIndex = 4;
             // 
             // flpnl_Modpacks
@@ -187,7 +189,7 @@ namespace Hypermc
             this.flpnl_Modpacks.Location = new System.Drawing.Point(-1, -1);
             this.flpnl_Modpacks.Name = "flpnl_Modpacks";
             this.flpnl_Modpacks.Padding = new System.Windows.Forms.Padding(10);
-            this.flpnl_Modpacks.Size = new System.Drawing.Size(1082, 548);
+            this.flpnl_Modpacks.Size = new System.Drawing.Size(1082, 542);
             this.flpnl_Modpacks.TabIndex = 1;
             // 
             // hbtn_CreateModpack
@@ -200,7 +202,7 @@ namespace Hypermc
             this.hbtn_CreateModpack.ForeColor = System.Drawing.Color.Black;
             this.hbtn_CreateModpack.HoverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.hbtn_CreateModpack.HoverForeColor = System.Drawing.Color.Empty;
-            this.hbtn_CreateModpack.Location = new System.Drawing.Point(11, 554);
+            this.hbtn_CreateModpack.Location = new System.Drawing.Point(11, 548);
             this.hbtn_CreateModpack.Name = "hbtn_CreateModpack";
             this.hbtn_CreateModpack.Size = new System.Drawing.Size(78, 43);
             this.hbtn_CreateModpack.TabIndex = 0;
@@ -213,7 +215,7 @@ namespace Hypermc
             this.cpy_right.AutoSize = true;
             this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cpy_right.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cpy_right.Location = new System.Drawing.Point(388, 5);
+            this.cpy_right.Location = new System.Drawing.Point(68, 8);
             this.cpy_right.Name = "cpy_right";
             this.cpy_right.Size = new System.Drawing.Size(289, 19);
             this.cpy_right.TabIndex = 5;
