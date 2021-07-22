@@ -26,7 +26,7 @@ L’inspiration
 Im un grand fan de KSP. J’aime les nouvelles choses. Mettez-les ensemble, vous obtenez des mods de jeu. Je me suis vraiment agacé en téléchargeant une tonne de fichiers et en mettant le dossier gamedata, alors j’ai cherché une solution alternative. C’est quand j’ai trouvé CKAN (The Comprehensive Kerbal Archive Network). J’en suis tombée amoureuse. Puis mon cerveau a dit: « Et si je faisais la même chose avec l’un de mes jeux préférés de tous les temps. Minecraft ». J’ai donc commencé le développement
 
 État d’avancement
-À l’heure actuelle, nous en sommes encore aux premiers stades de développement
+À l’heure actuelle, nous en sommes encore aux premiers stades de développement.
 
 Contributeurs
 Merci beaucoup à tous les contributeurs incroyables. Je tiens à donner une mention spéciale à TheBoxyBear pour être ici depuis le jour 1.
