@@ -48,7 +48,7 @@ namespace Hypermc.UI.Dialogs
             // 
             this.txb_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_Name.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txb_Name.Location = new System.Drawing.Point(135, 98);
+            this.txb_Name.Location = new System.Drawing.Point(217, 136);
             this.txb_Name.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_Name.Name = "txb_Name";
             this.txb_Name.Size = new System.Drawing.Size(331, 42);
@@ -78,7 +78,7 @@ namespace Hypermc.UI.Dialogs
             // 
             this.cmbx_FmlVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbx_FmlVersion.FormattingEnabled = true;
-            this.cmbx_FmlVersion.Location = new System.Drawing.Point(135, 258);
+            this.cmbx_FmlVersion.Location = new System.Drawing.Point(217, 238);
             this.cmbx_FmlVersion.Name = "cmbx_FmlVersion";
             this.cmbx_FmlVersion.Size = new System.Drawing.Size(331, 44);
             this.cmbx_FmlVersion.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace Hypermc.UI.Dialogs
             // 
             this.cmbx_McVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbx_McVersion.FormattingEnabled = true;
-            this.cmbx_McVersion.Location = new System.Drawing.Point(135, 183);
+            this.cmbx_McVersion.Location = new System.Drawing.Point(217, 187);
             this.cmbx_McVersion.Name = "cmbx_McVersion";
             this.cmbx_McVersion.Size = new System.Drawing.Size(331, 44);
             this.cmbx_McVersion.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace Hypermc.UI.Dialogs
             // 
             this.lbl_FmlVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_FmlVersion.AutoSize = true;
-            this.lbl_FmlVersion.Location = new System.Drawing.Point(135, 224);
+            this.lbl_FmlVersion.Location = new System.Drawing.Point(0, 238);
             this.lbl_FmlVersion.Name = "lbl_FmlVersion";
             this.lbl_FmlVersion.Size = new System.Drawing.Size(170, 37);
             this.lbl_FmlVersion.TabIndex = 2;
@@ -107,7 +107,7 @@ namespace Hypermc.UI.Dialogs
             // 
             this.lbl_McVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_McVersion.AutoSize = true;
-            this.lbl_McVersion.Location = new System.Drawing.Point(135, 149);
+            this.lbl_McVersion.Location = new System.Drawing.Point(0, 190);
             this.lbl_McVersion.Name = "lbl_McVersion";
             this.lbl_McVersion.Size = new System.Drawing.Size(211, 37);
             this.lbl_McVersion.TabIndex = 2;
@@ -117,7 +117,8 @@ namespace Hypermc.UI.Dialogs
             // 
             this.lbl_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(135, 62);
+            this.lbl_Name.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Name.Location = new System.Drawing.Point(0, 139);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(196, 37);
             this.lbl_Name.TabIndex = 2;
