@@ -43,6 +43,7 @@ namespace Hypermc
             this.panel1 = new System.Windows.Forms.Panel();
             this.hbtn_CreateModpack = new Hypermc.UI.Components.HoverButton();
             this.flpnl_Modpacks = new System.Windows.Forms.FlowLayoutPanel();
+            this.hoverButton1 = new Hypermc.UI.Components.HoverButton();
             this.dpnl_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Icon)).BeginInit();
             this.tlpnl_TopButtons.SuspendLayout();
@@ -199,6 +200,7 @@ namespace Hypermc
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.hoverButton1);
             this.panel1.Controls.Add(this.hbtn_CreateModpack);
             this.panel1.Controls.Add(this.cpy_right);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -233,6 +235,22 @@ namespace Hypermc
             this.flpnl_Modpacks.Padding = new System.Windows.Forms.Padding(10);
             this.flpnl_Modpacks.Size = new System.Drawing.Size(819, 542);
             this.flpnl_Modpacks.TabIndex = 1;
+            // 
+            // hoverButton1
+            // 
+            this.hoverButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hoverButton1.FlatAppearance.BorderSize = 0;
+            this.hoverButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hoverButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hoverButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.hoverButton1.HoverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.hoverButton1.HoverForeColor = System.Drawing.Color.Empty;
+            this.hoverButton1.Location = new System.Drawing.Point(27, 111);
+            this.hoverButton1.Name = "hoverButton1";
+            this.hoverButton1.Size = new System.Drawing.Size(196, 59);
+            this.hoverButton1.TabIndex = 6;
+            this.hoverButton1.Text = "Settings";
+            this.hoverButton1.UseVisualStyleBackColor = false;
             // 
             // HyperMcView
             // 
@@ -273,6 +291,7 @@ namespace Hypermc
 		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label cpy_right;
         private System.Windows.Forms.Panel panel1;
+        private UI.Components.HoverButton hoverButton1;
     }
 }
 
