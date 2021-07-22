@@ -82,6 +82,6 @@ Im a big KSP fan. I love new things. Put those together you get game mods. I got
 </p>
 <br>
 <p align="center">
-        One of your developers created an api wrapper that is used in this project. You can check it out here <br>
+        One of our developers created an api wrapper that is used in this project. You can check it out here <br>
         https://github.com/AndrewToaster/ForgedCurse
 </p>
