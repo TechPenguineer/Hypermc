@@ -1,11 +1,14 @@
 
 using System;
 using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace HyperMcSettings
 {
     public class manager
     {
+
         string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.hypermc\\settings";
 
         public void createSettingsFolder(string SettingType)
@@ -32,7 +35,16 @@ namespace HyperMcSettings
                     File.Create($"{path}\\{settingFolder}\\{settingName}.json");
                 }
             }
+
+            void writeSetting()
+            {
+            
+            }
+
+            
             checkIfExists();
+            writeSettingFile();
+
 
 
             
