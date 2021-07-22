@@ -33,4 +33,4 @@ Merci beaucoup à tous les contributeurs incroyables. Je tiens à donner une men
 TheBoxyBear github: https://github.com/TheBoxyBear
 Et pour rester à jour, consultez notre reddit ici: https://www.reddit.com/r/hypermc/
 
-L'un de nos développeurs a créé un conteneur d'API qui est utilisé dans ce projet. Vous pouvez vérifier ici https://github.com/AndrewToaster/ForgedCurse
+L'un de nos développeurs a créé un conteneur d'API qui est utilisé dans ce projet. Vous pouvez vérifier ici https://github.com/AndrewToaster/ForgedCurse :)
