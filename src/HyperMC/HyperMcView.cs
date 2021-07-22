@@ -16,6 +16,7 @@ using Hypermc.UI.UserControls;
 using Hypermc.UI.Views;
 using Hypermc.Utility;
 using HyperMC.CurseForge;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Hypermc
 {
@@ -23,12 +24,14 @@ namespace Hypermc
     {
 
         private readonly IForgeClient _forgeClient;
+        private readonly IServiceProvider _provider;
 
-        public HyperMcView(IForgeClient forgeClient)
+        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
+            _provider = provider;
             _modpacks = new();
             _modpacks.CollectionChanged += ModpacksUpdated;
         }
@@ -181,7 +184,7 @@ namespace Hypermc
         private void Hbtn_Options_Click(object sender, EventArgs e)
         {
             //Utils.NotImplAlert("Options Menu");
-            SetView(new SettingView());
+            SetView(_provider.GetRequiredService<SettingView>());
         }
 
         #endregion Minimize Button
