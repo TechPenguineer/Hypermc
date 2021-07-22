@@ -47,5 +47,10 @@ namespace Hypermc.UI.UserControls
 		{
 			OnClick(e);
 		}
-	}
+
+        private void lbl_Name_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

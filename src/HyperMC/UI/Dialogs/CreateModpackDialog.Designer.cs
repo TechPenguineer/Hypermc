@@ -129,7 +129,7 @@ namespace Hypermc.UI.Dialogs
             this.hbtn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hbtn_Cancel.HoverBackColor = System.Drawing.Color.Empty;
             this.hbtn_Cancel.HoverForeColor = System.Drawing.Color.Empty;
-            this.hbtn_Cancel.Location = new System.Drawing.Point(374, 376);
+            this.hbtn_Cancel.Location = new System.Drawing.Point(12, 376);
             this.hbtn_Cancel.Name = "hbtn_Cancel";
             this.hbtn_Cancel.Size = new System.Drawing.Size(103, 42);
             this.hbtn_Cancel.TabIndex = 1;
@@ -147,7 +147,7 @@ namespace Hypermc.UI.Dialogs
             this.hbtn_Ok.Name = "hbtn_Ok";
             this.hbtn_Ok.Size = new System.Drawing.Size(103, 42);
             this.hbtn_Ok.TabIndex = 1;
-            this.hbtn_Ok.Text = "Ok";
+            this.hbtn_Ok.Text = "OK";
             this.hbtn_Ok.UseVisualStyleBackColor = true;
             this.hbtn_Ok.Click += new System.EventHandler(this.Hbtn_Ok_Click);
             // 
