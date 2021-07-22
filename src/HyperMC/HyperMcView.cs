@@ -10,27 +10,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ForgedCurse;
 using Hypermc.Data;
 using Hypermc.UI.Dialogs;
 using Hypermc.UI.UserControls;
 using Hypermc.UI.Views;
 using Hypermc.Utility;
+using HyperMC.CurseForge;
 
 namespace Hypermc
 {
 	public partial class HyperMcView : Form, IViewHost
 	{
-		private readonly ForgeClient _forge;
-
-		public HyperMcView()
+		public HyperMcView(IForgeClient forgeClient)
 		{
 			InitializeComponent();
-			_forge = new ForgeClient();
 
+            _forgeClient = forgeClient;
 			_modpacks = new();
 			_modpacks.CollectionChanged += ModpacksUpdated;
-		}
+        }
 
 		private void HyperMcView_Load(object sender, EventArgs e)
 		{
@@ -193,8 +191,9 @@ namespace Hypermc
 
 		private IView? _view;
 		private IView? _viewPrev;
+        private readonly IForgeClient _forgeClient;
 
-		public void SetView(IView view, object? data = null)
+        public void SetView(IView view, object? data = null)
 		{
 			if (_view is not null)
 			{
