@@ -20,4 +20,4 @@ Estado avanzado En la actualidad, todavía estamos en las primeras etapas de des
 
 Colaboradores Muchas gracias a todos los increíbles colaboradores. Tengo que dar una mención especial a TheBoxyBear por estar aquí desde el día 1. TheBoxyBear github: https://github.com/TheBoxyBear Y para estar al día, echa un vistazo a nuestro reddit aquí: https://www.reddit.com/r/hypermc/
 
-Uno de sus desarrolladores ha creado un contenedor de API que se utiliza en este proyecto. Puede consultar aquí https://github.com/AndrewToaster/ForgedCurse
+Uno de nuestros desarrolladores ha creado un contenedor de API que se utiliza en este proyecto. Puede consultar aquí https://github.com/AndrewToaster/ForgedCurse
