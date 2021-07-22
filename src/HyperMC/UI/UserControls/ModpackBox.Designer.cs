@@ -31,6 +31,7 @@ namespace Hypermc.UI.UserControls
 		{
             this.pcb_Thumbnail = new System.Windows.Forms.PictureBox();
             this.lbl_Name = new System.Windows.Forms.Label();
+            this.lbl_forge_version = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Thumbnail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +49,25 @@ namespace Hypermc.UI.UserControls
             // lbl_Name
             // 
             this.lbl_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Name.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Name.Font = new System.Drawing.Font("Segoe UI Semilight", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Name.ForeColor = System.Drawing.Color.White;
             this.lbl_Name.Location = new System.Drawing.Point(0, 133);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(217, 36);
             this.lbl_Name.TabIndex = 1;
             this.lbl_Name.Text = "#NAME";
-            this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lbl_Name.Click += new System.EventHandler(this.lbl_Name_Click_1);
+            // 
+            // lbl_forge_version
+            // 
+            this.lbl_forge_version.AutoSize = true;
+            this.lbl_forge_version.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_forge_version.Location = new System.Drawing.Point(3, 133);
+            this.lbl_forge_version.Name = "lbl_forge_version";
+            this.lbl_forge_version.Size = new System.Drawing.Size(127, 20);
+            this.lbl_forge_version.TabIndex = 2;
+            this.lbl_forge_version.Text = "#FORGE VERSION";
             // 
             // ModpackBox
             // 
@@ -63,6 +75,7 @@ namespace Hypermc.UI.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lbl_forge_version);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.pcb_Thumbnail);
             this.Margin = new System.Windows.Forms.Padding(29, 33, 29, 33);
@@ -70,6 +83,7 @@ namespace Hypermc.UI.UserControls
             this.Size = new System.Drawing.Size(217, 169);
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Thumbnail)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -77,5 +91,6 @@ namespace Hypermc.UI.UserControls
 
 		private System.Windows.Forms.PictureBox pcb_Thumbnail;
 		private System.Windows.Forms.Label lbl_Name;
-	}
+        private System.Windows.Forms.Label lbl_forge_version;
+    }
 }

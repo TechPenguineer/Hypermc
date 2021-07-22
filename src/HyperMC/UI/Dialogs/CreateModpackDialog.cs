@@ -15,6 +15,7 @@ namespace Hypermc.UI.Dialogs
 	public partial class CreateModpackDialog : Form
 	{
 		public ModpackData? Data { get; private set; }
+		public ModpackData? DataForge { get; private set; }
 
 		public CreateModpackDialog()
 		{
@@ -49,7 +50,8 @@ namespace Hypermc.UI.Dialogs
 				return;
 			}
 
-			Data = new ModpackData(txb_Name.Text, Properties.Resources.DefaultModpackImage, null);
+			Data = new ModpackData(txb_Name.Text,  Properties.Resources.DefaultModpackImage, null);
+			DataForge = new ModpackData(cmbx_FmlVersion.Text, Properties.Resources.DefaultModpackImage, null);
 			DialogResult = DialogResult.OK;
 			Close();
 		}

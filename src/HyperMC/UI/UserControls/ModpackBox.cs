@@ -30,6 +30,7 @@ namespace Hypermc.UI.UserControls
 			set {
 				base.Name = value;
 				lbl_Name.Text = value;
+				lbl_forge_version.Text = $"Forge Version: TBD";
 			}
 		}
 
@@ -49,6 +50,11 @@ namespace Hypermc.UI.UserControls
 		}
 
         private void lbl_Name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Name_Click_1(object sender, EventArgs e)
         {
 
         }
