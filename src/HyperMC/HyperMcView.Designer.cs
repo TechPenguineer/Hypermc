@@ -32,13 +32,13 @@ namespace Hypermc
         {
             this.dpnl_Top = new Hypermc.UI.Components.DraggablePanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cpy_right = new System.Windows.Forms.Label();
             this.pcb_Icon = new System.Windows.Forms.PictureBox();
             this.tlpnl_TopButtons = new System.Windows.Forms.TableLayoutPanel();
             this.hbtn_Minimize = new Hypermc.UI.Components.HoverButton();
             this.hbtn_Close = new Hypermc.UI.Components.HoverButton();
             this.hbtn_Options = new Hypermc.UI.Components.HoverButton();
             this.hbtn_Maximize = new Hypermc.UI.Components.HoverButton();
+            this.cpy_right = new System.Windows.Forms.Label();
             this.pnl_MainArea = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.hbtn_CreateModpack = new Hypermc.UI.Components.HoverButton();
@@ -55,7 +55,6 @@ namespace Hypermc
             this.dpnl_Top.BackColor = System.Drawing.Color.White;
             this.dpnl_Top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dpnl_Top.Controls.Add(this.label1);
-            this.dpnl_Top.Controls.Add(this.cpy_right);
             this.dpnl_Top.Controls.Add(this.pcb_Icon);
             this.dpnl_Top.Controls.Add(this.tlpnl_TopButtons);
             this.dpnl_Top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,17 +75,6 @@ namespace Hypermc
             this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "HyperMC";
-            // 
-            // cpy_right
-            // 
-            this.cpy_right.AutoSize = true;
-            this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cpy_right.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cpy_right.Location = new System.Drawing.Point(68, 8);
-            this.cpy_right.Name = "cpy_right";
-            this.cpy_right.Size = new System.Drawing.Size(230, 13);
-            this.cpy_right.TabIndex = 5;
-            this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
             // 
             // pcb_Icon
             // 
@@ -184,6 +172,18 @@ namespace Hypermc
             this.hbtn_Maximize.UseVisualStyleBackColor = true;
             this.hbtn_Maximize.Click += new System.EventHandler(this.Hbtn_Maximize_Click);
             // 
+            // cpy_right
+            // 
+            this.cpy_right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cpy_right.AutoSize = true;
+            this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cpy_right.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.cpy_right.Location = new System.Drawing.Point(9, 581);
+            this.cpy_right.Name = "cpy_right";
+            this.cpy_right.Size = new System.Drawing.Size(230, 13);
+            this.cpy_right.TabIndex = 5;
+            this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
+            // 
             // pnl_MainArea
             // 
             this.pnl_MainArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -200,6 +200,7 @@ namespace Hypermc
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.hbtn_CreateModpack);
+            this.panel1.Controls.Add(this.cpy_right);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(830, 0);
             this.panel1.Name = "panel1";
@@ -253,6 +254,7 @@ namespace Hypermc
             this.tlpnl_TopButtons.ResumeLayout(false);
             this.pnl_MainArea.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
