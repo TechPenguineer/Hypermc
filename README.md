@@ -65,7 +65,7 @@ Im a big KSP fan. I love new things. Put those together you get game mods. I got
 <p>
 <h1>Status</h1>
 <p align="center">
-As of right now we are still under early stages of development
+        As of 22/7/2021 we started the dependency injector
 </p>
 </p>
 <br>
