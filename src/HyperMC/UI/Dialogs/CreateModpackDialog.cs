@@ -23,7 +23,10 @@ namespace Hypermc.UI.Dialogs
 			ForgeClient client = new ForgeClient();
 
 			List<dynamic> supported_versions;
+
+
 			dynamic versions = client.Minecraft.RetrieveGameVersions();
+
 			Console.WriteLine(versions);
 			cmbx_McVersion.Items.Add(versions);
 		}
@@ -33,6 +36,16 @@ namespace Hypermc.UI.Dialogs
 			if (string.IsNullOrWhiteSpace(txb_Name.Text))
 			{
 				MessageDialog.Exclaim("Please specify a modpack name", "Warning", owner: this);
+				return;
+			}
+			if (string.IsNullOrWhiteSpace(cmbx_FmlVersion.Text))
+			{
+				MessageDialog.Exclaim("Please specify a Forge version", "Warning", owner: this);
+				return;
+			}
+			if (string.IsNullOrWhiteSpace(cmbx_McVersion.Text))
+			{
+				MessageDialog.Exclaim("Please specify a Minecraft version", "Warning", owner: this);
 				return;
 			}
 
