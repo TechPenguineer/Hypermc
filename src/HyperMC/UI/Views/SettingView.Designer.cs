@@ -101,14 +101,16 @@ namespace Hypermc.UI.Views
             // hbtn_Back
             // 
             this.hbtn_Back.BackColor = System.Drawing.Color.White;
+            this.hbtn_Back.Dock = System.Windows.Forms.DockStyle.Top;
             this.hbtn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hbtn_Back.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.hbtn_Back.HoverBackColor = System.Drawing.Color.Empty;
             this.hbtn_Back.HoverForeColor = System.Drawing.Color.Empty;
-            this.hbtn_Back.Location = new System.Drawing.Point(3, 3);
+            this.hbtn_Back.Location = new System.Drawing.Point(0, 0);
             this.hbtn_Back.Name = "hbtn_Back";
-            this.hbtn_Back.Size = new System.Drawing.Size(75, 23);
+            this.hbtn_Back.Size = new System.Drawing.Size(1082, 32);
             this.hbtn_Back.TabIndex = 1;
-            this.hbtn_Back.Text = "<-";
+            this.hbtn_Back.Text = "←";
             this.hbtn_Back.UseVisualStyleBackColor = false;
             this.hbtn_Back.Click += new System.EventHandler(this.Hbtn_Back_Click);
             // 
@@ -116,7 +118,7 @@ namespace Hypermc.UI.Views
             // 
             this.lbl_Options.AutoSize = true;
             this.lbl_Options.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Options.Location = new System.Drawing.Point(422, 26);
+            this.lbl_Options.Location = new System.Drawing.Point(418, 37);
             this.lbl_Options.Name = "lbl_Options";
             this.lbl_Options.Size = new System.Drawing.Size(171, 29);
             this.lbl_Options.TabIndex = 0;
