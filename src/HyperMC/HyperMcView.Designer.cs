@@ -31,8 +31,9 @@ namespace Hypermc
         private void InitializeComponent()
         {
             this.dpnl_Top = new Hypermc.UI.Components.DraggablePanel();
-            this.pcb_Icon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cpy_right = new System.Windows.Forms.Label();
+            this.pcb_Icon = new System.Windows.Forms.PictureBox();
             this.tlpnl_TopButtons = new System.Windows.Forms.TableLayoutPanel();
             this.hbtn_Minimize = new Hypermc.UI.Components.HoverButton();
             this.hbtn_Close = new Hypermc.UI.Components.HoverButton();
@@ -41,7 +42,6 @@ namespace Hypermc
             this.pnl_MainArea = new System.Windows.Forms.Panel();
             this.flpnl_Modpacks = new System.Windows.Forms.FlowLayoutPanel();
             this.hbtn_CreateModpack = new Hypermc.UI.Components.HoverButton();
-            this.cpy_right = new System.Windows.Forms.Label();
             this.dpnl_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Icon)).BeginInit();
             this.tlpnl_TopButtons.SuspendLayout();
@@ -64,6 +64,28 @@ namespace Hypermc
             this.dpnl_Top.Size = new System.Drawing.Size(1082, 40);
             this.dpnl_Top.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(537, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "HyperMC";
+            // 
+            // cpy_right
+            // 
+            this.cpy_right.AutoSize = true;
+            this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cpy_right.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cpy_right.Location = new System.Drawing.Point(68, 8);
+            this.cpy_right.Name = "cpy_right";
+            this.cpy_right.Size = new System.Drawing.Size(289, 19);
+            this.cpy_right.TabIndex = 5;
+            this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
+            // 
             // pcb_Icon
             // 
             this.pcb_Icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -74,16 +96,6 @@ namespace Hypermc
             this.pcb_Icon.Size = new System.Drawing.Size(31, 32);
             this.pcb_Icon.TabIndex = 2;
             this.pcb_Icon.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(537, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "HyperMC";
             // 
             // tlpnl_TopButtons
             // 
@@ -194,32 +206,21 @@ namespace Hypermc
             // 
             // hbtn_CreateModpack
             // 
-            this.hbtn_CreateModpack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.hbtn_CreateModpack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hbtn_CreateModpack.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.hbtn_CreateModpack.FlatAppearance.BorderSize = 0;
             this.hbtn_CreateModpack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hbtn_CreateModpack.Font = new System.Drawing.Font("Bahnschrift Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.hbtn_CreateModpack.ForeColor = System.Drawing.Color.Black;
             this.hbtn_CreateModpack.HoverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.hbtn_CreateModpack.HoverForeColor = System.Drawing.Color.Empty;
-            this.hbtn_CreateModpack.Location = new System.Drawing.Point(11, 548);
+            this.hbtn_CreateModpack.Location = new System.Drawing.Point(0, 559);
             this.hbtn_CreateModpack.Name = "hbtn_CreateModpack";
-            this.hbtn_CreateModpack.Size = new System.Drawing.Size(78, 43);
+            this.hbtn_CreateModpack.Size = new System.Drawing.Size(1080, 43);
             this.hbtn_CreateModpack.TabIndex = 0;
             this.hbtn_CreateModpack.Text = "+";
             this.hbtn_CreateModpack.UseVisualStyleBackColor = false;
             this.hbtn_CreateModpack.Click += new System.EventHandler(this.Hbtn_CreateModpack_Click);
-            // 
-            // cpy_right
-            // 
-            this.cpy_right.AutoSize = true;
-            this.cpy_right.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cpy_right.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cpy_right.Location = new System.Drawing.Point(68, 8);
-            this.cpy_right.Name = "cpy_right";
-            this.cpy_right.Size = new System.Drawing.Size(289, 19);
-            this.cpy_right.TabIndex = 5;
-            this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
             // 
             // HyperMcView
             // 
