@@ -59,5 +59,10 @@ namespace HyperMC.CurseForge
         {
             return await _forgeClient.Addons.RetriveAddon(modId);
         }
+
+        public async Task<MinecraftVersion[]> GetMinecraftVersions()
+        {
+            return await _forgeClient.Minecraft.RetrieveGameVersions();
+        }
     }
 }
