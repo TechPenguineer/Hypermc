@@ -40,9 +40,9 @@ namespace Hypermc
             this.hbtn_Options = new Hypermc.UI.Components.HoverButton();
             this.hbtn_Maximize = new Hypermc.UI.Components.HoverButton();
             this.pnl_MainArea = new System.Windows.Forms.Panel();
-            this.flpnl_Modpacks = new System.Windows.Forms.FlowLayoutPanel();
-            this.hbtn_CreateModpack = new Hypermc.UI.Components.HoverButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.hbtn_CreateModpack = new Hypermc.UI.Components.HoverButton();
+            this.flpnl_Modpacks = new System.Windows.Forms.FlowLayoutPanel();
             this.dpnl_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Icon)).BeginInit();
             this.tlpnl_TopButtons.SuspendLayout();
@@ -73,7 +73,7 @@ namespace Hypermc
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(537, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 23);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "HyperMC";
             // 
@@ -84,7 +84,7 @@ namespace Hypermc
             this.cpy_right.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cpy_right.Location = new System.Drawing.Point(68, 8);
             this.cpy_right.Name = "cpy_right";
-            this.cpy_right.Size = new System.Drawing.Size(289, 19);
+            this.cpy_right.Size = new System.Drawing.Size(230, 13);
             this.cpy_right.TabIndex = 5;
             this.cpy_right.Text = "© 2021 - Tech Penguin INC.  All Rights Reserved";
             // 
@@ -196,15 +196,15 @@ namespace Hypermc
             this.pnl_MainArea.Size = new System.Drawing.Size(1082, 604);
             this.pnl_MainArea.TabIndex = 4;
             // 
-            // flpnl_Modpacks
+            // panel1
             // 
-            this.flpnl_Modpacks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.flpnl_Modpacks.Location = new System.Drawing.Point(-1, -1);
-            this.flpnl_Modpacks.Name = "flpnl_Modpacks";
-            this.flpnl_Modpacks.Padding = new System.Windows.Forms.Padding(10);
-            this.flpnl_Modpacks.Size = new System.Drawing.Size(819, 542);
-            this.flpnl_Modpacks.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.hbtn_CreateModpack);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(830, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 602);
+            this.panel1.TabIndex = 2;
             // 
             // hbtn_CreateModpack
             // 
@@ -223,18 +223,19 @@ namespace Hypermc
             this.hbtn_CreateModpack.UseVisualStyleBackColor = false;
             this.hbtn_CreateModpack.Click += new System.EventHandler(this.Hbtn_CreateModpack_Click);
             // 
-            // panel1
+            // flpnl_Modpacks
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.hbtn_CreateModpack);
-            this.panel1.Location = new System.Drawing.Point(820, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 539);
-            this.panel1.TabIndex = 2;
+            this.flpnl_Modpacks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.flpnl_Modpacks.Location = new System.Drawing.Point(-1, -1);
+            this.flpnl_Modpacks.Name = "flpnl_Modpacks";
+            this.flpnl_Modpacks.Padding = new System.Windows.Forms.Padding(10);
+            this.flpnl_Modpacks.Size = new System.Drawing.Size(819, 542);
+            this.flpnl_Modpacks.TabIndex = 1;
             // 
             // HyperMcView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(1082, 644);

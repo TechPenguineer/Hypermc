@@ -100,10 +100,11 @@ namespace HyperMC_old
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.panel1.Location = new System.Drawing.Point(832, 31);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(832, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 509);
+            this.panel1.Size = new System.Drawing.Size(205, 513);
             this.panel1.TabIndex = 1;
             // 
             // modContainer
