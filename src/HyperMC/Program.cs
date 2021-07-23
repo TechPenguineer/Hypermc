@@ -36,7 +36,7 @@ namespace Hypermc
                     .AddSingleton<IUserSettings, UserSettings>();
 
             services.AddTransient<SettingView>()
-                    .AddTransient<IFileUesr, FileUser>();
+                    .AddTransient<IFileManager, FileManager>();
 
             services.AddForgeClient();
 

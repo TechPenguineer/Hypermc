@@ -27,10 +27,10 @@ namespace Hypermc
 
         private readonly IForgeClient _forgeClient;
         private readonly IServiceProvider _provider;
-        private readonly IFileUesr _fileUesr;
+        private readonly IFileManager _fileUesr;
         private readonly IUserSettings _settings;
 
-        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileUesr fileUesr, IUserSettings settings)
+        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileManager fileUesr, IUserSettings settings)
         {
             InitializeComponent();
 

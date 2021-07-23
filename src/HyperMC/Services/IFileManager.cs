@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hypermc.Services
 {
-    public interface IFileUesr
+    public interface IFileManager
     {
         Task WriteToFile<T>(T data, string file);
         Task<T> ReadFile<T>(string file);

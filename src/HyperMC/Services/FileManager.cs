@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hypermc.Services
 {
-    public class FileUser : IFileUesr
+    public class FileManager : IFileManager
     {
         public async Task<T> ReadFile<T>(string file)
         {

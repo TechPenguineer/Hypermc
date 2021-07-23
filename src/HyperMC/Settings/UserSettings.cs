@@ -13,12 +13,12 @@ namespace Hypermc.Settings
     {
         private readonly string _appPath;
         private readonly string _settingsFile;
-        private readonly IFileUesr _fileUesr;
+        private readonly IFileManager _fileUesr;
 
         public string MinecraftPath { get; set; }
         public string ModPacksPath { get; set; }
 
-        public UserSettings(IFileUesr fileUesr)
+        public UserSettings(IFileManager fileUesr)
         {
             // TODO: possibly move the file names to the appsettings.
             _appPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\.hypermc";
