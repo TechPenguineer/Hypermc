@@ -228,9 +228,12 @@ namespace Hypermc
         {
             if (_view is not null)
             {
-                _view.HideView(Utils.PopChildControls(pnl_MainArea));
-                _view.OnMessage -= View_OnMessage;
-                _viewPrev = _view;
+                if (_view.GetType() != view.GetType())
+                {
+                    _view.HideView(Utils.PopChildControls(pnl_MainArea));
+                    _view.OnMessage -= View_OnMessage;
+                    _viewPrev = _view;
+                }
             }
 
             view.OnMessage += View_OnMessage;
