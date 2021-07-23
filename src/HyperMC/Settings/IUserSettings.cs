@@ -9,7 +9,8 @@ namespace Hypermc.Settings
     public interface IUserSettings
     {
         string MinecraftPath { get; set; }
+        string ModPacksPath { get; set; }
 
-        void Initialize();
+        Task Initialize();
     }
 }
