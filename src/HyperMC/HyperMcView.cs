@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hypermc.Data;
+using Hypermc.Services;
+using Hypermc.Settings;
 using Hypermc.UI.Dialogs;
 using Hypermc.UI.UserControls;
 using Hypermc.UI.Views;
@@ -25,20 +27,32 @@ namespace Hypermc
 
         private readonly IForgeClient _forgeClient;
         private readonly IServiceProvider _provider;
+        private readonly IFileManager _fileManager;
+        private readonly IUserSettings _settings;
 
-        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider)
+        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileManager fileManager, IUserSettings settings)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
             _provider = provider;
+            _fileManager = fileManager;
+            _settings = settings;
             _modpacks = new();
             _modpacks.CollectionChanged += ModpacksUpdated;
         }
 
-        private void HyperMcView_Load(object sender, EventArgs e)
+        private async void HyperMcView_Load(object sender, EventArgs e)
         {
             SetView(new ControlView(pnl_MainArea));
+            var mods = await _fileManager.ReadFile<ModpackData[]>($@"{_settings.ModPacksPath}\packs.json");
+            if (mods != null)
+            {
+                foreach (var mod in mods)
+                {
+                    _modpacks.Add(mod);
+                }
+            }
         }
 
         #region Default View
@@ -61,7 +75,7 @@ namespace Hypermc
 
         private ObservableCollection<ModpackData> _modpacks;
 
-        private void ModpacksUpdated(object? sender, NotifyCollectionChangedEventArgs e)
+        private async void ModpacksUpdated(object? sender, NotifyCollectionChangedEventArgs e)
         {
             switch (e.Action)
             {
@@ -112,13 +126,25 @@ namespace Hypermc
             }
 
             SortModpacks();
+            await _fileManager.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksPath}\packs.json");
         }
 
-        private static ModpackBox CreateModpackBox(ModpackData data)
+        private ModpackBox CreateModpackBox(ModpackData data)
         {
+            Image thumbnail;
+            if (string.IsNullOrWhiteSpace(data.Thumbnail))
+            {
+                thumbnail = Properties.Resources.DefaultModpackImage;
+            }
+            else
+            {
+                // May need to be changed depending on how the image will be set
+                thumbnail = Image.FromStream(_forgeClient.GetImageFromURL(data.Thumbnail).GetAwaiter().GetResult());
+            }
+
             return new()
             {
-                Thumbnail = data.Thumbnail,
+                Thumbnail = thumbnail,
                 SizeMode = PictureBoxSizeMode.StretchImage,
                 Name = data.Name,
                 Tag = data.Path
@@ -202,9 +228,12 @@ namespace Hypermc
         {
             if (_view is not null)
             {
-                _view.HideView(Utils.PopChildControls(pnl_MainArea));
-                _view.OnMessage -= View_OnMessage;
-                _viewPrev = _view;
+                if (_view.GetType() != view.GetType())
+                {
+                    _view.HideView(Utils.PopChildControls(pnl_MainArea));
+                    _view.OnMessage -= View_OnMessage;
+                    _viewPrev = _view;
+                }
             }
 
             view.OnMessage += View_OnMessage;

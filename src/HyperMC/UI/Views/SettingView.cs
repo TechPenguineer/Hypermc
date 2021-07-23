@@ -25,6 +25,7 @@ namespace Hypermc.UI.Views
 			InitializeComponent();
             _settings = settings;
 			game_path.Text = settings.MinecraftPath;
+			modPackPath.Text = settings.ModPacksPath;
         }
 
 		public event IView.ViewMessageCallback OnMessage;

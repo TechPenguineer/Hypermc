@@ -64,5 +64,17 @@ namespace HyperMC.CurseForge
         {
             return await _forgeClient.Minecraft.RetrieveGameVersions();
         }
+
+        public async Task<Stream> GetImageFromURL(string url)
+        {
+            var result = await _forgeClient.HttpClient.GetAsync(url);
+
+            if (result.IsSuccessStatusCode)
+            {
+                return await result.Content.ReadAsStreamAsync();
+            }
+
+            return null;
+        }
     }
 }

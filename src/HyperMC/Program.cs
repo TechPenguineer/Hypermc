@@ -1,3 +1,4 @@
+using Hypermc.Services;
 using Hypermc.Settings;
 using Hypermc.UI.Views;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,10 +17,10 @@ namespace Hypermc
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static async Task Main()
         {
             Provider = ConfigureService();
-            Provider.GetRequiredService<IUserSettings>().Initialize();
+            await Provider.GetRequiredService<IUserSettings>().Initialize();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
@@ -34,7 +35,8 @@ namespace Hypermc
             services.AddSingleton<HyperMcView>()
                     .AddSingleton<IUserSettings, UserSettings>();
 
-            services.AddTransient<SettingView>();
+            services.AddTransient<SettingView>()
+                    .AddTransient<IFileManager, FileManager>();
 
             services.AddForgeClient();
 

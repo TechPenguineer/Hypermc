@@ -10,10 +10,15 @@ namespace Hypermc.Data
 	public class ModpackData
 	{
 		public string Name { get; set; }
-		public Image Thumbnail { get; }
+		public string Thumbnail { get; }
 		public string Path { get; }
 
-		public ModpackData(string name, Image thumbnail, string path)
+        public ModpackData()
+        {
+
+        }
+
+		public ModpackData(string name, string thumbnail, string path)
 		{
 			Name = name;
 			Thumbnail = thumbnail;
