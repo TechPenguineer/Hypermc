@@ -129,7 +129,7 @@ namespace Hypermc
             await _fileUesr.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksPath}\packs.json");
         }
 
-        private static ModpackBox CreateModpackBox(ModpackData data)
+        private ModpackBox CreateModpackBox(ModpackData data)
         {
             Image thumbnail;
             if (string.IsNullOrWhiteSpace(data.Thumbnail))
@@ -138,7 +138,8 @@ namespace Hypermc
             }
             else
             {
-                thumbnail = Image.FromFile(data.Thumbnail);
+                // May need to be changed depending on how the image will be set
+                thumbnail = Image.FromStream(_forgeClient.GetImageFromURL(data.Thumbnail).GetAwaiter().GetResult());
             }
 
             return new()
