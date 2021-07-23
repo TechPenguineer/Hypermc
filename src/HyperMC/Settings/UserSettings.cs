@@ -36,6 +36,11 @@ namespace Hypermc.Settings
                 Directory.CreateDirectory(_appPath);
             }
 
+            if (!Directory.Exists(ModPacksPath))
+            {
+                Directory.CreateDirectory(ModPacksPath);
+            }
+
             var settings = await _fileUesr.ReadFile<UserSettings>(_settingsFile);
 
             if (settings != null)

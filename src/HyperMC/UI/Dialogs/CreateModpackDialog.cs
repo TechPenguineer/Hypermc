@@ -64,8 +64,8 @@ namespace Hypermc.UI.Dialogs
                 return;
             }
 
-            Data = new ModpackData(txb_Name.Text, Properties.Resources.DefaultModpackImage, null);
-            DataForge = new ModpackData(cmbx_FmlVersion.Text, Properties.Resources.DefaultModpackImage, null);
+            Data = new ModpackData(txb_Name.Text, "", null);
+            DataForge = new ModpackData(cmbx_FmlVersion.Text, "", null);
             DialogResult = DialogResult.OK;
             Close();
         }

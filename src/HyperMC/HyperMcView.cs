@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hypermc.Data;
+using Hypermc.Services;
+using Hypermc.Settings;
 using Hypermc.UI.Dialogs;
 using Hypermc.UI.UserControls;
 using Hypermc.UI.Views;
@@ -25,20 +27,32 @@ namespace Hypermc
 
         private readonly IForgeClient _forgeClient;
         private readonly IServiceProvider _provider;
+        private readonly IFileUesr _fileUesr;
+        private readonly IUserSettings _settings;
 
-        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider)
+        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileUesr fileUesr, IUserSettings settings)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
             _provider = provider;
+            _fileUesr = fileUesr;
+            _settings = settings;
             _modpacks = new();
             _modpacks.CollectionChanged += ModpacksUpdated;
         }
 
-        private void HyperMcView_Load(object sender, EventArgs e)
+        private async void HyperMcView_Load(object sender, EventArgs e)
         {
             SetView(new ControlView(pnl_MainArea));
+            var mods = await _fileUesr.ReadFile<ModpackData[]>($@"{_settings.ModPacksPath}\packs.json");
+            if (mods != null)
+            {
+                foreach (var mod in mods)
+                {
+                    _modpacks.Add(mod);
+                }
+            }
         }
 
         #region Default View
@@ -61,7 +75,7 @@ namespace Hypermc
 
         private ObservableCollection<ModpackData> _modpacks;
 
-        private void ModpacksUpdated(object? sender, NotifyCollectionChangedEventArgs e)
+        private async void ModpacksUpdated(object? sender, NotifyCollectionChangedEventArgs e)
         {
             switch (e.Action)
             {
@@ -112,13 +126,24 @@ namespace Hypermc
             }
 
             SortModpacks();
+            await _fileUesr.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksPath}\packs.json");
         }
 
         private static ModpackBox CreateModpackBox(ModpackData data)
         {
+            Image thumbnail;
+            if (string.IsNullOrWhiteSpace(data.Thumbnail))
+            {
+                thumbnail = Properties.Resources.DefaultModpackImage;
+            }
+            else
+            {
+                thumbnail = Image.FromFile(data.Thumbnail);
+            }
+
             return new()
             {
-                Thumbnail = data.Thumbnail,
+                Thumbnail = thumbnail,
                 SizeMode = PictureBoxSizeMode.StretchImage,
                 Name = data.Name,
                 Tag = data.Path
