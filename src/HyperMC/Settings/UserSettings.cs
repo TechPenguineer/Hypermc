@@ -13,17 +13,17 @@ namespace Hypermc.Settings
     {
         private readonly string _appPath;
         private readonly string _settingsFile;
-        private readonly IFileManager _fileUesr;
+        private readonly IFileManager _fileManager;
 
         public string MinecraftPath { get; set; }
         public string ModPacksPath { get; set; }
 
-        public UserSettings(IFileManager fileUesr)
+        public UserSettings(IFileManager fileManager)
         {
             // TODO: possibly move the file names to the appsettings.
             _appPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\.hypermc";
             _settingsFile = $@"{_appPath}\settings.json";
-            _fileUesr = fileUesr;
+            _fileManager = fileManager;
 
             MinecraftPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\.minecraft";
             ModPacksPath = $@"{MinecraftPath}\ModPacks";
@@ -41,7 +41,7 @@ namespace Hypermc.Settings
                 Directory.CreateDirectory(ModPacksPath);
             }
 
-            var settings = await _fileUesr.ReadFile<UserSettings>(_settingsFile);
+            var settings = await _fileManager.ReadFile<UserSettings>(_settingsFile);
 
             if (settings != null)
             {
@@ -55,7 +55,7 @@ namespace Hypermc.Settings
             MinecraftPath = mcPath;
             ModPacksPath = modPath;
 
-            await _fileUesr.WriteToFile(this, _settingsFile);
+            await _fileManager.WriteToFile(this, _settingsFile);
         }
     }
 }

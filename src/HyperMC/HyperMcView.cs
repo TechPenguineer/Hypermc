@@ -27,16 +27,16 @@ namespace Hypermc
 
         private readonly IForgeClient _forgeClient;
         private readonly IServiceProvider _provider;
-        private readonly IFileManager _fileUesr;
+        private readonly IFileManager _fileManager;
         private readonly IUserSettings _settings;
 
-        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileManager fileUesr, IUserSettings settings)
+        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileManager fileManager, IUserSettings settings)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
             _provider = provider;
-            _fileUesr = fileUesr;
+            _fileManager = fileManager;
             _settings = settings;
             _modpacks = new();
             _modpacks.CollectionChanged += ModpacksUpdated;
@@ -45,7 +45,7 @@ namespace Hypermc
         private async void HyperMcView_Load(object sender, EventArgs e)
         {
             SetView(new ControlView(pnl_MainArea));
-            var mods = await _fileUesr.ReadFile<ModpackData[]>($@"{_settings.ModPacksPath}\packs.json");
+            var mods = await _fileManager.ReadFile<ModpackData[]>($@"{_settings.ModPacksPath}\packs.json");
             if (mods != null)
             {
                 foreach (var mod in mods)
@@ -126,7 +126,7 @@ namespace Hypermc
             }
 
             SortModpacks();
-            await _fileUesr.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksPath}\packs.json");
+            await _fileManager.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksPath}\packs.json");
         }
 
         private ModpackBox CreateModpackBox(ModpackData data)
