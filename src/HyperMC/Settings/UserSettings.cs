@@ -36,10 +36,10 @@ namespace Hypermc.Settings
                 Directory.CreateDirectory(_appPath);
             }
 
-            if (File.Exists(_settingsFile))
-            {
-                var settings = await _fileUesr.ReadFile<UserSettings>(_settingsFile);
+            var settings = await _fileUesr.ReadFile<UserSettings>(_settingsFile);
 
+            if (settings != null)
+            {
                 MinecraftPath = settings.MinecraftPath;
                 ModPacksPath = settings.ModPacksPath;
             }

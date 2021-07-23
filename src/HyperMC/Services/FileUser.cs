@@ -12,9 +12,14 @@ namespace Hypermc.Services
     {
         public async Task<T> ReadFile<T>(string file)
         {
-            using var stream = new FileStream(file, FileMode.Open, FileAccess.Read);
-            var settings = await JsonSerializer.DeserializeAsync<T>(stream);
-            return settings;
+            if (File.Exists(file))
+            {
+                using var stream = new FileStream(file, FileMode.Open, FileAccess.Read);
+                var settings = await JsonSerializer.DeserializeAsync<T>(stream);
+                return settings;
+            }
+
+            return default(T);
         }
 
         public async Task WriteToFile<T>(T data, string file)
