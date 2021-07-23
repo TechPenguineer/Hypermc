@@ -16,7 +16,9 @@
 </p>
 
 # LANGUAGE SUPPORT 
-**[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
+- **[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
+
+- **[Documentation España](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/spanishREADME.md)**
 
 <p>
 <h1>About  <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
@@ -80,6 +82,6 @@ Im a big KSP fan. I love new things. Put those together you get game mods. I got
 </p>
 <br>
 <p align="center">
-        One of your developers created an api wrapper that is used in this project. You can check it out here <br>
+        One of our developers created an api wrapper that is used in this project. You can check it out here <br>
         https://github.com/AndrewToaster/ForgedCurse
 </p>
