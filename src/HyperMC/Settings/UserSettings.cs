@@ -19,7 +19,7 @@ namespace Hypermc.Settings
 
         public string MinecraftPath { get; private set; }
         public string ModPacksPath { get; private set; }
-        public string ModPacksFilePath { get; }
+        public string ModPacksFile { get; }
 
         public UserSettings(IFileManager fileManager, IConfiguration config)
         {
@@ -31,7 +31,7 @@ namespace Hypermc.Settings
 
             MinecraftPath = string.Format(settings.DeafultMinecraftPath, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             ModPacksPath = string.Format(settings.DefaultModPacksPath, MinecraftPath);
-            ModPacksFilePath = string.Format(settings.DefaultModPacksFilePath, ModPacksPath);
+            ModPacksFile = string.Format(settings.ModPacksFile, ModPacksPath);
         }
 
         public async Task Initialize()
@@ -41,9 +41,9 @@ namespace Hypermc.Settings
                 Directory.CreateDirectory(_appPath);
             }
 
-            if (!Directory.Exists(ModPacksFilePath))
+            if (!Directory.Exists(ModPacksPath))
             {
-                Directory.CreateDirectory(ModPacksFilePath);
+                Directory.CreateDirectory(ModPacksPath);
             }
 
             var settings = await _fileManager.ReadFile<UserSettings>(_settingsFile);
@@ -51,7 +51,7 @@ namespace Hypermc.Settings
             if (settings != null)
             {
                 MinecraftPath = settings.MinecraftPath;
-                ModPacksPath = settings.ModPacksFilePath;
+                ModPacksPath = settings.ModPacksPath;
             }
         }
 

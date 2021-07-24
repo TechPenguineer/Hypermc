@@ -15,7 +15,7 @@ namespace Hypermc.Settings
     {
         public string AppPath { get; set; }
         public string DeafultMinecraftPath { get; set; }
-        public string DefaultModPacksFilePath { get; set; }
+        public string ModPacksFile { get; set; }
         public string DefaultModPacksPath { get; set; }
         public string SettingsFile { get; set; }
     }

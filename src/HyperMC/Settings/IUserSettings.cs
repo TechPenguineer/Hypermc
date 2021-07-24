@@ -10,7 +10,7 @@ namespace Hypermc.Settings
     {
         string MinecraftPath { get; }
         string ModPacksPath { get; }
-        string ModPacksFilePath { get; }
+        string ModPacksFile { get; }
 
         Task Initialize();
     }
