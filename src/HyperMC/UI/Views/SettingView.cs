@@ -18,10 +18,6 @@ namespace Hypermc.UI.Views
 
         public SettingView(IUserSettings settings)
 		{
-			string env_flder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-			string mc_flder = $"{env_flder}\\.minecraft";
-			//game_path.Text = $"{mc_flder}";
-
 			InitializeComponent();
             _settings = settings;
 			game_path.Text = settings.MinecraftPath;

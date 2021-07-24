@@ -45,7 +45,7 @@ namespace Hypermc
         private async void HyperMcView_Load(object sender, EventArgs e)
         {
             SetView(new ControlView(pnl_MainArea));
-            var mods = await _fileManager.ReadFile<ModpackData[]>($@"{_settings.ModPacksPath}\packs.json");
+            var mods = await _fileManager.ReadFile<ModpackData[]>(_settings.ModPacksFilePath);
             if (mods != null)
             {
                 foreach (var mod in mods)
@@ -126,7 +126,7 @@ namespace Hypermc
             }
 
             SortModpacks();
-            await _fileManager.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksPath}\packs.json");
+            await _fileManager.WriteToFile(_modpacks.ToArray(), $@"{_settings.ModPacksFilePath}\packs.json");
         }
 
         private ModpackBox CreateModpackBox(ModpackData data)
