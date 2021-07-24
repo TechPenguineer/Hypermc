@@ -1,4 +1,5 @@
 ﻿using Hypermc.Services;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hypermc.Settings
 {
@@ -15,18 +17,21 @@ namespace Hypermc.Settings
         private readonly string _settingsFile;
         private readonly IFileManager _fileManager;
 
-        public string MinecraftPath { get; set; }
-        public string ModPacksPath { get; set; }
+        public string MinecraftPath { get; private set; }
+        public string ModPacksPath { get; private set; }
+        public string ModPacksFile { get; }
 
-        public UserSettings(IFileManager fileManager)
+        public UserSettings(IFileManager fileManager, IConfiguration config)
         {
-            // TODO: possibly move the file names to the appsettings.
-            _appPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\.hypermc";
-            _settingsFile = $@"{_appPath}\settings.json";
+            var settings = config.Get<ApplicationSettings>().AppSettings;            
+            _appPath = string.Format(settings.AppPath, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            _settingsFile = string.Format(settings.SettingsFile, _appPath);
+
             _fileManager = fileManager;
 
-            MinecraftPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\.minecraft";
-            ModPacksPath = $@"{MinecraftPath}\ModPacks";
+            MinecraftPath = string.Format(settings.DeafultMinecraftPath, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            ModPacksPath = string.Format(settings.DefaultModPacksPath, MinecraftPath);
+            ModPacksFile = string.Format(settings.ModPacksFile, ModPacksPath);
         }
 
         public async Task Initialize()
