@@ -39,9 +39,8 @@ namespace Hypermc.UI.UserControls
             // 
             this.pcb_Thumbnail.Dock = System.Windows.Forms.DockStyle.Top;
             this.pcb_Thumbnail.Location = new System.Drawing.Point(0, 0);
-            this.pcb_Thumbnail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_Thumbnail.Name = "pcb_Thumbnail";
-            this.pcb_Thumbnail.Size = new System.Drawing.Size(217, 133);
+            this.pcb_Thumbnail.Size = new System.Drawing.Size(190, 100);
             this.pcb_Thumbnail.TabIndex = 0;
             this.pcb_Thumbnail.TabStop = false;
             this.pcb_Thumbnail.Click += new System.EventHandler(this.Pcb_Thumbnail_Click);
@@ -51,9 +50,9 @@ namespace Hypermc.UI.UserControls
             this.lbl_Name.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Name.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Name.ForeColor = System.Drawing.Color.White;
-            this.lbl_Name.Location = new System.Drawing.Point(0, 133);
+            this.lbl_Name.Location = new System.Drawing.Point(0, 100);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(217, 36);
+            this.lbl_Name.Size = new System.Drawing.Size(190, 27);
             this.lbl_Name.TabIndex = 1;
             this.lbl_Name.Text = "#NAME";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -64,24 +63,24 @@ namespace Hypermc.UI.UserControls
             this.lbl_forge_version.AutoSize = true;
             this.lbl_forge_version.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_forge_version.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_forge_version.Location = new System.Drawing.Point(3, 133);
+            this.lbl_forge_version.Location = new System.Drawing.Point(3, 100);
             this.lbl_forge_version.Name = "lbl_forge_version";
-            this.lbl_forge_version.Size = new System.Drawing.Size(85, 12);
+            this.lbl_forge_version.Size = new System.Drawing.Size(56, 11);
             this.lbl_forge_version.TabIndex = 2;
-            this.lbl_forge_version.Text = "#FORGE VERSION";
+            this.lbl_forge_version.Text = "#MC VERSION";
             // 
             // ModpackBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lbl_forge_version);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.pcb_Thumbnail);
-            this.Margin = new System.Windows.Forms.Padding(29, 33, 29, 33);
+            this.Margin = new System.Windows.Forms.Padding(25, 25, 25, 25);
             this.Name = "ModpackBox";
-            this.Size = new System.Drawing.Size(217, 169);
+            this.Size = new System.Drawing.Size(190, 127);
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Thumbnail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

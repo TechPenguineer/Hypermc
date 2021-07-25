@@ -11,7 +11,6 @@ namespace HyperMCLIB
     {
         public static void buildNotification()
         {
-            
         }
     }
 }
