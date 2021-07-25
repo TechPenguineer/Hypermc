@@ -23,7 +23,7 @@ namespace Hypermc.Settings
 
         public UserSettings(IFileManager fileManager, IConfiguration config)
         {
-            var settings = config.Get<ApplicationSettings>().AppSettings;            
+            var settings = config.GetSection(nameof(ApplicationSettings)).Get<ApplicationSettings>();
             _appPath = string.Format(settings.AppPath, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             _settingsFile = string.Format(settings.SettingsFile, _appPath);
 
