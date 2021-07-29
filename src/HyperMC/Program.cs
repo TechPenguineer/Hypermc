@@ -21,11 +21,14 @@ namespace Hypermc
         [STAThread]
         static async Task Main()
         {
-            var builder = new ConfigurationBuilder();
-            BuildConfig(builder);
-            builder.Build();
-
             var host = Host.CreateDefaultBuilder()
+                .ConfigureAppConfiguration(builder =>
+                {
+                    builder.SetBasePath(Directory.GetCurrentDirectory())
+                        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                        .AddJsonFile($"appsettings.{ Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production" }.json", optional: true)
+                        .AddEnvironmentVariables();
+                })
                 .ConfigureServices((context, services) =>
                 {
                     ConfigureServices(services);
@@ -40,7 +43,7 @@ namespace Hypermc
             Application.Run(host.Services.GetRequiredService<HyperMcView>());
         }
 
-        private static IServiceProvider ConfigureServices(IServiceCollection services)
+        private static void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<HyperMcView>()
                     .AddSingleton<IUserSettings, UserSettings>();
@@ -49,16 +52,6 @@ namespace Hypermc
                     .AddTransient<IFileManager, FileManager>();
 
             services.AddForgeClient();
-
-            return services.BuildServiceProvider();
-        }
-
-        static void BuildConfig(IConfigurationBuilder builder)
-        {
-            builder.SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{ Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production" }.json", optional: true)
-                .AddEnvironmentVariables();
         }
     }
 }
