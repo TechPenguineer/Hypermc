@@ -15,8 +15,8 @@ namespace Hypermc.Services
         /// <typeparam name="U">The type of the data that is being passed in to be saved</typeparam>
         /// <typeparam name="O">The return type</typeparam>
         /// <param name="fileOrQuery">The file name or query string to run</param>
-        /// <param name="parameters">The data to query the database on</param>
-        /// <param name="connectionStringName">The connection string name for the database</param>
+        /// <param name="parameters">The data to query the database on (can be ignored when using file based data)</param>
+        /// <param name="connectionStringName">The connection string name for the database (can be ignored when using file based data)</param>
         /// <returns></returns>
         Task<O> LoadData<T, U, O>(string fileOrQuery, U parameters = default(U), string connectionStringName = null);
 
@@ -26,7 +26,7 @@ namespace Hypermc.Services
         /// <typeparam name="T">The data type that is being passed in</typeparam>
         /// <param name="fileOrQuery">The file name or query string to run</param>
         /// <param name="parametersOrData">The data to be saved to the file or database</param>
-        /// <param name="connectionStringName">The connection string name for the database</param>
+        /// <param name="connectionStringName">The connection string name for the database (can be ignored when using file based data)</param>
         /// <returns></returns>
         Task SaveData<T>(string fileOrQuery, T parametersOrData = default(T), string connectionStringName = null);
     }
