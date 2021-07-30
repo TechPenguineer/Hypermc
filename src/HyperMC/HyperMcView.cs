@@ -26,18 +26,19 @@ namespace Hypermc
     {
 
         private readonly IForgeClient _forgeClient;
-        private readonly IServiceProvider _provider;
         private readonly IFileManager _fileManager;
         private readonly IUserSettings _settings;
+        private readonly SettingView _settingView;
 
-        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileManager fileManager, IUserSettings settings)
+        public HyperMcView(IForgeClient forgeClient, IFileManager fileManager, IUserSettings settings, SettingView settingView)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
-            _provider = provider;
             _fileManager = fileManager;
             _settings = settings;
+            _settingView = settingView;
+
             _modpacks = new();
             _modpacks.CollectionChanged += ModpacksUpdated;
         }
@@ -210,7 +211,7 @@ namespace Hypermc
         private void Hbtn_Options_Click(object sender, EventArgs e)
         {
             //Utils.NotImplAlert("Options Menu");
-            SetView(_provider.GetRequiredService<SettingView>());
+            SetView(_settingView);
         }
 
         #endregion Minimize Button
