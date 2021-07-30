@@ -26,16 +26,16 @@ namespace Hypermc
     {
 
         private readonly IForgeClient _forgeClient;
-        private readonly IFileManager _fileManager;
+        private readonly IDataAccess _dataAccess;
         private readonly IUserSettings _settings;
         private readonly SettingView _settingView;
 
-        public HyperMcView(IForgeClient forgeClient, IFileManager fileManager, IUserSettings settings, SettingView settingView)
+        public HyperMcView(IForgeClient forgeClient, IDataAccess dataAccess, IUserSettings settings, SettingView settingView)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
-            _fileManager = fileManager;
+            _dataAccess = dataAccess;
             _settings = settings;
             _settingView = settingView;
 
@@ -46,7 +46,7 @@ namespace Hypermc
         private async void HyperMcView_Load(object sender, EventArgs e)
         {
             SetView(new ControlView(pnl_MainArea));
-            var mods = await _fileManager.ReadFile<ModpackData[]>(_settings.ModPacksFile);
+            var mods = await _dataAccess.LoadData<ModpackData[]>(_settings.ModPacksFile);
             if (mods != null)
             {
                 foreach (var mod in mods)
@@ -127,7 +127,7 @@ namespace Hypermc
             }
 
             SortModpacks();
-            await _fileManager.WriteToFile(_modpacks.ToArray(), _settings.ModPacksFile);
+            await _dataAccess.SaveData(_modpacks.ToArray(), _settings.ModPacksFile);
         }
 
         private ModpackBox CreateModpackBox(ModpackData data)

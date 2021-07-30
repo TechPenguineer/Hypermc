@@ -49,7 +49,7 @@ namespace Hypermc
                     .AddSingleton<IUserSettings, UserSettings>();
 
             services.AddTransient<SettingView>()
-                    .AddTransient<IFileManager, FileManager>();
+                    .AddTransient<IDataAccess, FileDataAccess>();
 
             services.AddForgeClient();
         }
