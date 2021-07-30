@@ -26,18 +26,19 @@ namespace Hypermc
     {
 
         private readonly IForgeClient _forgeClient;
-        private readonly IServiceProvider _provider;
-        private readonly IFileManager _fileManager;
+        private readonly IDataAccess _dataAccess;
         private readonly IUserSettings _settings;
+        private readonly SettingView _settingView;
 
-        public HyperMcView(IForgeClient forgeClient, IServiceProvider provider, IFileManager fileManager, IUserSettings settings)
+        public HyperMcView(IForgeClient forgeClient, IDataAccess dataAccess, IUserSettings settings, SettingView settingView)
         {
             InitializeComponent();
 
             _forgeClient = forgeClient;
-            _provider = provider;
-            _fileManager = fileManager;
+            _dataAccess = dataAccess;
             _settings = settings;
+            _settingView = settingView;
+
             _modpacks = new();
             _modpacks.CollectionChanged += ModpacksUpdated;
         }
@@ -45,7 +46,7 @@ namespace Hypermc
         private async void HyperMcView_Load(object sender, EventArgs e)
         {
             SetView(new ControlView(pnl_MainArea));
-            var mods = await _fileManager.ReadFile<ModpackData[]>(_settings.ModPacksFile);
+            var mods = await _dataAccess.LoadData<ModpackData[], int, ModpackData[]>(_settings.ModPacksFile);
             if (mods != null)
             {
                 foreach (var mod in mods)
@@ -126,7 +127,7 @@ namespace Hypermc
             }
 
             SortModpacks();
-            await _fileManager.WriteToFile(_modpacks.ToArray(), _settings.ModPacksFile);
+            await _dataAccess.SaveData(_settings.ModPacksFile, _modpacks.ToArray());
         }
 
         private ModpackBox CreateModpackBox(ModpackData data)
@@ -210,7 +211,7 @@ namespace Hypermc
         private void Hbtn_Options_Click(object sender, EventArgs e)
         {
             //Utils.NotImplAlert("Options Menu");
-            SetView(_provider.GetRequiredService<SettingView>());
+            SetView(_settingView);
         }
 
         #endregion Minimize Button
