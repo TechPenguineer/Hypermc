@@ -46,7 +46,7 @@ namespace Hypermc.Settings
                 Directory.CreateDirectory(ModPacksPath);
             }
 
-            var settings = await _dataAccess.LoadData<UserSettings>(_settingsFile);
+            var settings = await _dataAccess.LoadData<UserSettings, int, UserSettings>(_settingsFile);
 
             if (settings != null)
             {
@@ -60,7 +60,7 @@ namespace Hypermc.Settings
             MinecraftPath = mcPath;
             ModPacksPath = modPath;
 
-            await _dataAccess.SaveData(this, _settingsFile);
+            await _dataAccess.SaveData(_settingsFile, this);
         }
     }
 }

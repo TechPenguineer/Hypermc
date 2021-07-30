@@ -10,31 +10,22 @@ namespace Hypermc.Services
 {
     public class FileDataAccess : IDataAccess
     {
-        public async Task<T> LoadData<T>(string file)
+        public async Task<O> LoadData<T, U, O>(string fileOrQuery, U parameters = default(U), string connectionStringName = null)
         {
-            if (File.Exists(file))
+            if (File.Exists(fileOrQuery))
             {
-                using var stream = new FileStream(file, FileMode.Open, FileAccess.Read);
-                var settings = await JsonSerializer.DeserializeAsync<T>(stream);
+                using var stream = new FileStream(fileOrQuery, FileMode.Open, FileAccess.Read);
+                var settings = await JsonSerializer.DeserializeAsync<O>(stream);
                 return settings;
             }
 
-            return default(T);
+            return default(O);
         }
 
-        public async Task SaveData<T>(T data, string file)
+        public async Task SaveData<T>(string fileOrQuery, T parametersOrData, string connectionStringName = null)
         {
-            string settingsToSave = JsonSerializer.Serialize(data);
-            await File.WriteAllTextAsync(file, settingsToSave);
-        }
-
-        public Task<List<T>> LoadData<T, U>(string query, U parameters, string connectionStringName)
-        {
-            return null;
-        }
-        public Task SaveData<T>(string query, T parameters, string connectionStringName)
-        {
-            return null;
+            string settingsToSave = JsonSerializer.Serialize(parametersOrData);
+            await File.WriteAllTextAsync(fileOrQuery, settingsToSave);
         }
     }
 }
