@@ -15,19 +15,19 @@ namespace Hypermc.Settings
     {
         private readonly string _appPath;
         private readonly string _settingsFile;
-        private readonly IFileManager _fileManager;
+        private readonly IDataAccess _dataAccess;
 
         public string MinecraftPath { get; private set; }
         public string ModPacksPath { get; private set; }
         public string ModPacksFile { get; }
 
-        public UserSettings(IFileManager fileManager, IConfiguration config)
+        public UserSettings(IDataAccess dataAccess, IConfiguration config)
         {
             var settings = config.GetSection(nameof(ApplicationSettings)).Get<ApplicationSettings>();
             _appPath = string.Format(settings.AppPath, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             _settingsFile = string.Format(settings.SettingsFile, _appPath);
 
-            _fileManager = fileManager;
+            _dataAccess = dataAccess;
 
             MinecraftPath = string.Format(settings.DeafultMinecraftPath, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             ModPacksPath = string.Format(settings.DefaultModPacksPath, MinecraftPath);
@@ -46,7 +46,7 @@ namespace Hypermc.Settings
                 Directory.CreateDirectory(ModPacksPath);
             }
 
-            var settings = await _fileManager.ReadFile<UserSettings>(_settingsFile);
+            var settings = await _dataAccess.LoadData<UserSettings, int, UserSettings>(_settingsFile);
 
             if (settings != null)
             {
@@ -60,7 +60,7 @@ namespace Hypermc.Settings
             MinecraftPath = mcPath;
             ModPacksPath = modPath;
 
-            await _fileManager.WriteToFile(this, _settingsFile);
+            await _dataAccess.SaveData(_settingsFile, this);
         }
     }
 }
