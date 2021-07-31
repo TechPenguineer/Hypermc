@@ -2,6 +2,7 @@
 !define APP_VERSION "1.0.0"
 
 !define INSTALLER_TITLE = "${APP_NAME} - ${APP_VERSION} - Setup"
+!define UNINSTALLER_TITLE = "${APP_NAME} - ${APP_VERSION} - Uninstaller"
 
 !addincludedir "./"
 
@@ -22,5 +23,5 @@ ShowUnInstDetails show
 Section "MainSection" SEC01
    
 SectionEnd
-0
-0
+
+WriteUninstaller "${UNINSTALLER_TITLE}.exe"
