@@ -29,3 +29,13 @@ ShowUnInstDetails show
 Section "MainSection" SEC01
    
 SectionEnd
+
+
+; ---------------------- FUNCITONS ----------------------
+Function .onVerifyInstDir
+  ReadEnvStr $0 "ProgramFiles(x86)"
+  StrCmp $0 $INSTDIR 0 PathGood
+  MessageBox MB_OK "directory not valid for installation"
+  Abort
+PathGood:
+FunctionEnd
