@@ -73,15 +73,7 @@ Im a big KSP fan. I love new things. Put those together you get game mods. I got
 <br>
 <p>
 <h1>Contributers</h1> 
-<p align="center">
-    Thank you so much to all the amazing contributers. I want to give a special mention to TheBoxyBear for being here since day 1.
-    TheBoxyBear github: https://github.com/TheBoxyBear
-</p>
-<p align="center">
-        And to keep up to date, check our reddit here: https://www.reddit.com/r/hypermc/
-</p>
-<br>
-<p align="center">
-        One of our developers created an api wrapper that is used in this project. You can check it out here <br>
-        https://github.com/AndrewToaster/ForgedCurse
-</p>
+
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/Hypermc)
+
