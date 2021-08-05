@@ -1,6 +1,6 @@
 CC=gcc
 OUTPUT_DIR=$(wildcard out/$@.o)
-SRC=$(wildcard src/*.c)
+SRC=$(wildcard src/*.*)
 CFLAGS= -Wall -o 
 VERSION=1-0-0
 
