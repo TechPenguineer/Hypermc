@@ -74,7 +74,8 @@ namespace HyperMC.CurseForge
                 return await result.Content.ReadAsStreamAsync();
             }
 
-            return null;
+            return null;  
+            
         }
     }
 }
