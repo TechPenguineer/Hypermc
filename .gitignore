@@ -390,4 +390,4 @@ MigrationBackup/
 .ionide/
 
 # REMOVE PRIVATE USAGE API WRAPPER
-*/HyperMC.CurseForge
+src/HyperMC.CurseForge
