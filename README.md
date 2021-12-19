@@ -15,6 +15,13 @@
 
 </p>
 
+# This project is abandoned
+sadly we abandoned this project.
+because overflow stopped developing
+and the team was not sure where to go
+so we are no longer working
+on hyperMC
+
 
 # LANGUAGE SUPPORT 
 - **[Documentation Français](https://github.com/TechPenguineer/Hypermc/blob/Windows/Languages/frenchREADME.md)**
