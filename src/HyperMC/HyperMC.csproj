@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.0" />
   </ItemGroup>
 
